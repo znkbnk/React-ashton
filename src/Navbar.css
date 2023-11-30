@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--main);
+}
+
+:root {
+    --top: rgb(44, 184, 118);
+    --lb: rgb(65,230,255);
+    --textwhite: white;
+    --textblack: rgb(0, 0, 0);
+    --main: #5f4ee0;
+
+}
+
+.navbar {
+    height: auto;
+    background-color: var(--top);
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+}
+
+h1 {
+    color: white;
+    margin-right: 20px;
+}
+
+.leftside {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 5vh;
+    text-align: center;
+    color: white;
+    margin-bottom: 5vh;
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10vh;
+    color: white;
+}
+
+.nav-elements ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-elements ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-right: 35px;
+}
+
+.nav-elements ul a  {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-elements ul li i {
+    font-size: 25px;
+    color: white;
+    margin-right: 7px;
+}
+
+.nav-elements ul li a::after {
+    content: '';
+    width: 0;
+    background-color: white;
+    height: 3px;
+    display: flex;
+    transition: 0.5s;
+}
+
+.nav-elements ul li a:hover::after{
+    width: 100%;
+}
+
+.nav-elements ul a.active {
+    color: --lb;
+}
