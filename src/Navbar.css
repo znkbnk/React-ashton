@@ -14,6 +14,10 @@ body {
 
 }
 
+.menu-icon {
+  display: none;
+}
+
 .navbar {
     height: auto;
     background-color: var(--top);
@@ -98,4 +102,42 @@ h2 {
     color: --lb;
 }
 
-@media
+@media (max-width: 700px) {
+  .container {
+    padding: 5.5vh;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    z-index: 4;
+  }
+
+  .nav-elements {
+    position: absolute;
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    transition: all 0.3s ease-in;
+  }
+  .nav-elements.active {
+    width: 200px;
+    background-color: rgb(197, 44, 184);
+    transition: 0.8s;
+    
+  }
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    padding-left: 20px;
+  }
+  .nav-elements ul li {
+    margin-right: auto;
+    margin-top: 22px;
+  }
+}
+

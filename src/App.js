@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
   Route,
   BrowserRouter,
   Routes,
@@ -16,10 +15,10 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/' element={<Services />} />
-        <Route path='/' element={<Aprovals />} />
-        <Route path='/' element={<Legals />} />
+        <Route path='/Home' element={<Home />} />
+        <Route path='/Services' element={<Services />} />
+        <Route path='/Aprovals' element={<Aprovals />} />
+        <Route path='/Legals' element={<Legals />} />
       </Routes>
     </BrowserRouter>
   );

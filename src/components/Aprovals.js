@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Aprovals = () =>  {
-  return (
-    <div>Aprovals</div>
-  )
-}
+const Aprovals = () => {
+  return <div>Aprovals</div>;
+};
 
-export default Aprovals
+export default Aprovals;
