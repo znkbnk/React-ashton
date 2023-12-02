@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 320px;
+  height: 400px;
+  margin: 40px 30px;
+  transition: 0.5s;
+}
+
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc(1vh + 50px);
+}
+
+
+
+.cards::before,
+.cards::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 70%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(10deg);
+  transition: 0.5s;
+  background: linear-gradient(315deg,rgb(250,128,114),	#98FB98);
+}
+.cards::after {
+  filter: blur(30px);
+}
+.cards:hover:before,
+.cards:hover::after {
+  transform: skewX(0deg);
+  left: 20px;
+}
+
+.cards .content {
+  position: relative;
+  left: 0;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.05);
+  z-index: 1;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+  color: #000;
+}
+.cards:hover .content {
+  left: -25px;
+  padding: 60px 40px;
+}
+.cards .content h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.cards .content p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+.cards .content a {
+  font-size: 1.1em;
+  color: #000;
+  display: inline-block;
+  background: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+  justify-content: center;
+   align-items: center;
+  }
+.cards::before,
+  .cards::after {
+    transform: skewX(5deg); /* Adjust the skewX value for smaller screens */
+  }
+  
+}
