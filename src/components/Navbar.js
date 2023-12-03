@@ -38,7 +38,9 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className='container'>
         <div className='leftside'>
-          <h1>Logo</h1>
+
+          <img  src="https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg" class='logo' alt="Ashton & Moore Ltd, Aerospace, Industrial Finishing, Plating, Industrial Finishing, Anodising"></img>
+          
         </div>
         <div className='menu-icon' onClick={hanleShowNavnar}>
           {showNavBar ? (

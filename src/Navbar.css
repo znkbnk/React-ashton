@@ -23,6 +23,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+
 }
 
 .container {
@@ -36,6 +38,8 @@ body {
 h1 {
   color: var(--textwhite);
   margin-right: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 
 .leftside {
@@ -49,6 +53,8 @@ h2 {
   text-align: center;
   color: var(--textwhite);
   margin-bottom: 5vh;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  
 }
 
 .home-container {
@@ -79,6 +85,7 @@ h2 {
   font-weight: 600;
   color: var(--textwhite);
   text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .nav-elements ul li i {

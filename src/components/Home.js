@@ -14,7 +14,9 @@ const Home = () => {
               aluminium oxide. The anodising process artificially produces this
               film but as a hard, dense wear resistant surface.
             </p>
-            <NavLink to='/Legals'>Read More</NavLink>
+            <NavLink to='/Legals' className='navlink'>
+              Read More
+            </NavLink>
           </div>
         </li>
         <li className='cards'>
@@ -22,9 +24,11 @@ const Home = () => {
             <h2>Non Destructive Testing</h2>
             <p>
               Ashton & Moore Limited have extended their extensive range of
-              Aerospace finishing services to include NON DESTRUCTIVE TESTING.
+              Aerospace finishing services to include Non Destructive Testing.
             </p>
-            <NavLink to='/Legals'>Read More</NavLink>
+            <NavLink to='/Legals' className='navlink'>
+              Read More
+            </NavLink>
           </div>
         </li>
         <li className='cards'>
@@ -35,7 +39,9 @@ const Home = () => {
               many non metallic surfaces, our painting division is at the
               forefront of technology.
             </p>
-            <NavLink to='/Legals'>Read More</NavLink>
+            <NavLink to='/Legals' className='navlink'>
+              Read More
+            </NavLink>
           </div>
         </li>
         <li className='cards'>
@@ -46,7 +52,9 @@ const Home = () => {
               passive film, during the manufacturing processes minute particles
               of steel and non ferrous metals are...
             </p>
-            <NavLink to='/Legals'>Read More</NavLink>
+            <NavLink to='/Legals' className='navlink'>
+              Read More
+            </NavLink>
           </div>
         </li>
         <li className='cards'>
@@ -54,10 +62,12 @@ const Home = () => {
             <h2>Plating</h2>
             <p>
               Silver, like lead, also has excellent lubrication and anti galling
-              properties. Ashton & Moore offer deposits of pure silver
-              without the addition of the brightening...
+              properties. Ashton & Moore offer deposits of pure silver without
+              the addition of the brightening...
             </p>
-            <NavLink to='/Legals'>Read More</NavLink>
+            <NavLink to='/Legals' className='navlink'>
+              Read More
+            </NavLink>
           </div>
         </li>
       </ul>

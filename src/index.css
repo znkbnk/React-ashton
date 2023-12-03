@@ -1,0 +1,12 @@
+.logo {
+  position: relative;
+  width: 125px; /* Set the width of your logo */
+  height: 100px; /* Set the height of your logo */
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: 2px solid #ddd;
+  box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
