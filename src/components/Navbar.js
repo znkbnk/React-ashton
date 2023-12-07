@@ -1,54 +1,68 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../Navbar.css";
+import SearchBar from "./SearchBar";
+import sections from "../data";
 
-const Navbar = () => {
+
+
+
+const Navbar = ({setSearchResults}) => {
   const [showNavBar, setShowNavbar] = useState(false);
 
   const hanleShowNavnar = () => {
     setShowNavbar(!showNavBar);
   };
 
-   const handleCloseNavbar = () => {
-     setShowNavbar(false);
-   };
+  const handleCloseNavbar = () => {
+    setShowNavbar(false);
+  };
 
-    useEffect(() => {
-      const handleOutsideClick = (event) => {
-        const navbar = document.querySelector(".navbar");
-        const navElements = document.querySelector(".nav-elements");
+  const handleSearch = (results) => {
+    setSearchResults(results);
+  };
 
-        if (
-          !navbar.contains(event.target) &&
-          !navElements.contains(event.target) &&
-          showNavBar
-        ) {
-          handleCloseNavbar();
-        }
-      };
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      const navbar = document.querySelector(".navbar");
+      const navElements = document.querySelector(".nav-elements");
 
-      document.addEventListener("click", handleOutsideClick);
+      if (
+        !navbar.contains(event.target) &&
+        !navElements.contains(event.target) &&
+        showNavBar
+      ) {
+        handleCloseNavbar();
+      }
+    };
 
-      return () => {
-        document.removeEventListener("click", handleOutsideClick);
-      };
-    }, [showNavBar]);
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, [showNavBar]);
 
   return (
     <nav className='navbar'>
       <div className='container'>
         <div className='leftside'>
-
-          <img  src="https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg" class='logo' alt="Ashton & Moore Ltd, Aerospace, Industrial Finishing, Plating, Industrial Finishing, Anodising"></img>
-          
+          <Link to='/'>
+            <img
+              src='https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg'
+              className='logo'
+              alt='Ashton & Moore Ltd, Aerospace, Industrial Finishing, Plating, Industrial Finishing, Anodising'
+            ></img>
+          </Link>
         </div>
+        <SearchBar sections={sections} onSearch={handleSearch} />
         <div className='menu-icon' onClick={hanleShowNavnar}>
           {showNavBar ? (
             <i>
               <svg
                 stroke='currentColor'
                 fill='currentColor'
-                stroke-width='0'
+                strokeWidth='0'
                 viewBox='0 0 1024 1024'
                 height='1em'
                 width='1em'
@@ -62,7 +76,7 @@ const Navbar = () => {
               <svg
                 stroke='currentColor'
                 fill='currentColor'
-                stroke-width='0'
+                strokeWidth='0'
                 viewBox='0 0 448 512'
                 height='1em'
                 width='1em'
@@ -80,7 +94,7 @@ const Navbar = () => {
           <ul>
             <li>
               <i>{/*icon*/}</i>
-              <NavLink to='/Home' onClick={handleCloseNavbar}>
+              <NavLink to='/' onClick={handleCloseNavbar}>
                 Home
               </NavLink>
             </li>

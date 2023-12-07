@@ -62,6 +62,62 @@ Use the useEffect hook to add an event listener for clicks outside the navbar to
 Update the div with the class "nav-elements" by adding an onClick event with the handler named "handlerClosenavbar".
 
 
+Lesson 3:
+
+Step 1: Dynamic Content
+
+Generate a new file named data.js. 
+Initializ an Array of Objects.
+Each object in the array will represent the content for a specific section or component on the website.
+Transfer all content/text from the Home.js file to the data.js file.
+
+Step 2: Update Home.js
+
+Below your <ul className='cards-container'> use the .map method on the sections prop to iterate over each section.
+For each section, you create an li element with a unique key based on the index and a cards class.
+Within each li, you have a div with a content class.
+Inside the content div, you have an h2 for the section title, a p for the description, and a NavLink for reading more.
+When employing React Router's NavLink, you specify the destination using the "to" prop along with a "navlink" class.
+
+Step 3: Create SearchResults.js
+
+Define the Functional Component that takes a prop named results. (use curly braces for the prop).
+In the return statement .map through results array.
+Display title <h3> of each result and content <p> of each result.
+Add <hr /> horizontal line between each result for better visual separation. ( for now ).
+
+Step 4: Update App.js file
+
+Replace BrowserRouter with a div tag, and in your index.js file, encompass your App component within BrowserRouter.
+Create state for search results.
+Create a navigation function.
+Define a function to handle search results, use results as an argument, navigate to the SearchResults route.
+Use the Navbar Component while passing the handleSearch function to the setSearchResults prop.
+Define route for SearchResults component, pass a prop named results with the value of searchResults.
+Add more Components and Routes...
+
+Step 5: Create SearchBar Component
+
+Set up the initial state for the search term.
+Define a function to handle the search. 
+Map through sections to filter based on the search term.
+Inside .map extract and filter content from each section. ( this one is very tricky, use React.Children.toArray ( check data.js file why) ).
+Inside .filter check if the child is a string and includes the search term (dont forget about toLowerCase()).
+Recursively check children if it's a React element (This one is tricky aswell, this is where I spent most of the time).
+If there are matching paragraphs, create a new section with filtered content.
+No matching paragraphs, return null.
+Remove null entries from the array.
+Pass the search results to the parent component.
+Clear the search term.
+Render the search bar component, create input field for entering the search term and button to trigger the search.
+
+
+
+
+
+
+
+
 
 
 
