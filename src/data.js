@@ -45,7 +45,7 @@ const sections = [
           even growth over the whole component.
         </p>
 
-        <h2>Chromic Acid Anodising</h2>
+        <h3>Chromic Acid Anodising</h3>
 
         <p>
           This method produces comparatively thin but dense oxide films that are
@@ -76,7 +76,7 @@ const sections = [
           products.
         </p>
 
-        <h2>Thin Film Sulphuric Anodising</h2>
+        <h3>Thin Film Sulphuric Anodising</h3>
 
         <p>
           Considered a more 'environmentally friendly' process than chromic acid
@@ -89,7 +89,7 @@ const sections = [
           and is seriously being considered by others.
         </p>
 
-        <h2>Sulphuric acid anodising</h2>
+        <h3>Sulphuric acid anodising</h3>
         <p>
           This method can produce much thicker films than the chromic process,
           and is generally used in corrosion resistance, general engineering, or
@@ -112,7 +112,7 @@ const sections = [
           oxidation, provide an extra “Key” for subsequent coatings and can also
           be used to colour the surface of the component.
         </p>
-        <h2>Tartaric sulphuric acid anodising</h2>
+        <h3>Tartaric sulphuric acid anodising</h3>
         <p>
           Like Thin film Sulphuric acid anodising this is considered a more
           “environmentally friendly” option to chromic acid anodising and is now
@@ -121,7 +121,7 @@ const sections = [
           chromic seal (like Thin film sulphuric anodising), unless the surface
           is subsequently painted.
         </p>
-        <h2>Masking</h2>
+        <h3>Masking</h3>
         <p>
           Exacting engineering requirements now require that specific areas of
           components should not be coated. Although masking for anodising is
@@ -132,7 +132,7 @@ const sections = [
           results on a production scale.
         </p>
 
-        <h2>Ipcote</h2>
+        <h3>Ipcote</h3>
 
         <p>
           Jet engines, marine and power generation turbines, off shore oil
@@ -173,7 +173,7 @@ const sections = [
           version.
         </p>
 
-        <h2>Dry Film Lubrication</h2>
+        <h3>Dry Film Lubrication</h3>
 
         <p>
           Modern engineering applications require demanding performance
@@ -311,7 +311,7 @@ const sections = [
     linkTo: "/Conversion-coatings",
     content: (
       <div>
-        <h2>Alocrom</h2>
+        <h3>Alocrom</h3>
         <p>
           Alocrom (chromic conversion coating) can be applied either locally or
           all over via a dip process. It utilises hexavalent chrome (either
@@ -328,7 +328,7 @@ const sections = [
           by jig marks.
         </p>
 
-        <h2>Iridite NCP</h2>
+        <h3>Iridite NCP</h3>
 
         <p>
           Iridite NCP is one of the first hexavalent chrome alternatives to
@@ -338,7 +338,7 @@ const sections = [
           corrosion protection. It is often used as a stand alone finish.
         </p>
 
-        <h2>Phosphating</h2>
+        <h3>Phosphating</h3>
         <p>
           Phosphating is the application of a porous crystalline coating usually
           applied to ferrous based materials. The process is non electrolytic
@@ -411,7 +411,7 @@ const sections = [
           not require plating.
         </p>
 
-        <h2>Lead Indium</h2>
+        <h3>Lead Indium</h3>
 
         <p>
           Lead coatings on big end and other similar bearings has been used
@@ -431,7 +431,9 @@ const sections = [
           a near boiling oil bath. This fusion forms a lead indium alloy which
           does not oxidise, thereby lasting for many years.
         </p>
-        <h2>Silver Plating</h2>
+        <h3>Silver Plating</h3>
+        <br />
+
         <p>
           Silver, like lead, also has excellent lubrication and anti galling
           properties. Ashton & Moore offer deposits of pure silver without the
@@ -447,7 +449,7 @@ const sections = [
           components are assembled together in high temperature applications.
         </p>
 
-        <h2>Cadmium Plating</h2>
+        <h3>Cadmium Plating</h3>
 
         <p>
           As one of the few companies still licenced to provide this process
@@ -466,7 +468,7 @@ const sections = [
           protective capabilities.
         </p>
 
-        <h2>Masking</h2>
+        <h3>Masking</h3>
 
         <p>
           Exacting engineering requirements now require that specific areas of

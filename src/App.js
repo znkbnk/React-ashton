@@ -12,6 +12,8 @@ import Painting from "./components/Painting";
 import Conversion from "./components/Conversion-coatings";
 import Plating from "./components/Plating";
 import SearchResults from "./components/SearchResults";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -29,9 +31,9 @@ const App = () => {
 
       <Routes>
         {/* Set Home as the main page */}
-        <Route path='/' element={<Home sections={sections} />} />
+        <Route path='/' element={<Home />} />
 
-        <Route path='/Services' element={<Services />} />
+        <Route path='/Services' element={<Services sections={sections} />} />
         <Route path='/Aprovals' element={<Aprovals />} />
         <Route path='/Legals' element={<Legals />} />
         <Route path='/Anodising' element={<Anodising />} />
@@ -39,10 +41,12 @@ const App = () => {
         <Route path='/Painting' element={<Painting />} />
         <Route path='/Conversion-coatings' element={<Conversion />} />
         <Route path='/Plating' element={<Plating />} />
+        <Route path='/Contact' element={<Contact />} />
         <Route
           path='/SearchResults'
           element={<SearchResults results={searchResults} />}
         />
+        <Route path='/Footer' element={<Footer />} />
       </Routes>
     </div>
   );

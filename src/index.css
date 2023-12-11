@@ -1,14 +1,213 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  background-color: var(--main);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --result: #854f6c;
+  --result-hover: #dfb6b2;
+  --service: #854f6c;
+  --text-color: #fbe4d8;
+}
+
 .logo {
   position: relative;
-  width: 125px; /* Set the width of your logo */
-  height: 100px; /* Set the height of your logo */
+  width: 125px;
+  height: 100px;
   border: 2px solid #ccc;
   border-radius: 5px;
   outline: 2px solid #ddd;
   box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.3);
 }
 
+.content-container {
+  max-width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+  padding: 20px;
+  margin: 20px;
+  flex: 1;
+}
 
+/* Add the following styles for better readability and aesthetics */
+.content-container p {
+  white-space: normal;
+  overflow-wrap: break-word;
+}
 
+/* search Results */
 
+.searchResult {
+  max-width: 100vh;
+  height: auto;
+  border-radius: 30px;
+  background: var(--result);
+  box-shadow: 1px 1px 20px 10px #ffffff3f;
+  padding: 10px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
 
+.searchResult h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.searchResult p {
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 20px;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.searchResult:hover {
+  box-shadow: 15px 15px 30px #acacac, -15px -15px 30px #ffffff;
+  background-color: var(--result-hover);
+  border: 1px solid rgba(255, 255, 255, 0.454);
+}
+
+/* service cards */
+
+.service-cards {
+  max-width: 100vh;
+  height: auto;
+  border-radius: 30px;
+  background: var(--service);
+  box-shadow: 1px 1px 20px 10px #ffffff3f;
+  padding: 10px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  color: var(--text-color);
+}
+
+.service-cards h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+.service-cards h1 {
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 20px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.service-cards p {
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 20px;
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Adjust the height as needed */
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .searchResult {
+    background: var(--result-hover);
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--top);
+  color: var(--textwhite);
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: auto;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.footer-section img {
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 16px; /* Adjust the font size as needed */
+  text-align: center;
+}
+
+.footer-section h4 {
+  font-size: 18px; /* Adjust the font size as needed */
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 5px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: var(--textwhite);
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-section a:hover {
+  color: var(--active);
+}
+
+/* Video */
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure the video is rendered behind other elements */
+}
+
+/* Style for the video itself to cover the full screen */
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire container */
+  opacity: 0.3;
+}

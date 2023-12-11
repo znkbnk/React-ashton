@@ -1,0 +1,28 @@
+/* Carousel.css */
+
+.slider-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Ensure images fill the entire slide */
+.slick-slide img {
+  width: 100%;
+  height: 60vh; /* Adjust this value as needed */
+  object-fit: cover;
+}
+
+/* Customize dot indicators at the bottom (optional) */
+.slick-dots {
+  bottom: 20px;
+}
+
+.slick-dots li {
+  margin: 0 8px;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #fff; /* Change the color of the dot */
+}

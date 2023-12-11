@@ -4,10 +4,7 @@ import "../Navbar.css";
 import SearchBar from "./SearchBar";
 import sections from "../data";
 
-
-
-
-const Navbar = ({setSearchResults}) => {
+const Navbar = ({ setSearchResults }) => {
   const [showNavBar, setShowNavbar] = useState(false);
 
   const hanleShowNavnar = () => {
@@ -87,6 +84,7 @@ const Navbar = ({setSearchResults}) => {
             </i>
           )}
         </div>
+
         <div
           className={`nav-elements ${showNavBar && "active"}`}
           onClick={handleCloseNavbar}
@@ -114,6 +112,12 @@ const Navbar = ({setSearchResults}) => {
               <i>{/*icon*/}</i>
               <NavLink to='/Legals' onClick={handleCloseNavbar}>
                 Legals
+              </NavLink>
+            </li>
+            <li>
+              <i>{/*icon*/}</i>
+              <NavLink to='/Contact' onClick={handleCloseNavbar}>
+                Contact Us
               </NavLink>
             </li>
           </ul>

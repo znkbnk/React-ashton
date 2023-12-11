@@ -1,16 +1,19 @@
 import React from "react";
+import Footer from "./Footer";
 
 const SearchResults = ({ results }) => {
   return (
     <div>
-      <h2>Search Results</h2>
-      {results.map((result, index) => (
-        <div key={index}>
-          <h3>{result.title}</h3>
-          <p>{result.content}</p>
-          <hr />
-        </div>
-      ))}
+      <div className='search-results'>
+        <h2>Search Results:</h2>
+        {results.map((result, index) => (
+          <div key={index} className='searchResult'>
+            <h2>{result.title}</h2>
+            <p>{result.content}</p>
+          </div>
+        ))}
+      </div>
+      <Footer />
     </div>
   );
 };

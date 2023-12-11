@@ -1,9 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-}
+
 .navlink {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -18,21 +13,23 @@
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-top: calc(1vh + 50px);  
+  justify-content:center;
+  position: relative; /* Ensure the cards container is positioned relative to its parent */
+  z-index: 2; 
+  min-height: 100vh;
 }
 
 
 .cards {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:flex-start;
   position: relative;
-  width: 320px;
+  width: 300px;
   height: 400px;
   margin: 40px 30px;
   transition: 0.5s;  
+  max-width: 400px; 
 }
 
 .cards::before,
@@ -46,7 +43,7 @@
   border-radius: 8px;
   transform: skewX(12deg);
   transition: 0.5s;
-  background: linear-gradient(315deg,rgb(250,128,114),	#98FB98);
+  background: linear-gradient(315deg,#2b124c,	#dfb6b2);
 }
 .cards::after {
   filter: blur(30px);
@@ -67,7 +64,7 @@
   backdrop-filter: blur(10px);
   transition: 0.5s;
   border: 0.5px solid rgba(255, 255, 255, 0.07);
-  color: #000;
+  color: #fbe4d8;
   transform: skewX(-1deg);
 
 }

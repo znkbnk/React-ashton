@@ -93,7 +93,7 @@ Create state for search results.
 Create a navigation function.
 Define a function to handle search results, use results as an argument, navigate to the SearchResults route.
 Use the Navbar Component while passing the handleSearch function to the setSearchResults prop.
-Define route for SearchResults component, pass a prop named results with the value of searchResults.
+Define route for SearchResults component, pass a prop named results with the value of searchResults. 
 Add more Components and Routes...
 
 Step 5: Create SearchBar Component
@@ -111,11 +111,23 @@ Pass the search results to the parent component.
 Clear the search term.
 Render the search bar component, create input field for entering the search term and button to trigger the search.
 
+Lesson 6: Create Slider/Carousel and Contact Form
 
+Contact Form:
 
+Start by creating a React functional component named Contact.
+Inside the Contact component, initialize the state using the useState hook. The state should include properties for display, firstName, lastName, phone, email, and textarea.
+Implement the inputCheck function to handle input validation. This function will be called when any input field changes.
+Implement the submitCheck function to perform form validation when the submit button is clicked.
+In the return statement of the component, render the form with input fields and the submit button. Attach event handlers for the onChange and onClick events.
+Fill in the remaining JSX structure for the form, including the header and other input fields.
 
+Slider/Carousel: 
 
-
+Install React Slick and its required styles: npm install react-slick slick-carousel
+Initializes a variable settings with configuration options for the Slider component.
+In the return statement include a container for the 'Slider' component with 'n' slides.
+Add a content container with a heading and paragraph, and finally, the Footer component.
 
 
 
