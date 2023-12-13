@@ -111,7 +111,7 @@ Pass the search results to the parent component.
 Clear the search term.
 Render the search bar component, create input field for entering the search term and button to trigger the search.
 
-Lesson 6: Create Slider/Carousel and Contact Form
+Lesson 4: Create Slider/Carousel and Contact Form
 
 Contact Form:
 
@@ -129,7 +129,24 @@ Initializes a variable settings with configuration options for the Slider compon
 In the return statement include a container for the 'Slider' component with 'n' slides.
 Add a content container with a heading and paragraph, and finally, the Footer component.
 
+Lesson 5: Sending Emails with emailjs in React
 
-
+Step 1: Import the emailjs library.
+Step 2: Create a function to handle the email sending process.
+Step 3: Define initial form state using useState.
+Step 4: Define the parameters for sending the email ( servide, template and public ID's).
+Step 5: Extract the relevant data for the email from your form.
+Step 6: Update the submitCheck functions (use destructuring assignment).
+Step 7: Assigned button element to constant variable using getElementById method.
+Step 8: Check if all fields are filled.
+Step 9: Check if the email format is correct.
+Step 10: Use Email.js to send the email ( you can find a template on emailjs.com).
+Step 11: Handle successful email sending.
+Step 12: Handle email sending error.
+Homework:
+Step 13: Include a window.alert for a successful email.
+Step 14: Add the "success"/"error" classes to the submitBtn element using the classList.add method.
+Step 15: After a delay of 'n' milliseconds, remove the "success" and "error" classes from the submitBtn using the setTimeout function.
+Dont forget!!! to update the Email.js service ID, template ID, and public key with your actual credentials.
 
 
