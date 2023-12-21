@@ -1,3 +1,63 @@
+import Airbus from "./components/Approvals/Airbus";
+import Babcock from "./components/Approvals/Babcock";
+import Heroux from "./components/Approvals/Heroux";
+import BAeSystems from "./components/Approvals/BAeSystems";
+import SpiritAeroSystemsEurope from "./components/Approvals/SpiritAeroSystemsEurope";
+import RRCS from "./components/Approvals/RRCS";
+import MeggittAerospace from "./components/Approvals/MeggittAerospace";
+import EatonAeroquipAeroDivision from "./components/Approvals/EatonAeroquipAeroDivision";
+import Claverham from "./components/Approvals/Claverham";
+import FlightRefuelling from "./components/Approvals/FlightRefuelling";
+import SafranPowerUK from "./components/Approvals/SafranPowerUK";
+import CollinsAerospace from "./components/Approvals/CollinsAerospace";
+import Liebherr from "./components/Approvals/Liebherr";
+import Lockheed from "./components/Approvals/Lockheed";
+import MoogAerocraftGroup from "./components/Approvals/MoogAerocraftGroup";
+import HSMarstonAerospace from "./components/Approvals/HSMarstonAerospace";
+import MartinBakerAircraft from "./components/Approvals/MartinBakerAircraft";
+import MessierBugattiDowty from "./components/Approvals/MessierBugattiDowty";
+import Dowty from "./components/Approvals/Dowty";
+import MettisAerospace from "./components/Approvals/MettisAerospace";
+import ParkerHannifinAndPrattAndWhitney from "./components/Approvals/ParkerHannifinAndPrattAndWhitney";
+import HawkerBeechcraft from "./components/Approvals/HawkerBeechcraft";
+import RollsRoyceAerospaceAndOverhaulAndRepair from "./components/Approvals/RollsRoyceAerospaceAndOverhaulAndRepair";
+import RollsRoyceDeutschland from "./components/Approvals/RollsRoyceDeutschland";
+import TriumphActuationSystems from "./components/Approvals/TriumphActuationSystems";
+import GEAviation from "./components/Approvals/GEAviation";
+import MODDefenceStandards from "./components/Approvals/MODDefenceStandards";
+import ThirdPartyAccreditationScope from "./components/Approvals/Third";
+
+const approvalComponents = {
+  Airbus,
+  Babcock,
+  Heroux,
+  BAeSystems,
+  SpiritAeroSystemsEurope,
+  RRCS,
+  MeggittAerospace,
+  EatonAeroquipAeroDivision,
+  Claverham,
+  FlightRefuelling,
+  SafranPowerUK,
+  CollinsAerospace,
+  Liebherr,
+  Lockheed,
+  MoogAerocraftGroup,
+  HSMarstonAerospace,
+  MartinBakerAircraft,
+  MessierBugattiDowty,
+  Dowty,
+  MettisAerospace,
+  ParkerHannifinAndPrattAndWhitney,
+  HawkerBeechcraft,
+  RollsRoyceAerospaceAndOverhaulAndRepair,
+  RollsRoyceDeutschland,
+  TriumphActuationSystems,
+  GEAviation,
+  MODDefenceStandards,
+  ThirdPartyAccreditationScope,
+};
+
 const sections = [
   {
     title: "Anodising",
@@ -20,7 +80,6 @@ const sections = [
           processes do not produce a coating but are a conversion of the surface
           aluminium to aluminium oxide and are therefore metallurgically bonded.
         </p>
-        <br />
         <p>
           Both the Chromic and sulphuric acid methods produce a dense layer,
           which, because it is porous, requires a subsequent sealing process to
@@ -35,7 +94,6 @@ const sections = [
           the anodised film, as the thinner the film, the less dye will be
           absorbed.
         </p>
-        <br />
         <p>
           A major benefit of anodising is that because the oxide film is
           electrically resistant, the film is distributed across the component
@@ -57,7 +115,6 @@ const sections = [
           subsequent painting operations as the first coat of paint soaks into
           the pores.
         </p>
-        <br />
         <p>
           The thin film also reduces the possibility of fatigue fracture on the
           component. Furthermore, unlike Sulphuric acid, Chromic acid protects
@@ -66,7 +123,6 @@ const sections = [
           component. These two attributes make Chromic acid anodising ideal for
           critical components in the aerospace and defence sectors.
         </p>
-        <br />
         <p>
           A further benefit of the chromic process is that the chromic solution
           is extremely searching and will seep into even the smallest of flaws.
@@ -98,14 +154,12 @@ const sections = [
           anodising. Thus, combined with the ability to accept dye, sulphuric
           anodised films offer a wide variety of visual finishes.
         </p>
-        <br />
         <p>
           Sulphuric anodising can be found in almost every walk of life wherever
           aluminium is used and examples of this process can be seen on domestic
           cookware, hand tools, fascias for computers and televisions,
           automotive trim etc.
         </p>
-        <br />
         <p>
           Sulphuric acid anodising may also be used to apply anodic films on
           Titanium. These films are relatively thin but prevent natural
@@ -142,7 +196,6 @@ const sections = [
           performance coatings can significantly improve the performance and
           life of these components.
         </p>
-        <br />
         <p>
           Ipcote/MCAC is a range of sacrificial aluminium ceramic coatings with
           high resistance to oxidation, salt and chemical corrosion as well as
@@ -153,7 +206,6 @@ const sections = [
           effective in other applications such as exhaust systems, heat
           exchangers and even landing gear.
         </p>
-        <br />
         <p>
           The corrosion resistance of these coatings has been found to be so
           good that they are now being specified by users as acceptable
@@ -163,7 +215,6 @@ const sections = [
           which when applied on top of an Ipcote base will improve performance
           even further.
         </p>
-        <br />
         <p>
           Although the standard Ipcote range is water based and therefore
           environmentally friendly it does contain small amounts of Chrome,
@@ -181,7 +232,7 @@ const sections = [
           components that for various reasons may not be lubricated by the more
           traditional oils and greases and in these circumstances materials such
           as PTFE, Graphite and molybdenum disulphide can be used. Ashton &
-          Moore with it’s wide experience of applying high performance paints
+          Moore with it's wide experience of applying high performance paints
           are highly qualified to work with these materials and can offer a wide
           range of materials depending on whether simple lubrication or more
           complex load bearing anti frictional characteristics are required.
@@ -204,7 +255,7 @@ const sections = [
           site which, being Midlands based, is ideally situated to service the
           whole of the country.
         </p>
-        <br />
+        
         <p>
           Complementing our plating, painting and anodising capability, (see
           other pages), non destructive testing offers Aerospace, Defence and
@@ -213,20 +264,20 @@ const sections = [
           logistical problems, although of course we also offer a “Stand alone”
           service for this and all our processes.
         </p>
-        <br />
+        
         <p>
           Our NDT department offers magnetic particle and fluorescent dye
           penetrant services, having approvals from Nadcap plus an extensive
           range of aerospace and industrial specifiers (see “our approvals” page
           for detailed list.
         </p>
-        <br />
+        
         <p>
           All of our NDT operatives are at least level II qualified and our MD,
           Dr Keith Tucker, holds level III status accepted by all the approval
           bodies that we work for .
         </p>
-        <br />
+        
         <p>
           For further information about this and other benefits we can offer
           please contact our sales department on 08456 18 81 96 or e-mail
@@ -247,37 +298,37 @@ const sections = [
           non metallic surfaces, our painting division is at the forefront of
           technology.
         </p>
-        <br />
+        
 
         <p>
           We specialise in epoxy, acrylic, polyurethane and PTFE coatings for
           the aerospace and defence industries.
         </p>
-        <br />
+        
         <p>
           With our more specialised coatings we can offer infra red reflectivity
           (IRR) for military purposes, dry film lubrication or even high levels
           of corrosion protection coupled with resistance to temperatures in
           excess of 700o C.
         </p>
-        <br />
+        
         <p>
           Should very high quality lacquered finishes on polished brass or
           stainless steel be required, we can provide them.
         </p>
-        <br />
+        
         <p>
           Modern high performance products require high performance protection
           frequently from specially formulated products with specific
           performance attributes and painting is no exception.
         </p>
-        <br />
+        
         <p>
           The aircraft industry for example requires paints which will resist
           fire, heat, wear, corrosion, as well as attack from fuels and
           hydraulic fluids as well as abrasion and impact from everyday use.
         </p>
-        <br />
+        
         <p>
           Ashton & Moore's expertise in this field allows us to offer paint for
           almost any application whether a specific system is specified, as
@@ -285,7 +336,7 @@ const sections = [
           offering solutions to companies who require a given performance but
           need advice on a system to attain that performance.
         </p>
-        <br />
+        
         <p>
           Currently Ashton and Moore offer Epoxy, acrylic, polyurethane systems
           along with dry film lubricants such as PTFE and molybdenum disulphide,
@@ -294,7 +345,7 @@ const sections = [
           applications and even paints which, in some applications, can be used
           as a replacement for cadmium plating.
         </p>
-        <br />
+        
         <p>
           Exacting engineering requirements require that specific areas of
           components should not be coated. As with our other divisions, our
@@ -347,7 +398,7 @@ const sections = [
           action producing an exceptionally strong bond of the phosphate layer
           to the component surface.
         </p>
-        <br />
+        
         <p>
           The coating produced is crystalline and porous and forms a very good
           base for subsequent applications. As an undercoat for paints it
@@ -356,7 +407,7 @@ const sections = [
           performance of the component, or provide lubricity for subsequent
           manufacturing operations.
         </p>
-        <br />
+        
 
         <p>
           Although most commonly applied to ferrous materials, it can also be
@@ -364,7 +415,7 @@ const sections = [
           painting operations, both corrosion performance and adhesion are
           considerably improved.
         </p>
-        <br />
+        
 
         <p>
           Ashton & Moore Ltd. offers four types of Phosphating, Zinc Phosphate
@@ -379,7 +430,7 @@ const sections = [
           compressive, coating continues to offer lubricative properties for
           extended life.
         </p>
-        <br />
+        
 
         <p>
           We also offer low temperature phosphate used on components sensitive
@@ -423,7 +474,7 @@ const sections = [
           from other parts of the engine preventing them from abrading other
           parts of the engine, this extends engine life dramatically.
         </p>
-        <br />
+        
         <p>
           Unfortunately in this type of application Lead readily oxidises and
           wears away, to prevent this, a thin film of pure Indium is plated on
@@ -432,7 +483,7 @@ const sections = [
           does not oxidise, thereby lasting for many years.
         </p>
         <h3>Silver Plating</h3>
-        <br />
+        
 
         <p>
           Silver, like lead, also has excellent lubrication and anti galling
@@ -440,7 +491,7 @@ const sections = [
           addition of the brightening agents used for decorative purposes, such
           as table wear and jewellery.
         </p>
-        <br />
+        
         <p>
           The even white matt coating produced is used extensively in high
           performance applications to prevent assemblies of similar materials
@@ -459,7 +510,7 @@ const sections = [
           limited by law to use only on aerospace products and some safety
           critical applications.
         </p>
-        <br />
+        
         <p>
           As well as being conductive the cadmium plating has predictable torque
           characteristics, good lubricity and works well as either a final
@@ -484,4 +535,4 @@ const sections = [
   },
 ];
 
-export default sections;
+export { sections, approvalComponents };

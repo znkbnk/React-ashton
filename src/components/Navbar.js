@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../Navbar.css";
 import SearchBar from "./SearchBar";
-import sections from "../data";
+import {sections} from "../data";
 
 const Navbar = ({ setSearchResults }) => {
   const [showNavBar, setShowNavbar] = useState(false);
@@ -104,8 +104,8 @@ const Navbar = ({ setSearchResults }) => {
             </li>
             <li>
               <i>{/*icon*/}</i>
-              <NavLink to='/Aprovals' onClick={handleCloseNavbar}>
-                Aprovals
+              <NavLink to='/Approvals' onClick={handleCloseNavbar}>
+                Approvals
               </NavLink>
             </li>
             <li>

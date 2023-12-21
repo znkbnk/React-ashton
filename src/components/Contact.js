@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Contact.css"; 
+import "../Contact.css";
 import Footer from "./Footer";
 import emailjs from "emailjs-com";
 
@@ -8,7 +8,7 @@ const Contact = () => {
     display: false,
     firstName: "",
     lastName: "",
-    companyName: '',
+    companyName: "",
     phone: "",
     email: "",
     textarea: "",
@@ -21,7 +21,8 @@ const Contact = () => {
   };
 
   const submitCheck = () => {
-    const { firstName, lastName, companyName, phone, email, textarea } = formData;
+    const { firstName, lastName, companyName, phone, email, textarea } =
+      formData;
     const submitBtn = document.getElementById("submitBtn");
 
     if (
@@ -33,10 +34,10 @@ const Contact = () => {
       !textarea
     ) {
       alert("Please fill in all fields.");
-      document.getElementById("submitBtn").classList.add("error");
+      document.getElementById("submitBtn").classNameList.add("error");
     } else if (!email.match(/@./g)) {
       alert("Email is in the wrong format.");
-      document.getElementById("submitBtn").classList.add("error");
+      document.getElementById("submitBtn").classNameList.add("error");
     } else {
       // Set the recipient's email dynamically
 
@@ -57,21 +58,21 @@ const Contact = () => {
         .then((response) => {
           console.log("Email sent successfully:", response);
           setFormData({ ...formData, display: true });
-          submitBtn.classList.add("success");
+          submitBtn.classNameList.add("success");
           window.alert("Email sent successfully!");
           // Reset button color after 3 seconds
           setTimeout(() => {
-            submitBtn.classList.remove("success", "error");
+            submitBtn.classNameList.remove("success", "error");
           }, 3000);
         })
         .catch((error) => {
           console.error("Error sending email:", error);
           alert("Error sending email. Please try again later.");
-          submitBtn.classList.add("error");
+          submitBtn.classNameList.add("error");
 
           // Reset button color after 3 seconds
           setTimeout(() => {
-            submitBtn.classList.remove("success", "error");
+            submitBtn.classNameList.remove("success", "error");
           }, 3000);
         });
     }
@@ -92,206 +93,149 @@ const Contact = () => {
         </div>
         <div className='content-container'>
           <div className='left-section'>
-            <h2>Left Section</h2>
-            <table class='borderless' width='100%'>
-              <tbody>
-                <tr></tr>
-                <tr>
-                  <td>
-                    Managing Director and NDT Level III
-                    <hr />
-                  </td>
-                  <td>-Dr. Keith Tucker</td>
-                </tr>
-                <tr>
-                  <td>
-                    <p>
-                      Works Director
-                      <hr />
-                    </p>
-                  </td>
-                  <td>
-                    <p>-Mark Hudson</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Production Manager
-                    <hr />
-                  </td>
-                  <td>
-                    <p>-Nazia Kouser</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Quality Manager</td>
+            <div className='contact-container-names'>
+              <h1>Contact Us</h1>
+              <div className='icons'>
+                <i>
+                  <span className='fa fa-map-marker' aria-hidden='true'></span>
+                  Ashton & Moore Limited 12 Smith Street, Hockley, Birmingham,
+                  B19 3EX
+                </i>
 
-                  <td>-Mark Nikolic</td>
-                </tr>
-                <tr>
-                  <td>
-                    <span>Quality Administrator</span>
-                  </td>
-                  <td>-Valerie Mcadorey</td>
-                </tr>
-                <tr></tr>
-                <tr>
-                  <td>
-                    <span>
-                      <span>Technical Officer</span>
-                    </span>
-                  </td>
-                  <td>
-                    <span>
-                      <span>Joseph Adams</span>
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Technical Officer</td>
+                <i>
+                  <span className='fa fa-phone' aria-hidden='true'></span>
+                  08456 1881 96 (3p/min + telecoms companies access charge)
+                </i>
 
-                  <td>Paula Kalika</td>
-                </tr>
-                <hr />
-
-                <tr>
-                  <td>Quotations</td>
-                  <td>
-                    <p>-Jean Archer</p>
-                    <p>-Carol Smith</p>
-                    <p>-Greg Barrett</p>
-                  </td>
-                </tr>
-                <hr />
-
-                <tr>
-                  <td>Contract Review / Customer Liaison</td>
-                  <td>
-                    <p>
-                      <span>-Andrew</span>
-                    </p>
-                    <p>-Ellie Vaughan</p>
-                  </td>
-                </tr>
-                <hr />
-
-                <tr>
-                  <td>
-                    <span>Financial Controller</span>
-                  </td>
-                  <td>
-                    <span>
-                      <span>-Colin Marks</span>
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span>
-                      <span>Accounts Clerk</span>
-                    </span>
-                  </td>
-                  <td>
-                    <span>
-                      <span>-Rita Cooper</span>
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span>
-                      <span>Purchasing and Stores</span>
-                    </span>
-                  </td>
-                  <td>Ted Tancred / Paul Laurence</td>
-                </tr>
-                <tr>
-                  <td>
-                    <span>
-                      <span>Despatch Supervisor</span>
-                    </span>
-                  </td>
-                  <td>
-                    <span>
-                      <span>-Tariq Hussain</span>
-                    </span>
-                  </td>
-                </tr>
-                <tr></tr>
-                <tr>
-                  <td>
-                    <span>
-                      <span>Paint Shop Supervisors</span>
-                    </span>
-                  </td>
-                  <td>
-                    <span>
-                      <span>-Will Ashman</span>
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span>
-                      <span>Phosphating / Silver / Cadmium Supervisor</span>
-                    </span>
-                  </td>
-                  <td>
-                    <span>
-                      <span>-Kevin McGihon</span>
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span>
-                      <span>
-                        Sulphuric Anodising Supervisor / Thin Film Sulphuric
-                        Anodising
-                      </span>
-                    </span>
-                  </td>
-                  <td>
-                    <span>-Mark Downey</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span>Chromic Anodising Supervisor</span>
-                  </td>
-                  <td>
-                    <span>-Arthur Worth</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span>Electropolishing Supervisor</span>
-                  </td>
-                  <td>
-                    <span>-Mark Downey</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span>Tartaric Sulphuric Anodising</span>
-                  </td>
-                  <td>
-                    <span>-Mark Downey</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>NDT Supervisor</td>
-                  <td>-Andrew Hale</td>
-                </tr>
-                <hr />
-              </tbody>
-            </table>
+                <i>
+                  <span className='fa fa-envelope' aria-hidden='true'></span>
+                  contact@ashton-moore.co.uk
+                </i>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong> Managing Director and NDT Level III</strong>
+                </div>
+                <div className='name'>Dr. Keith Tucker</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong> Works Director</strong>
+                </div>
+                <div className='name'>Mark Hudson</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong> Production Manager</strong>
+                </div>
+                <div className='name'>Nazia Kouser</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Quality Manager</strong>
+                </div>
+                <div className='name'>Mark Nikolic</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Quality Administrator</strong>
+                </div>
+                <div className='name'>Valerie Mcadorey</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Technical Officer</strong>
+                </div>
+                <div className='name'>Joseph Adams, Paula Kalika</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Quotations</strong>
+                </div>
+                <div className='name'>Jean Archer, Carol Smith, Greg Barrett</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Contract Review / Customer Liaison</strong>
+                </div>
+                <div className='name'>Andrew, Ellie Vaughan</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Financial Controller</strong>
+                </div>
+                <div className='name'>Colin Marks</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Accounts Clerk</strong>
+                </div>
+                <div className='name'>Rita Cooper</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Purchasing and Stores</strong>
+                </div>
+                <div className='name'>Paul Laurence</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Despatch Supervisor</strong>
+                </div>
+                <div className='name'>Tariq Hussain</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Paint Shop Supervisors</strong>
+                </div>
+                <div className='name'>Will Ashman</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Phosphating / Silver / Cadmium Supervisor</strong>
+                </div>
+                <div className='name'>Kevin McGihon</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>
+                    Sulphuric Anodising Supervisor / Thin Film Sulphuric
+                    Anodising
+                  </strong>
+                </div>
+                <div className='name'>Mark Downey</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Chromic Anodising Supervisor</strong>
+                </div>
+                <div className='name'>Arthur Worth</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Electropolishing Supervisor</strong>
+                </div>
+                <div className='name'>Mark Downey</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>Tartaric Sulphuric Anodising</strong>
+                </div>
+                <div className='name'>Mark Downey</div>
+              </div>
+              <div className='contact-list'>
+                <div className='position'>
+                  <strong>NDT Supervisor</strong>
+                </div>
+                <div className='name'>Andrew Hale</div>
+              </div>
+            </div>
           </div>
           <div className='contact-container'>
             <div className='form'>
               <div className='header'>
-                <h1>Welcome!</h1>
-                <p>Please provide your information below.</p>
+                <h2>Make An Enquiry</h2>
+                <h2>Please provide your information below.</h2>
               </div>
               <div className='inputcontainer'>
                 <input

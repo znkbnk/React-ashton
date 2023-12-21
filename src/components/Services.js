@@ -13,7 +13,7 @@ const Services = ({ sections }) => {
         </video>
       </div>
       <div>
-        <h2>Services</h2>
+        <h1>Services</h1>
       </div>
       <div>
         <ul className='cards-container'>
@@ -22,7 +22,7 @@ const Services = ({ sections }) => {
               <div className='content'>
                 <h2>{section.title}</h2>
                 <p>{section.description}</p>
-                <NavLink to={section.linkTo} className='navlink'>
+                <NavLink to={`/Services${section.linkTo}`} className='navlink'>
                   Read More
                 </NavLink>
               </div>

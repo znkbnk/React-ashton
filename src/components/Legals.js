@@ -5,7 +5,9 @@ const Legals = () => {
   return (
     <div>
       Legals
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

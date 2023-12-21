@@ -17,35 +17,35 @@ const Footer = () => {
       </div>
 
       <div className='footer-section'>
-        {/* Text */}
-        <p>Some text here...</p>
-      </div>
-
-      <div className='footer-section'>
-        {/* Text Links - Section 1 */}
-        <h4>Useful Links</h4>
         <ul>
-          <li>
-            <a href='#'>Link 1</a>
-          </li>
-          <li>
-            <a href='#'>Link 2</a>
-          </li>
-          {/* Add more links as needed */}
+          <li>Ashton & Moore Limited</li>
+          <li>12 Smith Street, Hockley</li>
+          <li>Birmingham, B19 3EX</li>
         </ul>
       </div>
 
       <div className='footer-section'>
-        {/* Text Links - Section 2 */}
-        <h4>More Links</h4>
         <ul>
           <li>
-            <a href='#'>Link 3</a>
+            <a href='/'>Privacy Policy</a>
           </li>
           <li>
-            <a href='#'>Link 4</a>
+            <a href='/'>Cookie Policy</a>
           </li>
-          {/* Add more links as needed */}
+          <li>
+            <a href='/'>Terms and Conditions</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className='footer-section'>
+        <ul>
+          <li>
+            Company No: 195160
+          </li>
+          <li>
+            VAT No: 670939307
+          </li>
         </ul>
       </div>
     </footer>

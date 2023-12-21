@@ -1,11 +1,9 @@
-
-
 :root {
-  --top: #190019;
-  --active: #854f6c;
-  --textwhite:	#fbe4d8;
-  --textblack:	#dfb6b2;
-  --main:#dfb6b2;
+  --top: #262018;
+  --active: #c16e36;
+  --textwhite: #ded1b7;
+  --textblack: #62361e;
+  --main: #ded1b7;
 }
 
 .menu-icon {
@@ -19,7 +17,6 @@
   top: 0;
   z-index: 100;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
-
 }
 
 .container {
@@ -31,10 +28,20 @@
 }
 
 h1 {
+  font-size: 6vh;
+
+  color: var(--textblack);
+  margin-right: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+h3 {
+  font-size: 5vh;
   color: var(--textwhite);
   margin-right: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
+  text-align: center;
 }
 
 .leftside {
@@ -45,10 +52,11 @@ h1 {
 
 h2 {
   font-size: 5vh;
-  text-align: center;
   color: var(--textwhite);
-  margin-bottom: 5vh;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
 }
 
 .home-container {
@@ -138,7 +146,7 @@ h2 {
     margin-right: auto;
     margin-top: 22px;
   }
-   .search-container {
+  .search-container {
     display: flex;
     align-items: center;
     max-width: 14em;
@@ -155,10 +163,7 @@ h2 {
   }
 }
 
-
-
 /* Search bar */
-
 
 .search-container {
   display: flex;
@@ -167,7 +172,7 @@ h2 {
   min-width: 10em;
   width: fit-content;
   height: fit-content;
-  background-color: #5c6370;
+  background-color: #62361e;
   border-radius: 0.8em;
   overflow: hidden;
   margin-right: 10px;
@@ -177,12 +182,13 @@ h2 {
 .search-icon {
   height: 1em;
   padding: 0 0.5em 0 0.8em;
-  fill: #abb2bf;
+  color: var(--textwhite);
 }
 
 .search-input {
   background-color: transparent;
-  color: #ffffff;
+  color: var(--textwhite);
+
   outline: none;
   width: 100%;
   border: 0;
@@ -191,5 +197,5 @@ h2 {
 }
 
 .search-input::placeholder {
-  color: #abb2bf;
+  color: var(--textwhite);
 }

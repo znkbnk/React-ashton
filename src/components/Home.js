@@ -8,16 +8,18 @@ import "../Carousel.css";
 import image1 from "../images/carousel1.jpg";
 import image2 from "../images/carousel2.jpg";
 import image3 from "../images/carousel3.jpg";
+import NewsItem from "./NewsItem";
 
 const Home = () => {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, 
+    autoplay: true,
     autoplaySpeed: 5000,
+    prevArrow: <></>, // Set to empty fragment to hide the default arrows
+    nextArrow: <></>,
   };
 
   return (
@@ -36,11 +38,41 @@ const Home = () => {
         </Slider>
       </div>
 
-      <div className='content-container'>
-        <h2>News</h2>
-        Hello, this is your news content.
+      <div>
+        <h1>News</h1>
+
+        <div className='news-container'>
+          <NewsItem
+            image={image1}
+            title='News Title 1'
+            description='This is a short description of the news.'
+            link='/news/1' // Replace with the actual link to the news page
+          />
+
+          <NewsItem
+            image={image2}
+            title='News Title 2'
+            description='Another short description of the news.'
+            link='/news/2' // Replace with the actual link to the news page
+          />
+          <NewsItem
+            image={image1}
+            title='News Title 3'
+            description='This is a short description of the news.'
+            link='/news/1' // Replace with the actual link to the news page
+          />
+
+          <NewsItem
+            image={image2}
+            title='News Title 4'
+            description='Another short description of the news.'
+            link='/news/2' // Replace with the actual link to the news page
+          />
+        </div>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };

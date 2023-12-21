@@ -149,4 +149,18 @@ Step 14: Add the "success"/"error" classes to the submitBtn element using the cl
 Step 15: After a delay of 'n' milliseconds, remove the "success" and "error" classes from the submitBtn using the setTimeout function.
 Dont forget!!! to update the Email.js service ID, template ID, and public key with your actual credentials.
 
+Lesson 6: Building an Enlargable News Card Component 
+
+Step 1: Import React and useState
+Step 2: Create the NewsItem Component
+Step 3: Define state for managing whether the card is enlarged or not
+Step 4: Define function to toggle the enlarged state
+Step 5: Define function to close the enlarged card
+Step 6: In return statement use className to conditionally apply CSS classes for styling
+Step 7: Render either the image or close button based on the enlarged state 
+Step 8: Render either additional content or the title/description based on the enlarged state (thats new div)
+Step 9: Render the "READ MORE" button only if not enlarged ( thats 3rd render )
+Step 10: Add/update stylings for: .service-container .enlarged, .enlarged-visible, .service-cards, .close-button, .news-card, .custom-button, .news-card
+         
+       
 

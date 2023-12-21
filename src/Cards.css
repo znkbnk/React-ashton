@@ -8,13 +8,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+
 }
 
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content:center;
-  position: relative; /* Ensure the cards container is positioned relative to its parent */
+  position: relative; 
   z-index: 2; 
   min-height: 100vh;
 }
@@ -27,9 +28,10 @@
   position: relative;
   width: 300px;
   height: 400px;
-  margin: 40px 30px;
   transition: 0.5s;  
   max-width: 400px; 
+  margin: 50px;
+
 }
 
 .cards::before,
@@ -43,7 +45,7 @@
   border-radius: 8px;
   transform: skewX(12deg);
   transition: 0.5s;
-  background: linear-gradient(315deg,#2b124c,	#dfb6b2);
+  background: linear-gradient(315deg,#c16e36,	#62361e);
 }
 .cards::after {
   filter: blur(30px);
@@ -64,9 +66,8 @@
   backdrop-filter: blur(10px);
   transition: 0.5s;
   border: 0.5px solid rgba(255, 255, 255, 0.07);
-  color: #fbe4d8;
+  color: #ded1b7;
   transform: skewX(-1deg);
-
 }
 .cards:hover .content {
   padding: 60px 40px;
@@ -84,15 +85,14 @@
 }
 .cards .content a {
   font-size: 1.1em;
-  color: #000;
+  color: #262018;
   display: inline-block;
-  background: #fff;
+  background: #ded1b7;
   padding: 12px;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 700;
   margin-top: 5px;
-  
 }
 
 @media (max-width: 600px) {
@@ -102,8 +102,10 @@
   }
 .cards::before,
   .cards::after {
-    transform: skewX(5deg); /* Adjust the skewX value for smaller screens */
+    transform: skewX(5deg); 
   }
+ 
   
  
 }
+
