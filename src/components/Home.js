@@ -9,6 +9,8 @@ import image1 from "../images/carousel1.jpg";
 import image2 from "../images/carousel2.jpg";
 import image3 from "../images/carousel3.jpg";
 import NewsItem from "./NewsItem";
+import { news } from "../data";
+
 
 const Home = () => {
   const settings = {

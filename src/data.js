@@ -58,6 +58,15 @@ const approvalComponents = {
   ThirdPartyAccreditationScope,
 };
 
+const news = [
+  {
+    title: "A year of Success at Ashton & Moore Ltd.",
+    description:
+      "In order to permit Ashton & Moore to continue as one of the best sub-contract metal finishers in the dynamic global Aerospace and Defence markets, fulfil our commitment to manufacturing 4.0 and move with the times, we have had a busy, yet fruitful year. Helped by a Midlands Aerospace and Nottingham University ERDF Aerospace UP Grant, we have improved our processing, inspection, data analysis, IT and communication capabilities. Indeed, we have not only attained Cyber Essentials Certification, but as a result of an invitation by a major global customer, attained JOSCAR registration. All of which illustrates our goal to provide the best possible service to our customers, both now and in the future.",
+    image: "https://www.ashton-moore.co.uk/wp-content/uploads/2022/10/AM.jpg",
+  },
+];
+
 const sections = [
   {
     title: "Anodising",
@@ -255,7 +264,7 @@ const sections = [
           site which, being Midlands based, is ideally situated to service the
           whole of the country.
         </p>
-        
+
         <p>
           Complementing our plating, painting and anodising capability, (see
           other pages), non destructive testing offers Aerospace, Defence and
@@ -264,20 +273,20 @@ const sections = [
           logistical problems, although of course we also offer a “Stand alone”
           service for this and all our processes.
         </p>
-        
+
         <p>
           Our NDT department offers magnetic particle and fluorescent dye
           penetrant services, having approvals from Nadcap plus an extensive
           range of aerospace and industrial specifiers (see “our approvals” page
           for detailed list.
         </p>
-        
+
         <p>
           All of our NDT operatives are at least level II qualified and our MD,
           Dr Keith Tucker, holds level III status accepted by all the approval
           bodies that we work for .
         </p>
-        
+
         <p>
           For further information about this and other benefits we can offer
           please contact our sales department on 08456 18 81 96 or e-mail
@@ -298,37 +307,36 @@ const sections = [
           non metallic surfaces, our painting division is at the forefront of
           technology.
         </p>
-        
 
         <p>
           We specialise in epoxy, acrylic, polyurethane and PTFE coatings for
           the aerospace and defence industries.
         </p>
-        
+
         <p>
           With our more specialised coatings we can offer infra red reflectivity
           (IRR) for military purposes, dry film lubrication or even high levels
           of corrosion protection coupled with resistance to temperatures in
           excess of 700o C.
         </p>
-        
+
         <p>
           Should very high quality lacquered finishes on polished brass or
           stainless steel be required, we can provide them.
         </p>
-        
+
         <p>
           Modern high performance products require high performance protection
           frequently from specially formulated products with specific
           performance attributes and painting is no exception.
         </p>
-        
+
         <p>
           The aircraft industry for example requires paints which will resist
           fire, heat, wear, corrosion, as well as attack from fuels and
           hydraulic fluids as well as abrasion and impact from everyday use.
         </p>
-        
+
         <p>
           Ashton & Moore's expertise in this field allows us to offer paint for
           almost any application whether a specific system is specified, as
@@ -336,7 +344,7 @@ const sections = [
           offering solutions to companies who require a given performance but
           need advice on a system to attain that performance.
         </p>
-        
+
         <p>
           Currently Ashton and Moore offer Epoxy, acrylic, polyurethane systems
           along with dry film lubricants such as PTFE and molybdenum disulphide,
@@ -345,7 +353,7 @@ const sections = [
           applications and even paints which, in some applications, can be used
           as a replacement for cadmium plating.
         </p>
-        
+
         <p>
           Exacting engineering requirements require that specific areas of
           components should not be coated. As with our other divisions, our
@@ -398,7 +406,7 @@ const sections = [
           action producing an exceptionally strong bond of the phosphate layer
           to the component surface.
         </p>
-        
+
         <p>
           The coating produced is crystalline and porous and forms a very good
           base for subsequent applications. As an undercoat for paints it
@@ -407,7 +415,6 @@ const sections = [
           performance of the component, or provide lubricity for subsequent
           manufacturing operations.
         </p>
-        
 
         <p>
           Although most commonly applied to ferrous materials, it can also be
@@ -415,7 +422,6 @@ const sections = [
           painting operations, both corrosion performance and adhesion are
           considerably improved.
         </p>
-        
 
         <p>
           Ashton & Moore Ltd. offers four types of Phosphating, Zinc Phosphate
@@ -430,7 +436,6 @@ const sections = [
           compressive, coating continues to offer lubricative properties for
           extended life.
         </p>
-        
 
         <p>
           We also offer low temperature phosphate used on components sensitive
@@ -474,7 +479,7 @@ const sections = [
           from other parts of the engine preventing them from abrading other
           parts of the engine, this extends engine life dramatically.
         </p>
-        
+
         <p>
           Unfortunately in this type of application Lead readily oxidises and
           wears away, to prevent this, a thin film of pure Indium is plated on
@@ -483,7 +488,6 @@ const sections = [
           does not oxidise, thereby lasting for many years.
         </p>
         <h3>Silver Plating</h3>
-        
 
         <p>
           Silver, like lead, also has excellent lubrication and anti galling
@@ -491,7 +495,7 @@ const sections = [
           addition of the brightening agents used for decorative purposes, such
           as table wear and jewellery.
         </p>
-        
+
         <p>
           The even white matt coating produced is used extensively in high
           performance applications to prevent assemblies of similar materials
@@ -510,7 +514,7 @@ const sections = [
           limited by law to use only on aerospace products and some safety
           critical applications.
         </p>
-        
+
         <p>
           As well as being conductive the cadmium plating has predictable torque
           characteristics, good lubricity and works well as either a final
@@ -535,4 +539,4 @@ const sections = [
   },
 ];
 
-export { sections, approvalComponents };
+export { sections, approvalComponents, news };

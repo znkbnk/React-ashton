@@ -27,7 +27,10 @@ const NewsItem = ({ image, title, description, link }) => {
         )}
         <div className='news-card'>
           {enlarged ? (
-            <p>text</p>
+            <>
+              <h1>{title}</h1>
+              <p>{description}</p>
+            </>
           ) : (
             <>
               <h1>{title}</h1>
