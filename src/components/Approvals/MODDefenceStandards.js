@@ -15,7 +15,7 @@ const MOD = () => {
       <section id='main' class='wrapper'>
         <div className='service-container'>
           <div className='service-cards'>
-            <h1>MOD Defence Standards</h1>
+            <h3>MOD Defence Standards</h3>
             <ul>
               <li>Approval No. FM00236</li>
             </ul>{" "}

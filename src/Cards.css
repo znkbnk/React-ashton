@@ -71,12 +71,12 @@
   border: 0.5px solid rgba(255, 255, 255, 0.07);
   color: #ded1b7;
   transform: skewX(-1deg);
-  border: 1px solid #ffffff49;
+  border: 1px solid #ffffff34;
 
 }
 
 .cards .content:hover {
-  border: 1px solid #ffffff9a;
+  border: 1px solid #ffffff5b;
 
 }
 .cards:hover .content {

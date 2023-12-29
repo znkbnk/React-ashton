@@ -15,7 +15,7 @@ const Parker = () => {
       <section id='main' class='wrapper'>
         <div className='service-container'>
           <div className='service-cards'>
-            <h1>Parker Hannifin & Pratt & Whitney</h1>
+            <h3>Parker Hannifin & Pratt & Whitney</h3>
             <ul>
               <li>Approval Specification AM203 J</li>
             </ul>

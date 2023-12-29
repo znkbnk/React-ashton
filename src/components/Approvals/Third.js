@@ -2,20 +2,19 @@ import React from "react";
 import Footer from "../Footer";
 import { useNavigate } from "react-router-dom";
 
-
 const ThirdPartyAccreditationScope = () => {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-   const handleBack = () => {
-     navigate(`/Approvals`); // Navigate back to the Approvals page
-   };
+  const handleBack = () => {
+    navigate(`/Approvals`); // Navigate back to the Approvals page
+  };
 
   return (
     <div>
       <section id='main' class='wrapper'>
         <div className='service-container'>
           <div className='service-cards'>
-            <h1>Third Party Accreditation Scope</h1>
+            <h3>Third Party Accreditation Scope</h3>
             <ul>
               <li>
                 Approval No. FM 00236 British Standards/Ministry of Defence

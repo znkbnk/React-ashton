@@ -52,7 +52,14 @@ const Navbar = ({ setSearchResults }) => {
             ></img>
           </Link>
         </div>
-        <SearchBar sections={sections} onSearch={handleSearch} />
+        <div className='additional-image-container'>
+          <SearchBar sections={sections} onSearch={handleSearch} />
+          <img
+            src='https://www.ashton-moore.co.uk/wp-content/uploads/2022/01/accreditations.jpg' // Replace with your image URL
+            className='additional-image'
+            alt='Additional'
+          />
+        </div>
         <div className='menu-icon' onClick={hanleShowNavnar}>
           {showNavBar ? (
             <i>
@@ -116,7 +123,11 @@ const Navbar = ({ setSearchResults }) => {
             </li>
             <li>
               <i>{/*icon*/}</i>
-              <NavLink to='/Contact' onClick={handleCloseNavbar}>
+              <NavLink
+                to='/Contact'
+                onClick={handleCloseNavbar}
+                style={{ whiteSpace: "nowrap" }}
+              >
                 Contact Us
               </NavLink>
             </li>

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Cards.css";
 import { NavLink } from "react-router-dom";
 import Footer from "./Footer";
 import video from "../images/video.mp4";
 
 const Services = ({ sections }) => {
+   useEffect(() => {
+     // Scroll to the top of the page when the component mounts
+     window.scrollTo(0, 0);
+   }, []);
   return (
     <div>
       <div className='video-container'>

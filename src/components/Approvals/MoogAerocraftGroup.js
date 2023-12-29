@@ -15,7 +15,7 @@ const BAESystems = () => {
       <section id='main' class='wrapper'>
         <div className='service-container'>
           <div className='service-cards'>
-            <h1>Moog Aerocraft Group</h1>
+            <h3>Moog Aerocraft Group</h3>
             <ul>
               <li>
                 Approval No. PRO 16691P Release - SQR-1 and SQR-2 (Previously GE

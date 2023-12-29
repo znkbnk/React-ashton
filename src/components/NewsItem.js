@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const NewsItem = ({ image, title, description, link }) => {
+const NewsItem = ({ image, title, description }) => {
   const [enlarged, setEnlarged] = useState(false);
 
   const handleEnlarge = () => {
@@ -11,6 +11,21 @@ const NewsItem = ({ image, title, description, link }) => {
     setEnlarged(false);
   };
 
+   const truncateDescription = (text, maxLength) => {
+  // Convert JSX elements to plain text
+  const plainText =
+    typeof text === "string"
+      ? text
+      : React.Children.toArray(text.props.children)
+          .map((child) =>
+            typeof child === "string" ? child : child.props.children
+          )
+          .join("");
+
+  return plainText.length > maxLength
+    ? `${plainText.slice(0, maxLength)}...`
+    : plainText;
+};
   return (
     <div
       className={`service-container ${
@@ -28,13 +43,13 @@ const NewsItem = ({ image, title, description, link }) => {
         <div className='news-card'>
           {enlarged ? (
             <>
-              <h1>{title}</h1>
+              <h3>{title}</h3>
               <p>{description}</p>
             </>
           ) : (
             <>
-              <h1>{title}</h1>
-              <p>{description}</p>
+              <h3>{title}</h3>
+              <p>{truncateDescription(description, 150)}</p>
             </>
           )}
           {!enlarged && (

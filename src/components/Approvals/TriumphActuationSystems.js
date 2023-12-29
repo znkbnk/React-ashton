@@ -15,7 +15,7 @@ const Triumph = () => {
       <section id='main' class='wrapper'>
         <div className='service-container'>
           <div className='service-cards'>
-            <h1>Triumph Actuation Systems</h1>
+            <h3>Triumph Actuation Systems</h3>
             <ul>
               <li>
                 Approval No. PRO 16691H Vendor ID: 5107 Release- SQ93 (

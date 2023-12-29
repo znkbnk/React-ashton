@@ -15,7 +15,7 @@ const BAESystems = () => {
       <section id='main' class='wrapper'>
         <div className='service-container'>
           <div className='service-cards'>
-            <h1>Spirit Aero Systems (Europe)</h1>
+            <h3>Spirit Aero Systems (Europe)</h3>
             <ul>
               <li>Approval No. SPIRIT/0161</li>
             </ul>

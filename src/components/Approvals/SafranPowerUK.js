@@ -15,7 +15,7 @@ const Safran = () => {
       <section id='main' class='wrapper'>
         <div className='service-container'>
           <div className='service-cards'>
-            <h1>Safran Power UK (Formerly Goodrich Power Systems)</h1>
+            <h3>Safran Power UK (Formerly Goodrich Power Systems)</h3>
             <ul>
               <li>
                 Approval No. 7002305 Release-981-151-001 or PS-06-10 No Specific

@@ -15,7 +15,7 @@ const RRCS = () => {
       <section id='main' class='wrapper'>
         <div className='service-container'>
           <div className='service-cards'>
-            <h1>RRCS</h1>
+            <h3>RRCS</h3>
             <ul>
               Approval No. 002305 (Previously CDS, AEC, Goodrich Birmingham)
               <li></li>

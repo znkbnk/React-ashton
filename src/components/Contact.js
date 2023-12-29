@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Contact.css";
 import Footer from "./Footer";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
+
+     useEffect(() => {
+       // Scroll to the top of the page when the component mounts
+       window.scrollTo(0, 0);
+     }, []);
   const [formData, setFormData] = useState({
     display: false,
     firstName: "",
@@ -20,7 +25,8 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const submitCheck = () => {
+  const submitCheck = (e) => {
+    e.preventDefault();
     const { firstName, lastName, companyName, phone, email, textarea } =
       formData;
     const submitBtn = document.getElementById("submitBtn");
@@ -34,10 +40,10 @@ const Contact = () => {
       !textarea
     ) {
       alert("Please fill in all fields.");
-      document.getElementById("submitBtn").classNameList.add("error");
+      document.getElementById("submitBtn").classList.add("error");
     } else if (!email.match(/@./g)) {
       alert("Email is in the wrong format.");
-      document.getElementById("submitBtn").classNameList.add("error");
+      document.getElementById("submitBtn").classList.add("error");
     } else {
       // Set the recipient's email dynamically
 
@@ -152,7 +158,9 @@ const Contact = () => {
                 <div className='position'>
                   <strong>Quotations</strong>
                 </div>
-                <div className='name'>Jean Archer, Carol Smith, Greg Barrett</div>
+                <div className='name'>
+                  Jean Archer, Carol Smith, Greg Barrett
+                </div>
               </div>
               <div className='contact-list'>
                 <div className='position'>
@@ -186,7 +194,7 @@ const Contact = () => {
               </div>
               <div className='contact-list'>
                 <div className='position'>
-                  <strong>Paint Shop Supervisors</strong>
+                  <strong>Paint Shop Supervisor</strong>
                 </div>
                 <div className='name'>Will Ashman</div>
               </div>
@@ -275,7 +283,11 @@ const Contact = () => {
                     setFormData({ ...formData, textarea: e.target.value })
                   }
                 ></textarea>
-                <button id='submitBtn' onClick={submitCheck}>
+                <button
+                  id='submitBtn'
+                  onClick={submitCheck}
+                  onTouchStart={(e) => submitCheck(e)}
+                >
                   Submit
                 </button>
               </div>

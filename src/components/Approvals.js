@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "./Footer";
-import { approvalComponents } from "../data";
+import { companies } from "../data";
 import { Link } from "react-router-dom";
 
 const Approvals = () => {
-  const approvalList = Object.keys(approvalComponents);
-
-
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -16,9 +17,11 @@ const Approvals = () => {
       <div className='service-container'>
         <div className='service-cards'>
           <ul>
-            {approvalList.map((approval) => (
-              <li key={approval}>
-                <Link to={`/Approvals/${approval}`}>{approval}</Link>
+            {companies.map((company) => (
+              <li key={company.title}>
+                <Link to={`/Approvals/${company.title.toLowerCase()}`}>
+                  {company.title}
+                </Link>
               </li>
             ))}
           </ul>

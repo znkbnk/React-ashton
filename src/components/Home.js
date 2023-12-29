@@ -44,32 +44,24 @@ const Home = () => {
         <h1>News</h1>
 
         <div className='news-container'>
-          <NewsItem
-            image={image1}
-            title='News Title 1'
-            description='This is a short description of the news.'
-            link='/news/1' // Replace with the actual link to the news page
-          />
-
-          <NewsItem
-            image={image2}
-            title='News Title 2'
-            description='Another short description of the news.'
-            link='/news/2' // Replace with the actual link to the news page
-          />
-          <NewsItem
-            image={image1}
-            title='News Title 3'
-            description='This is a short description of the news.'
-            link='/news/1' // Replace with the actual link to the news page
-          />
-
-          <NewsItem
-            image={image2}
-            title='News Title 4'
-            description='Another short description of the news.'
-            link='/news/2' // Replace with the actual link to the news page
-          />
+          {news.map((item, index) => (
+            <NewsItem
+              key={index}
+              image={item.image}
+              title={item.title}
+              description={item.description}
+              link={`/news/${index + 1}`}
+            />
+          ))}
+          {news.map((item, index) => (
+            <NewsItem
+              key={index}
+              image={item.image}
+              title={item.title}
+              description={item.description}
+              link={`/news/${index + 1}`}
+            />
+          ))}
         </div>
       </div>
       <div>

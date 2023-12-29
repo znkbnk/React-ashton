@@ -16,7 +16,7 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Reach from "./components/Reach";
 import Approvals from "./components/Approvals";
-import { sections, approvalComponents } from './data';
+import { sections, companies } from './data';
 
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -38,11 +38,11 @@ const App = () => {
         <Route path='/Services' element={<Services sections={sections} />} />
         <Route path='/Approvals' element={<Approvals />} />
 
-        {Object.keys(approvalComponents).map((approvalName) => (
+        {companies.map((company) => (
           <Route
-            key={approvalName}
-            path={`/Approvals/${approvalName.toLowerCase()}`}
-            element={React.createElement(approvalComponents[approvalName])}
+            key={company.title}
+            path={`/Approvals/${company.title.toLowerCase()}`}
+            element={company.description}
           />
         ))}
         
