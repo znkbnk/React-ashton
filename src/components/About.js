@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "./Footer";
 
 const About = () => {
   return (
@@ -36,7 +35,6 @@ const About = () => {
         frequently exceeding the quality and delivery requirements of any
         manufacturer.
       </p>
-      <Footer />
     </div>
   );
 };

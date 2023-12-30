@@ -1,6 +1,5 @@
 import React from "react";
 import {sections} from "../data";
-import Footer from "./Footer";
 
 const Plating = () => {
   const content = sections[4].content;
@@ -13,9 +12,7 @@ const Plating = () => {
           <p>{content}</p>
         </div>
       </div>
-      <div>
-        <Footer />
-      </div>
+    
     </div>
   );
 };

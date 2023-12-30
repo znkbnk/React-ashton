@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../Cards.css";
-import Footer from "./Footer";
 import "../Carousel.css";
 import image1 from "../images/carousel1.jpg";
 import image2 from "../images/carousel2.jpg";
@@ -64,9 +63,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div>
-        <Footer />
-      </div>
+     
     </div>
   );
 };

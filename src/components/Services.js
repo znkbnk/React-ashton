@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "../Cards.css";
 import { NavLink } from "react-router-dom";
-import Footer from "./Footer";
 import video from "../images/video.mp4";
 
 const Services = ({ sections }) => {
@@ -35,7 +34,7 @@ const Services = ({ sections }) => {
         </ul>
       </div>
 
-      <Footer />
+    
     </div>
   );
 };

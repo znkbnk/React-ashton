@@ -806,6 +806,515 @@ const companies = [
       </div>
     ),
   },
+  {
+    title: "Moog Aerocraft Group",
+    description: (
+      <div className='service-container'>
+        <div className='service-cards'>
+          <h3>Moog Aerocraft Group</h3>
+          <ul>
+            <li>
+              Approval No. PRO 16691P Release - SQR-1 and SQR-2 (Previously GE
+              Aviation, Smith's Aerospace and Dowty Wolverhampton)
+            </li>
+          </ul>
+          <ul>
+            <li>AMS 2411 Silver Plating</li>
+            <li>AMS 2700 Passivation of Corrosion-Resistant Steels</li>
+            <li>ASTM A967 Passivation of Stainless Steels</li>
+            <li>
+              ASTM E1417/E1417M Liquid Penetrant Testing Standard Practice
+            </li>
+            <li>ASTM E1444 Wet Continuous Method</li>
+            <li>
+              MIL-A-8625 Anodic Coating for Aluminium and Aluminium Alloys
+            </li>
+            <li>MIL-D-5541 Chemical Conversion coatings on Aluminium</li>
+            <li>NADCAP CP- Nadcap Accreditation for Chemical Processing</li>
+            <li>
+              NADCAP NDT- Nadcap Accreditation for Non-Destructive Testing
+            </li>
+            <li>
+              UKWCP.001B- MSPS 100CP.001 Sulphuric Anodising- include mandatory
+              alocroming of jig marks
+            </li>
+            <li>
+              UKWCP.001C- MSPS 100CP.001 Chromic Acid Anodising- include
+              mandatory alocroming of jig marks
+            </li>
+            <li>
+              UKWCP.002- MSPS 100CP.002 Chemical Conversion Coatings on
+              Aluminium Alloys
+            </li>
+            <li>UKWCP.004- MSPS 100CP.004 Cadmium Plating</li>
+            <li>
+              UKWCP.005- MSPS 100CP.005 Passivation of Corrosion-Resistant
+              Steels (not 440C material)
+            </li>
+            <li>
+              UKWCP.009- MSPS 100CP.009 Manganese Phosphate Treatment of Steel
+            </li>
+            <li>UKWCPS 1 Dry Film Lubricants</li>
+            <li>UKWPS 164 Electropolishing of Investment Castings</li>
+            <li>UKWPS 174 Paint Schemes</li>
+            <li>
+              UKWPS 74 Magnetic Particle Inspection - less than 1100 MPa before
+              and after plating - more than 1100 MPa after plating
+            </li>
+            <li>UKWPS 79 Fluorescent Penetrant Inspection- use PE pen only</li>
+            <li>PS 45 Temporary Protection of Parts</li>
+            <li>PS 143 Abrasive Blast</li>
+            <li>PS 156 Part Marking</li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Parker Hannifin And Pratt And Whitney",
+    description: (
+      <div className='service-container'>
+        <div className='service-cards'>
+          <h3>Parker Hannifin & Pratt & Whitney</h3>
+          <ul>
+            <li>Approval Specification AM203 J</li>
+          </ul>
+          <ul>
+            <li>A 017 MIL-A-8625F) Sulphuric Anodising</li>
+            <li>Q 050 (D112) Inspection System</li>
+            <li>R 010 (MIL-F-18264D) Paint- Organic Application</li>
+          </ul>
+          <ul>
+            <li>Pratt & Whitney (Canada)</li>
+          </ul>
+          <ul>
+            <li>AMS 2470/CPW 20 Chromic Acid Anodise</li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Rolls-Royce Aerospace & Overhaul & Repair",
+    description: (
+      <div className='service-container'>
+        <div className='service-cards'>
+          <h3>Rolls-Royce Aerospace & Overhaul & Repair</h3>
+          <ul>
+            <li>
+              Approval No. 01050 Release- RR 9000 SABRe (Flaw Detection
+              Requirements As Per Order/Drawing/Layout)
+            </li>
+          </ul>
+          <ul>
+            <li>AMS2472E Sulphuric Anodising</li>
+            <li>AMS2700 Passivation</li>
+            <li>MIL-A-8625 Type 1 Class 1 Anodising</li>
+            <li>RPS 1 Stripping of Anodised Films</li>
+            <li>RPS 6 Phosphating</li>
+            <li>
+              RPS 26-Sht. 7 Stripping of Paint Finishes for Aluminium Filled
+              Coatings
+            </li>
+            <li>RPS 26-Sht. 9 General Paint Stripping</li>
+            <li>RPS 54 sect 3 & 4 Anodising of Aluminium</li>
+            <li>
+              RPS 128 Solvent Cleaning and De-Greasing (replaced by RRP5100)
+            </li>
+            <li>RPS 168 Silver Plating</li>
+            <li>RPS 170 Cadmium Plating</li>
+            <li>RPS 386 Abrasive Blasting</li>
+            <li>RPS 436 Chemical Conversion of Aluminium</li>
+            <li>
+              RPS 440 Alkaline Cleaning and De-rusting (superseded by RRP51025)
+            </li>
+            <li>RPS 661 Organic Barrier Coatings</li>
+            <li>RPS 661/1 PTFE Dispersion</li>
+            <li>RPS 661/5 Dry Film Lubricant MSRR 3004</li>
+            <li>RPS 661/9 Molybdenum disulphide dry film lubricant</li>
+            <li>RPS 661/10 Graphite dry film lubricant</li>
+            <li>RPS 661/11 Air cure graphite dry film lubricant</li>
+            <li>RPS 661/12 Mica filled coating MSRR 9054</li>
+            <li>RPS 661/15 Heat resisting aluminium MSRR 9029</li>
+            <li>RPS 661/16 Heat resistant ES coating</li>
+            <li>RPS 661/21 Heat cured epoxy paint system</li>
+            <li>RPS 661-22 Application of Polymide Coatings</li>
+            <li>RPS 661/25 PRC-Desoto 2-part epoxy paint system</li>
+            <li>RPS 661/28 High temperature marking paints</li>
+            <li>RPS 661/30 Day-glo inspection aid paint</li>
+            <li>
+              RPS 661/32 PRC-Desoto 2-part epoxy/polyurethane paint system
+            </li>
+            <li>RPS 661/34 Epoxy varnish erosion resistant coating</li>
+            <li>RPS 661/43 Indestructible 2-part epoxy paint systems</li>
+            <li>RPS 661/47 Intumescent paint</li>
+            <li>
+              RPS 661/50 Indestructible 2-part epoxy polyurethane paint system
+            </li>
+            <li>
+              RPS 666/1 Sacrificial corrosion resistant coating (use type A
+              wherever possible as type B requires post peen cleaning and
+              process substantiation)
+            </li>
+            <li>RPS 666/2 Sacrificial corrosion resistant (thin) coating</li>
+            <li>RPS 666/3 Organic sacrificial corrosion resistant coating</li>
+            <li>RPS 666/4 Sealcoat</li>
+            <li>
+              RPS 761 Application of Protective Finishes to Group Support
+              Equipment
+            </li>
+            <li>
+              RPS 953 Thermal Processing of Materials up to 600oC Control of
+              Classified Parts Engine Component Repair or Partial Repair to
+              Specific Instructions Delegation of Authority to Approve Process
+              Data Cards in accordance with addendum 1
+            </li>
+            <li>RRP51000 Vapour Degreasing (was RPS128)</li>
+            <li>RRP51025 Alkaline Cleaning and De-Rusting (was RPS440)</li>
+            <li>
+              RRP58003 Penetrant Dye Inspection- need QAS, material and Issue
+              No. 1A2 and 1D2
+            </li>
+            <li>
+              RRP58004 Magnetic Particle Inspection : less than 1100 MPa before
+              plating : more than 1100 MPa after plating
+            </li>
+            <li>RRP58007 Visual Inspection</li>
+          </ul>
+          <ul>
+            <li>RR Overhaul and Repair</li>
+          </ul>
+          <ul>
+            <li>AMS 2470/CPW 20 Chromic Acid Anodise</li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Rolls-Royce (Deutschland)",
+    description: (
+      <div className='service-container'>
+        <div className='service-cards'>
+          <h3>Rolls-Royce (Deutschland)</h3>
+          <ul>
+            <li>Approval No. 97560/04 Release- RR 9000 SABRe</li>
+          </ul>{" "}
+          <ul>
+            <li>AMS 2472 E Sulphuric Anodising</li>
+            <li>AMS 2700 Passivation</li>
+            <li>MIL-A-8625 Anodising</li>
+            <li>RPS 6 Phosphating</li>
+            <li>RPS 26/7 Paint Stripping</li>
+            <li>RPS 26/9 Paint Stripping</li>
+            <li>RPS 54 Anodising of Aluminium</li>
+            <li>RPS 128 Cleaning and Degreasing</li>
+            <li>RPS 168 Silver Plating</li>
+            <li>RPS 170 Cadmium Plating</li>
+            <li>RPS 386 Abrasive Blasting</li>
+            <li>RPS 436 Chromate Treatment</li>
+            <li>RPS 440 Alkaline Cleaning and De-Rusting</li>
+            <li>RPS 661 Organic Coatings</li>
+            <li>RPS 661/1 PTFE Dispersion</li>
+            <li>RPS 661/5 Dry Film Lubricant MSRR 3004</li>
+            <li>RPS 661/9 Molybdenum Disulphide Dry Film :Lubricant</li>
+            <li>RPS 661/10 Graphite Dry Film Lubricant</li>
+            <li>RPS 661/11 Air Cure Graphite Dry Film Lubricant</li>
+            <li>RPS 661/12 Mica Filled Coating MSRR 9054</li>
+            <li>RPS 661/15 Heat Resistant Aluminium Paint</li>
+            <li>RPS 661/16 Heat Resistant ES Coating</li>
+            <li>RPS 661/21 Heat Cured Epoxy Paint System</li>
+            <li>RPS 661/25 PRC-Desoto two part Epoxy Paint System</li>
+            <li>RPS 661/28 High Temperature Marking Paints</li>
+            <li>RPS 661/30 Day-Glo Inspection Aid Paint</li>
+            <li>
+              RPS 661/32 PRC-Desoto two part Epoxy/Polyurethane Paint System
+            </li>
+            <li>RPS 661/34 Epoxy Varnish Erosion Resistant Coating</li>
+            <li>RPS 661/43 Indestructible two part Epoxy Paint Systems</li>
+            <li>RPS 661/47 Intumescent Paint</li>
+            <li>
+              RPS 661/50 Indestructible two part Epoxy/Polyurethane Paint System
+            </li>
+            <li>
+              RPS 666/1 Sacrificial Coating (use Type A wherever possible as
+              Type B requires post peen cleaning and process substantiation)
+            </li>
+            <li>RPS 666/2 Thin Sacrificial Coating</li>
+            <li>RPS 666/3 Organic Sacrificial Coating</li>
+            <li>RPS 666/4 Sealcoat</li>
+            <li>RPS 667 Two Part Polyurethane Coating</li>
+            <li>RPS 681 Cancelled</li>
+            <li>RPS 953 Control Procedure for Furnaces, etc.</li>
+            <li>RRP 58003- 1A2 and 1D2 Penetrant Dye Inspection</li>
+            <li>RRP 58004 Magnetic Particle Inspection</li>
+            <li>RRP 58007 Visual Inspection</li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "RRCS",
+    description: (
+      <div className='service-container'>
+        <div className='service-cards'>
+          <h3>RRCS</h3>
+          <ul>
+            Approval No. 002305 (Previously CDS, AEC, Goodrich Birmingham)
+            <li></li>
+          </ul>
+          <ul>
+            <li>HCP 355 Gloss Polyurethane Paint to BSX 34A</li>
+            <li>HCP 463 Alocrom</li>
+            <li>PF12 Cadmium Plating</li>
+            <li>PF12B Cadmium Plating</li>
+            <li>PF12E Cadmium Plating</li>
+            <li>PF12F Cadmium Plating</li>
+            <li>PF 16 Chromic Acid Anodising</li>
+            <li>PF 16A Sulphuric Acid Anodising</li>
+            <li>PF 27 Silver Plating</li>
+            <li>TI 3/45 Visual Inspection</li>
+            <li>TI 25/1 Silver Plating</li>
+            <li>TI 44/C Anodising</li>
+            <li>WP 13 Silver plating</li>
+            <li>WP 42G Parco-Lubrite</li>
+            <li>WP 92 Alocrom 1200</li>
+            <li>WP 122 Fluorescent Penetrant Flaw Detection</li>
+            <li>WP 147 Abrasive blasting</li>
+            <li>WP 180D Graphite Dry film Lubricant Coating</li>
+            <li>WP 269 Silver Plating</li>
+            <li>WP 337 Silver Plating</li>
+            <li>WP 340 Silver Plating</li>
+            <li>WP 387 Chromate passivation of Cadmium plating</li>
+            <li>WP 523 Magnetic Particle Flaw Detection</li>
+            <li>
+              WP 717 (Part of approved specs.- no separate approval required)
+            </li>
+            <li>WP 1046 Application of Intumescent paint</li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Safran Power UK (Formerly Goodrich Power Systems)",
+    description: (
+      <div className='service-container'>
+        <div className='service-cards'>
+          <h3>Safran Power UK (Formerly Goodrich Power Systems)</h3>
+          <ul>
+            <li>
+              Approval No. 7002305 Release-981-151-001 or PS-06-10 No Specific
+              Safran Power Approval
+            </li>
+          </ul>
+          <ul>
+            <li>914-026-002 - Silver Plating</li>
+            <li>914-032-045 - Sulphuric Acid Anodising of Aluminium</li>
+            <li>914-032-047 - Chromic Acid Anodising of Aluminium</li>
+            <li>914-032-106 - Passivation</li>
+            <li>
+              914-034-003/004 - Application of Paints Resistant to Lubricant &
+              Corrosion
+            </li>
+            <li>914-034-116 - Anti-Tracking Paint- Air Drying</li>
+            <li>914-034-117 - Anti-Tracking Paint- Stoving</li>
+            <li>914-040-035/044 - Dry Film Lubricants- DAG 504</li>
+            <li>914-632–59/061 - Alocrom 1200</li>
+            <li>915-018-009 - Stress Relieve</li>
+            <li>915-018-051 - Stress Relieve of Steels</li>
+            <li>981-014-001 - Sulphuric Acid Anodising</li>
+            <li>981-014-002 - Chromic Acid Anodising</li>
+            <li>981-014-003 - Cadmium Plate</li>
+            <li>981-257-540 - Protective Finishes to 80-152</li>
+            <li>Pr 1110 - Alocrom 1200</li>
+            <li>Pr 1050 - Passivation</li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Spirit Aero Systems (Europe)",
+    description: (
+      <div className='service-container'>
+        <div className='service-cards'>
+          <h3>Spirit Aero Systems (Europe)</h3>
+          <ul>
+            <li>Approval No. SPIRIT/0161</li>
+          </ul>
+          <ul>
+            <li>4a Chromic Anodising</li>
+            <li>4c Sulphuric Anodising</li>
+            <li>4r Chromate Conversion (Alocrom)</li>
+            <li>4t Paint Spraying and Stoving</li>
+            <li>4u Phosphating</li>
+            <li>5o De-embrittlement (ferrous alloys)</li>
+            <li>8v Metallurgical and Chemical Testing</li>
+            <li>12o Passivation</li>
+            <li>18f Final Inspection & Release</li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Triumph Actuation Systems",
+    description: (
+      <div className='service-container'>
+        <div className='service-cards'>
+          <h3>Triumph Actuation Systems</h3>
+          <ul>
+            <li>
+              Approval No. PRO 16691H Vendor ID: 5107 Release- SQ93 ( Previously
+              - GE Aviation- UK Landing Gear- Smiths Aerospace and Dowty
+              Hydraulics ) (Flaw Detect Requirements as per
+              Drawing/Order/Layout)
+            </li>
+          </ul>
+          <ul>
+            <li>
+              NDT2 Magnetic Flaw Detection- NDT28 to be done both prior to and
+              after plating
+            </li>
+            <li>
+              NDT3 Inspection of Ground Chromium Plated parts- Use PE pen only
+              (level 3 pen needed for in service parts)
+            </li>
+            <li>
+              NDT8 Liquid Penetrant Inspection- Use PE pen only (level 3 pen
+              needed for in service parts)
+            </li>
+            <li>
+              NDT28 Magnetic Flaw Detection- NDT28 to be done both prior to and
+              after plating
+            </li>
+            <li>
+              NDT29 Liquid Penetrant Inspection- Use PE pen only (level 3 pen
+              needed for in service parts)
+            </li>
+            <li>
+              NDT30 Inspection of Ground Chromium Plated parts- Use PE pen only
+              (level 3 pen needed for in service parts)
+            </li>
+            <li>PS 100 Cadmium Plating (less than 1450MPa)</li>
+            <li>PS 100M Cadmium plating- No passivate. (Marine)</li>
+            <li>PS 102-1 Chromic Acid Anodise and dichromate seal</li>
+            <li>PS 102-2 Sulphuric Acid Anodising & dichromate seal</li>
+            <li>
+              PS 102-4 Sulphuric Acid Anodising & dye & nickel acetate seal
+            </li>
+            <li>PS 102-5 Tartaric Sulphuric Acid Anodising</li>
+            <li>PS 102-6 Chromic Acid Anodising & how water seal</li>
+            <li>PS 102-7 Sulphuric Acid Anodising & nickel acetate seal </li>
+            <li>PS 108 Phosphating (Note: must be below 1450MPa/210 ksi)</li>
+            <li>PS 114 Alocrom (Aerospace)</li>
+            <li>PS 124 Passivation of Stainless Steel (Aerospace)</li>
+            <li>PS 126 Passivation of Stainless Steel (Non-Aerospace)</li>
+            <li>PS 127 Alocrom (Non-Aerospace)</li>
+          </ul>
+          <ul>
+            <li>Approval No. PRO 16691H Vendor ID: 5107 Release- SQ93</li>
+          </ul>
+          <ul>
+            <li>PS 117-3 Bonderite S-OT 310B</li>
+            <li>PS 117-5 Everlube 620A</li>
+            <li>PS 117-6 Everlube 620</li>
+            <li>PS 117-7 Everlube 620C</li>
+            <li>PS 117-8 Everlube 9002</li>
+            <li>
+              PS 603 Paint (Superceded by PS618 now only in colour BS381C-676,
+              light weatherwork grey)
+            </li>
+            <li>PS 615 Air Dry Polyurethane</li>
+            <li>
+              PS 618 Air Dry Epoxide (Colour BS381C-676, light weatherwork grey)
+            </li>
+            <li>PS 622 Air Dry Polyurethane (AV8B)</li>
+            <li>PS 631 Paint for Naval Equipment</li>
+            <li>PS 635 Polyurethane Paint Scheme</li>
+            <li>PS 811 Anti-Tracking Varnish</li>
+            <li>PS 4008 Polyurethane Paint Scheme</li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Third Party Accreditation Scope",
+    description: (
+      <div className='service-container'>
+        <div className='service-cards'>
+          <h3>Third Party Accreditation Scope</h3>
+          <ul>
+            <li>
+              Approval No. FM 00236 British Standards/Ministry of Defence (Std.
+              B.S.E.N. I.S.O. 9001 & AS9100 Rev. D). Society of British
+              Aerospace Companies (AS9100 Rev. D) Nadcap
+            </li>
+          </ul>
+          <ul>
+            <li>
+              AC 7108 Paint/Dry Film Coatings, Lead Indium Plating, Silver
+              Plating, Cadmium plating, Phosphating/Other Conversion Coatings,
+              Surface Treatment/Passivation, TCS/PACS, Irridite NCP Anodising
+              (SAA, CAA, TSA, TFSAA), Electropolishing, Chemical Cleaning.
+            </li>
+            <li>AS 7114/1- Penetrant N.D.T.</li>
+            <li>AS 7114/2- Magnetic Particle N.D.T.</li>
+          </ul>
+          <ul>
+            <li>
+              Federal Aviation Authority (through specific customer approvals
+              only)
+            </li>
+          </ul>
+          <ul>
+            <li>MILC-5541 - Alocrom 1200</li>
+          </ul>
+          <ul>
+            <li>
+              To download copies of our third party accreditation certificates
+              please click links below.
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href='https://www.ashton-moore.co.uk/wp-content/uploads/2020/11/AS9100-revD-ex-2023.pdf'>
+                ISO 9001/AS9100
+              </a>
+            </li>
+            <li>
+              <a href='https://www.ashton-moore.co.uk/wp-content/uploads/2020/11/14001-cert.pdf'>
+                ISO 14001
+              </a>
+            </li>
+            <li>
+              <a href='https://www.ashton-moore.co.uk/wp-content/uploads/2020/06/NADCAP-CP-Cert-6.pdf'>
+                Nadcap Chemical Processing Certificate
+              </a>
+            </li>
+            <li>
+              <a href='https://www.ashton-moore.co.uk/wp-content/uploads/2020/11/Nacap-chem-Scope.pdf'>
+                Nadcap Chemical Processing Scope
+              </a>
+            </li>
+            <li>
+              <a href='https://www.ashton-moore.co.uk/wp-content/uploads/2020/06/NADCAP-CP-Cert-1.pdf'>
+                Nadcap NDT Certificate
+              </a>
+            </li>
+            <li>
+              <a href='https://www.ashton-moore.co.uk/wp-content/uploads/2020/11/Scope-Of-Accreditation-Nadcap-NDT.pdf'>
+                Nadcap NDT Scope
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
 ];
 
 const news = [

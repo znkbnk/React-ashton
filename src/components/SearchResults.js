@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "./Footer";
 
 const SearchResults = ({ results }) => {
   return (
@@ -13,7 +12,6 @@ const SearchResults = ({ results }) => {
           </div>
         ))}
       </div>
-      <Footer />
     </div>
   );
 };

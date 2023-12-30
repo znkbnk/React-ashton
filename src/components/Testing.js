@@ -1,6 +1,5 @@
 import React from "react";
 import { sections } from "../data";
-import Footer from "./Footer";
 
 const Testing = () => {
   // Accessing the content property of the first section
@@ -16,9 +15,7 @@ const Testing = () => {
           </div>
         </div>
       </div>
-      <div>
-        <Footer />
-      </div>
+      
     </div>
   );
 };

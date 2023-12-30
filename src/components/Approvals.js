@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Footer from "./Footer";
 import { companies } from "../data";
 import { Link } from "react-router-dom";
 
@@ -28,9 +27,7 @@ const Approvals = () => {
         </div>
       </div>
 
-      <div>
-        <Footer />
-      </div>
+    
     </div>
   );
 };

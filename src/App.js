@@ -45,7 +45,7 @@ const App = () => {
             element={company.description}
           />
         ))}
-        
+
         <Route path='/Legals' element={<Legals />} />
         <Route path='/Services/Anodising' element={<Anodising />} />
         <Route path='/Services/Testing' element={<Testing />} />
@@ -55,11 +55,14 @@ const App = () => {
         <Route path='/Contact' element={<Contact />} />
         <Route path='/About' element={<About />} />
         <Route path='/Reach' element={<Reach />} />
-        
-       <Route path='/SearchResults' element={<SearchResults results={searchResults} />} />
 
-        <Route path='/Footer' element={<Footer />} />
+        <Route
+          path='/SearchResults'
+          element={<SearchResults results={searchResults} />}
+        />
+
       </Routes>
+      <Footer />
     </div>
   );
 };

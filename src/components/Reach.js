@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "./Footer";
 
 const Reach = () => {
   return (
@@ -138,9 +137,7 @@ const Reach = () => {
           components at all and almost certainly at levels below 0.1%.
         </p>
       </div>
-      <div>
-        <Footer />
-      </div>
+      
     </div>
   );
 };

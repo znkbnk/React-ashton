@@ -1,6 +1,5 @@
 import React from "react";
 import { sections } from "../data";
-import Footer from "./Footer";
 
 const Painting = () => {
   const content = sections[2].content;
@@ -13,9 +12,7 @@ const Painting = () => {
           <p>{content}</p>
         </div>
       </div>
-      <div>
-        <Footer />
-      </div>
+      
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../Contact.css";
-import Footer from "./Footer";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
@@ -296,9 +295,7 @@ const Contact = () => {
         </div>
         <div></div>
       </div>
-      <div>
-        <Footer />
-      </div>
+      
     </div>
   );
 };

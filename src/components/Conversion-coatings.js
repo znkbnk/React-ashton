@@ -1,6 +1,5 @@
 import React from "react";
 import {sections} from "../data";
-import Footer from "./Footer";
 
 const Conversion = () => {
   // Accessing the content property of the first section
@@ -14,9 +13,7 @@ const Conversion = () => {
          <p>{content}</p>
        </div>
      </div>
-     <div>
-       <Footer />
-     </div>
+    
    </div>
  );
 };

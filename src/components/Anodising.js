@@ -1,6 +1,5 @@
 import React from "react";
 import { sections } from "../data";
-import Footer from "./Footer";
 
 const Anodising = () => {
   const content = sections[0].content;
@@ -13,9 +12,7 @@ const Anodising = () => {
           <p>{content}</p>
         </div>
       </div>
-      <div>
-        <Footer />
-      </div>
+      
     </div>
   );
 };
