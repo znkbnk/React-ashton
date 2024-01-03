@@ -1,8 +1,11 @@
 import React from "react";
+import ScrollToTopOnMount from "../helpers/ScrollToTopOnMount";
 
 const SearchResults = ({ results }) => {
   return (
     <div>
+      <ScrollToTopOnMount />
+
       <div className='search-results'>
         <h1>Search Results:</h1>
         {results.map((result, index) => (

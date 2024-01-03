@@ -9,6 +9,7 @@ import image2 from "../images/carousel2.jpg";
 import image3 from "../images/carousel3.jpg";
 import NewsItem from "./NewsItem";
 import { news } from "../data";
+import ScrollToTopOnMount from "../helpers/ScrollToTopOnMount";
 
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
 
   return (
     <div>
+      <ScrollToTopOnMount />
       <div className='slider-container'>
         <Slider {...settings}>
           <div>
@@ -61,9 +63,17 @@ const Home = () => {
               link={`/news/${index + 1}`}
             />
           ))}
+          {news.map((item, index) => (
+            <NewsItem
+              key={index}
+              image={item.image}
+              title={item.title}
+              description={item.description}
+              link={`/news/${index + 1}`}
+            />
+          ))}
         </div>
       </div>
-     
     </div>
   );
 };

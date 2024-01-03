@@ -161,6 +161,30 @@ Step 7: Render either the image or close button based on the enlarged state
 Step 8: Render either additional content or the title/description based on the enlarged state (thats new div)
 Step 9: Render the "READ MORE" button only if not enlarged ( thats 3rd render )
 Step 10: Add/update stylings for: .service-container .enlarged, .enlarged-visible, .service-cards, .close-button, .news-card, .custom-button, .news-card
+
+Lesson 7: Create Simple Chatter Bot
+
+Step 1: Define the ChatBot functional component
+Step 2: Define an array of personalized questions
+Step 3: Define state variables to manage the: conversation, user input, placeholder, typing indicator, and current question index
+Step 4: Use useRef for reference to the chat container for scrolling
+Step 5: Create a function (using the variable from the step above) to scroll to the bottom of the chat container
+Step 6: Use useEffect (call the function from the step above) to scroll to the bottom when the conversation updates
+Step 7: Create a function to display personalized responses based on the current question index
+Step 8: In that function define personalized responses based on the current question index ( use if...else )
+Step 9: Set typing indicator and update conversation after a delay ( to use delay/setTimeout is optional )
+Step 10: In the end of the function clear user input
+Step 11: Create a function to handle button click to reveal the chat/bot
+Step 12: Create a function to handle button click to close the chat/bot
+Step 13: Create a function to handle key press (Enter (e.wich === 13)) for user input 
+Step 14: Render the ChatBot component
+Step 15: Define the button to start a chat/bot, then define a ref (from Step 4), then create another button to close the chat/bot
+Step 16: Map (.map) through conversation entries and display questions and answers 
+Step 17: Display the current question and user input
+Step 18: Apply the necessary styles.
+           
+   
+ 
          
        
 

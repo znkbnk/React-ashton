@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../Contact.css";
 import emailjs from "emailjs-com";
+import ScrollToTopOnMount from "../helpers/ScrollToTopOnMount";
 
 const Contact = () => {
 
@@ -85,6 +86,8 @@ const Contact = () => {
 
   return (
     <div>
+      <ScrollToTopOnMount />
+
       <div className='contact-page-container'>
         <div className='map-container'>
           {/* Your map component or content goes here */}
@@ -295,7 +298,6 @@ const Contact = () => {
         </div>
         <div></div>
       </div>
-      
     </div>
   );
 };

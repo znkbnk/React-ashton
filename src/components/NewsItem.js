@@ -28,11 +28,11 @@ const NewsItem = ({ image, title, description }) => {
 };
   return (
     <div
-      className={`service-container ${
+      className={`news-cards-container ${
         enlarged ? "enlarged enlarged-visible" : ""
       }`}
     >
-      <div className='service-cards'>
+      <div className='news-cards'>
         {enlarged ? (
           <button className='close-button' onClick={handleClose}>
             X

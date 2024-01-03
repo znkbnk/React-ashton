@@ -1,6 +1,5 @@
-
 .navlink {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .content {
@@ -8,30 +7,28 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-
 }
 
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
-  position: relative; 
-  z-index: 2; 
+  justify-content: center;
+  position: relative;
+  z-index: 2;
   min-height: 100vh;
+  padding: 20px;
 }
-
 
 .cards {
   display: flex;
   align-items: center;
-  justify-content:flex-start;
+  justify-content: flex-start;
   position: relative;
   width: 300px;
   height: 400px;
-  transition: 0.5s;  
-  max-width: 400px; 
+  transition: 0.5s;
+  max-width: 400px;
   margin: 50px;
-
 }
 
 .cards::before,
@@ -45,18 +42,15 @@
   border-radius: 8px;
   transform: skewX(12deg);
   transition: 0.5s;
-  background: linear-gradient(315deg,#c16e36,	#62361e);
-
+  background: linear-gradient(315deg, #c16e36, #62361e);
 }
 .cards::after {
   filter: blur(30px);
-
 }
 .cards:hover:before,
 .cards:hover::after {
   transform: skewX(0deg);
   border-radius: 8px;
-
 }
 
 .cards .content {
@@ -72,17 +66,14 @@
   color: #ded1b7;
   transform: skewX(-1deg);
   border: 1px solid #ffffff34;
-
 }
 
 .cards .content:hover {
   border: 1px solid #ffffff5b;
-
 }
 .cards:hover .content {
   padding: 60px 40px;
   transform: skewX(0deg);
-
 }
 .cards .content h2 {
   font-size: 2em;
@@ -107,15 +98,11 @@
 
 @media (max-width: 600px) {
   .cards-container {
-  justify-content: center;
-   align-items: center;
+    justify-content: center;
+    align-items: center;
   }
-.cards::before,
+  .cards::before,
   .cards::after {
-    transform: skewX(5deg); 
+    transform: skewX(5deg);
   }
- 
-  
- 
 }
-

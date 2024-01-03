@@ -1,0 +1,84 @@
+/* chatbot.css */
+
+.bot-button:hover {
+  background-color: var(--result-hover);
+}
+
+.text-section {
+  position: relative;
+  padding: 20px;
+  opacity: 0;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 2px solid var(--text-color);
+  background-color: var(--service);
+  border-radius: 30px;
+}
+
+.text-section::-webkit-scrollbar {
+  width: 12px;
+}
+
+.text-section::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 10px;
+}
+
+.text-section::-webkit-scrollbar-track {
+  background-color: var(--service);
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+#result {
+  font-size: 18px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.chat-entry {
+  margin-bottom: 10px;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.answer {
+  color: var(--text-color);
+  margin: 10px 0;
+}
+
+#ans {
+  color: var(--text-color);
+  margin: 10px 0;
+  font-size: 16px;
+  background: transparent;
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px;
+}
+
+#ans::placeholder {
+  color: var(--text-color);
+}
+
+#ans:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+#close-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-color);
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+}

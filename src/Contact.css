@@ -5,7 +5,7 @@
 }
 
 .map-container iframe {
-  width: 90%; /* Take up the full width */
+  width: 90%; 
   height: 400px;
   box-shadow: 15px 15px 30px #acacac, -5px -5px 15px #ffffff;
   background-color: var(--result-hover);
@@ -14,7 +14,7 @@
 
 .content-container {
   display: flex;
-  flex-direction: row; /* Change from column to row */
+  flex-direction: row; 
   justify-content: space-around;
   align-items: center;
   width: 90%;
@@ -40,6 +40,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.contact-list {
+  text-align: start;
+  
+}
+
+.name {
+   clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .form {
@@ -108,17 +119,15 @@ textarea {
 }
 
 #submitBtn {
-  /* Default button styles */
   color: #000;
   padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+  transition: background-color 0.3s ease; 
 
-  /* Add more styles as needed */
 }
 
 #submitBtn:hover {
-  background-color: #999; /* Darker blue color on hover */
+  background-color: #999; 
 }
 
 #submitBtn.success {

@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../Cards.css";
 import { NavLink } from "react-router-dom";
 import video from "../images/video.mp4";
+import ScrollToTopOnMount from "../helpers/ScrollToTopOnMount";
 
 const Services = ({ sections }) => {
-   useEffect(() => {
-     // Scroll to the top of the page when the component mounts
-     window.scrollTo(0, 0);
-   }, []);
+   
   return (
     <div>
+      <ScrollToTopOnMount />
+
       <div className='video-container'>
         <video autoPlay loop muted>
           <source className='home-video' src={video} type='video/mp4' />
@@ -33,8 +33,6 @@ const Services = ({ sections }) => {
           ))}
         </ul>
       </div>
-
-    
     </div>
   );
 };

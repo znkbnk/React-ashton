@@ -1,8 +1,11 @@
 import React from "react";
+import ScrollToTopOnMount from "../helpers/ScrollToTopOnMount";
 
 const Reach = () => {
   return (
     <div>
+      <ScrollToTopOnMount />
+
       <div>
         <h2>Reach</h2>
 
@@ -137,7 +140,6 @@ const Reach = () => {
           components at all and almost certainly at levels below 0.1%.
         </p>
       </div>
-      
     </div>
   );
 };

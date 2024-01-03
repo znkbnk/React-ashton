@@ -1,15 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { companies } from "../data";
 import { Link } from "react-router-dom";
+import ScrollToTopOnMount from "../helpers/ScrollToTopOnMount";
 
 const Approvals = () => {
-  useEffect(() => {
-    // Scroll to the top of the page when the component mounts
-    window.scrollTo(0, 0);
-  }, []);
+ 
 
   return (
     <div>
+      <ScrollToTopOnMount />
       <h1>Approvals</h1>
       <h3>For individual scopes click relevant name</h3>
 
@@ -26,8 +25,6 @@ const Approvals = () => {
           </ul>
         </div>
       </div>
-
-    
     </div>
   );
 };

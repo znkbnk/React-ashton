@@ -1,5 +1,6 @@
 import React from "react";
 import { sections } from "../data";
+import ScrollToTopOnMount from "../helpers/ScrollToTopOnMount";
 
 const Testing = () => {
   // Accessing the content property of the first section
@@ -7,6 +8,8 @@ const Testing = () => {
 
   return (
     <div>
+      <ScrollToTopOnMount />
+
       <div className='service-container'>
         <div className='service-cards'>
           <div>
@@ -15,7 +18,6 @@ const Testing = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };

@@ -17,6 +17,7 @@ import About from "./components/About";
 import Reach from "./components/Reach";
 import Approvals from "./components/Approvals";
 import { sections, companies } from './data';
+import ScrollToTopOnMount from "./helpers/ScrollToTopOnMount";
 
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -24,16 +25,20 @@ const App = () => {
 
   const handleSearch = (results) => {
     setSearchResults(results);
-    // Navigate to the SearchResults route
     navigate("/SearchResults");
   };
+
+  const handleGoBack = () => {
+    navigate("/Approvals");
+  };
+
+  
 
   return (
     <div>
       <Navbar setSearchResults={handleSearch} />
 
       <Routes>
-        {/* Set Home as the main page */}
         <Route path='/' element={<Home />} />
         <Route path='/Services' element={<Services sections={sections} />} />
         <Route path='/Approvals' element={<Approvals />} />
@@ -42,7 +47,18 @@ const App = () => {
           <Route
             key={company.title}
             path={`/Approvals/${company.title.toLowerCase()}`}
-            element={company.description}
+            element={
+              <>
+                <button onClick={handleGoBack} className='back-button'>
+                  Back
+                </button>
+                  <ScrollToTopOnMount />
+                  {company.description}
+                <button onClick={handleGoBack} className='back-button'>
+                  Back
+                </button>
+              </>
+            }
           />
         ))}
 
@@ -60,7 +76,6 @@ const App = () => {
           path='/SearchResults'
           element={<SearchResults results={searchResults} />}
         />
-
       </Routes>
       <Footer />
     </div>

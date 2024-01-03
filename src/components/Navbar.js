@@ -55,7 +55,7 @@ const Navbar = ({ setSearchResults }) => {
         <div className='additional-image-container'>
           <SearchBar sections={sections} onSearch={handleSearch} />
           <img
-            src='https://www.ashton-moore.co.uk/wp-content/uploads/2022/01/accreditations.jpg' // Replace with your image URL
+            src='https://www.ashton-moore.co.uk/wp-content/uploads/2022/01/accreditations.jpg'
             className='additional-image'
             alt='Additional'
           />
