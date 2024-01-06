@@ -62,25 +62,24 @@ export default function ChatBot() {
     setInputValue("");
   };
 
-  const handleButtonClick = () => {
-    const botButton = document.getElementById("bot-button");
-    const textSection = document.getElementById("text-section");
+const handleButtonClick = () => {
+  const botButton = document.querySelector(".bot-button");
+  const textSection = document.getElementById("text-section");
 
-    if (botButton.style.display !== "none") {
-      botButton.style.display = "none";
-    }
+  if (botButton.style.display !== "none") {
+    botButton.style.display = "none";
+  }
 
-    textSection.style.opacity = "1";
-  };
+  textSection.style.display = "block";
+};
 
-  const handleCloseButtonClick = () => {
-    const botButton = document.getElementById("bot-button");
-    const textSection = document.getElementById("text-section");
+const handleCloseButtonClick = () => {
+  const botButton = document.querySelector(".bot-button");
+  const textSection = document.getElementById("text-section");
 
-    botButton.style.display = "block";
-
-    textSection.style.opacity = "0";
-  };
+  botButton.style.display = "block";
+  textSection.style.display = "none";
+};
 
   const handleKeyPress = (e) => {
     if (e.which === 13) {

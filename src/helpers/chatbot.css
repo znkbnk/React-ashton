@@ -8,9 +8,9 @@
 
 .text-section {
  position: fixed; /* or position: absolute; */
-  top: 230px; /* Adjust the top distance according to your design */
+  top: 450px; /* Adjust the top distance according to your design */
   right: 100px;
-  opacity: 0;
+  display: none; 
   width: 300px;
   max-height: 400px;
   overflow-y: auto;
@@ -98,8 +98,8 @@
   background: #111;
   cursor: pointer;
   position: fixed;
-  top: 150px; /* Adjust the top distance according to your design */
-  right: 100px;
+  top: 650px; /* Adjust the top distance according to your design */
+  right: 50px;
   z-index: 300;
    width: 75px; /* Set a fixed width */
   height: 75px; /* Set a fixed height */
