@@ -1,12 +1,15 @@
 /* chatbot.css */
 
+
+
 .bot-button:hover {
   background-color: var(--result-hover);
 }
 
 .text-section {
-  position: relative;
-  padding: 20px;
+ position: fixed; /* or position: absolute; */
+  top: 230px; /* Adjust the top distance according to your design */
+  right: 100px;
   opacity: 0;
   width: 300px;
   max-height: 400px;
@@ -14,6 +17,9 @@
   border: 2px solid var(--text-color);
   background-color: var(--service);
   border-radius: 30px;
+    padding: 20px; /* Adjust padding as needed */
+  box-sizing: border-box; 
+  z-index: 300;
 }
 
 .text-section::-webkit-scrollbar {
@@ -82,3 +88,125 @@
   outline: none;
   margin: 0;
 }
+
+/* button */
+
+.bot-button {
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: fixed;
+  top: 150px; /* Adjust the top distance according to your design */
+  right: 100px;
+  z-index: 300;
+   width: 75px; /* Set a fixed width */
+  height: 75px; /* Set a fixed height */
+  border-radius: 50%; 
+  animation:  bot-button-bounce 4s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.bot-button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbot-button 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 40px;
+}
+
+@keyframes glowingbot-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@keyframes bot-button-bounce {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1) rotate(-5deg);
+  }
+
+  25% {
+    transform: scale(1) rotate(5deg);
+  }
+
+  30% {
+    transform: scale(1) rotate(-3deg);
+  }
+
+  35% {
+    transform: scale(1) rotate(2deg);
+  }
+
+  40% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.bot-button:active {
+  color: #000;
+}
+
+.bot-button:active:after {
+  background: transparent;
+}
+
+.bot-button:hover:before {
+  opacity: 1;
+}
+
+.bot-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  
+  background: #191919;
+  left: 0;
+  top: 0;
+   width: 75px; /* Set a fixed width */
+  height: 75px; /* Set a fixed height */
+  border-radius: 50%; 
+}
+

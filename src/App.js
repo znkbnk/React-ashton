@@ -18,6 +18,8 @@ import Reach from "./components/Reach";
 import Approvals from "./components/Approvals";
 import { sections, companies } from './data';
 import ScrollToTopOnMount from "./helpers/ScrollToTopOnMount";
+import ChatBot from "./helpers/ChatBot";
+import './helpers/chatbot.css'
 
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -40,7 +42,10 @@ const App = () => {
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/Services' element={<Services sections={sections} />} />
+        <Route
+          path='/Services'
+          element={<Services sections={sections} companies={companies} />}
+        />
         <Route path='/Approvals' element={<Approvals />} />
 
         {companies.map((company) => (
@@ -48,16 +53,18 @@ const App = () => {
             key={company.title}
             path={`/Approvals/${company.title.toLowerCase()}`}
             element={
-              <>
-                <button onClick={handleGoBack} className='back-button'>
-                  Back
-                </button>
+              <div className='service-container'>
+                <div className='service-cards'>
+                  <button onClick={handleGoBack} className='back-button'>
+                    Back
+                  </button>
                   <ScrollToTopOnMount />
                   {company.description}
-                <button onClick={handleGoBack} className='back-button'>
-                  Back
-                </button>
-              </>
+                  <button onClick={handleGoBack} className='back-button'>
+                    Back
+                  </button>
+                </div>
+              </div>
             }
           />
         ))}
@@ -77,6 +84,8 @@ const App = () => {
           element={<SearchResults results={searchResults} />}
         />
       </Routes>
+      <ChatBot />
+
       <Footer />
     </div>
   );

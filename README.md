@@ -182,9 +182,33 @@ Step 15: Define the button to start a chat/bot, then define a ref (from Step 4),
 Step 16: Map (.map) through conversation entries and display questions and answers 
 Step 17: Display the current question and user input
 Step 18: Apply the necessary styles.
-           
-   
- 
-         
-       
 
+Lesson 8: GlowBounce Button Project
+           
+Step 1: Basic Styles for .bot-button
+
+In this step, we have set the basic styles for the .bot-button class. It includes the button's position, size, color, and other properties.
+
+Step 2: Pseudo-element .bot-button:before
+
+This step introduces a pseudo-element (:before) to create a glowing border effect around the button. The linear gradient and keyframes are used for the animation.
+
+Step 3: Keyframes for Glowing Effect
+
+This section defines keyframes for the glowing effect of the button's border.
+
+Step 4: Keyframes for Bouncing Animation
+         
+This step defines keyframes for the bouncing animation of the button.
+
+Step 5: Styles for Active State
+
+These styles define the appearance of the button in its active state, changing the text color and making the background transparent.
+
+Step 6: Hover Effect
+
+This part adds a hover effect to the button, making the glowing border visible when the button is hovered over.
+
+Step 7: Pseudo-element .bot-button:after
+
+A pseudo-element (:after) is added to create a background for the button.

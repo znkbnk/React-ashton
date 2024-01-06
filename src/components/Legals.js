@@ -1,6 +1,5 @@
 import React from 'react'
 import ScrollToTopOnMount from '../helpers/ScrollToTopOnMount';
-import ChatBot from '../helpers/ChatBot';
 
 const Legals = () => {
   return (
@@ -8,7 +7,6 @@ const Legals = () => {
       <ScrollToTopOnMount />
 
       <div className='chatbot-container'>
-        <ChatBot />
       </div>
 
       

@@ -15,6 +15,7 @@ export default function ChatBot() {
   const [placeholder, setPlaceholder] = useState("Enter your response");
   const [isTyping, setIsTyping] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  
 
   const chatContainerRef = useRef(null);
 
@@ -98,7 +99,7 @@ export default function ChatBot() {
         onClick={handleButtonClick}
         className='bot-button'
       >
-        bot
+        Chat
       </button>
       <div
         id='text-section'

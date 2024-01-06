@@ -190,6 +190,9 @@ body {
   transform: scale(1.1);
 }
 
+
+
+
 @media (max-width: 768px) {
   .searchResult {
     background: var(--result-hover);

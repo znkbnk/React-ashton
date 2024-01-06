@@ -2,8 +2,7 @@ const companies = [
   {
     title: "Airbus",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Airbus UK</h3>
           <ul>
             <li>Approval No. 97560/04</li>
@@ -74,14 +73,12 @@ const companies = [
             <li>AITM6-9004 Inspection of Surface Resistance</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Babcock",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Babcock International Group</h3>
 
           <ul>
@@ -91,14 +88,12 @@ const companies = [
             <li>Internal Doc. 5KA-01 Alocrom</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "BAe Systems",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>BAe Systems Approvals</h3>
           <h3>BAe Systems - Aircraft Group</h3>
           <ul>
@@ -219,14 +214,12 @@ const companies = [
             <li>PS 23-3-9 Electropolishing of Stainless Steel</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Claverham",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Claverham</h3>
           <ul>
             <li>
@@ -264,14 +257,12 @@ const companies = [
             <li>AC7114 NADCAP Non Destructive Testing</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Collins Aerospace",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>COLLINS AEROSPACE (ex UTC, HAMILTON, FAIREY, CLAVERHAM)</h3>
           <ul>
             <li>Approval No. PQA 290184 Hamilton Sunstrand Aerospace</li>
@@ -337,14 +328,12 @@ const companies = [
             <li>PS 124 Passivation of Corrosion-Resistant Steel</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Dowty",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Dowty Rotol</h3>
           <ul>
             <li>
@@ -353,14 +342,12 @@ const companies = [
             </li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Eaton Aeroquip Aero Division",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Eaton Aeroquip Aero Division (Approval No. Y370)</h3>
           <ul>
             <li>
@@ -377,14 +364,12 @@ const companies = [
             <li>Sulphuric Acid Anodising</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Flight Refuelling",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Flight Refuelling</h3>
           <ul>
             <li>
@@ -396,14 +381,12 @@ const companies = [
             <li>DS 26 00 Processing Requirements</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "GE Aviation",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>
             GE Aviation- Q2 (Formerly Smith’s Aerospace / Dowty Propellers)
             (Approval No. PRO 16691P)
@@ -448,14 +431,12 @@ const companies = [
             <li>PS5026 Solid Film Lubricants</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Hawker Beechcraft",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Hawker Beechcraft (Raytheon)</h3>
           <ul>
             <li>
@@ -476,14 +457,12 @@ const companies = [
             <li>120 Passivation (not 440C material)</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Heroux",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Heroux Devtek (formerly APPH)</h3>
           <ul>
             <li>
@@ -523,14 +502,12 @@ const companies = [
             </li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "HS Marston Aerospace",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>H.S. Marston Aerospace (Approval No. AS 926)</h3>
           <ul>
             <li>Approval No. AS 926 Approval No AS 970</li>
@@ -539,28 +516,24 @@ const companies = [
             <li>All Services Covered by Hamilton/Sunstrand</li>
           </ul>{" "}
         </div>
-      </div>
     ),
   },
   {
     title: "Liebherr",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Liebherr Aerospace</h3>
 
           <ul>
             <li>LAT 4-1201 Passivation</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Lockheed",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Lockheed Martin</h3>
 
           <ul>
@@ -570,14 +543,12 @@ const companies = [
             <li>AMS-C5541 Alocrom</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Martin Baker Aircraft",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Martin-Baker Aircraft</h3>
           <ul>
             <li>
@@ -590,14 +561,12 @@ const companies = [
             <li>PS 306 Anodising</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Meggitt Aerospace",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Meggitt Aerospace</h3>
           <ul>
             <li>Meggitt Aircraft Brakes (previously Dunlop Aerospace)</li>
@@ -642,14 +611,12 @@ const companies = [
             </li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Messier Bugatti Dowty",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Messier Bugatti Dowty (Safran)</h3>
           <ul>
             <li>
@@ -708,14 +675,12 @@ const companies = [
             </li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Mettis Aerospace",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Mettis Aerospace</h3>
           <ul>
             <li>
@@ -724,14 +689,12 @@ const companies = [
             </li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "MOD Defence Standards",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>MOD Defence Standards</h3>
           <ul>
             <li>Approval No. FM00236</li>
@@ -803,14 +766,12 @@ const companies = [
             <li>BS EN ISO 15730 Electropolishing</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Moog Aerocraft Group",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Moog Aerocraft Group</h3>
           <ul>
             <li>
@@ -867,14 +828,12 @@ const companies = [
             <li>PS 156 Part Marking</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Parker Hannifin And Pratt And Whitney",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Parker Hannifin & Pratt & Whitney</h3>
           <ul>
             <li>Approval Specification AM203 J</li>
@@ -891,14 +850,12 @@ const companies = [
             <li>AMS 2470/CPW 20 Chromic Acid Anodise</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Rolls-Royce Aerospace & Overhaul & Repair",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Rolls-Royce Aerospace & Overhaul & Repair</h3>
           <ul>
             <li>
@@ -988,14 +945,12 @@ const companies = [
             <li>AMS 2470/CPW 20 Chromic Acid Anodise</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Rolls-Royce (Deutschland)",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Rolls-Royce (Deutschland)</h3>
           <ul>
             <li>Approval No. 97560/04 Release- RR 9000 SABRe</li>
@@ -1051,14 +1006,12 @@ const companies = [
             <li>RRP 58007 Visual Inspection</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "RRCS",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>RRCS</h3>
           <ul>
             Approval No. 002305 (Previously CDS, AEC, Goodrich Birmingham)
@@ -1094,14 +1047,12 @@ const companies = [
             <li>WP 1046 Application of Intumescent paint</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Safran Power UK (Formerly Goodrich Power Systems)",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Safran Power UK (Formerly Goodrich Power Systems)</h3>
           <ul>
             <li>
@@ -1132,14 +1083,12 @@ const companies = [
             <li>Pr 1050 - Passivation</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Spirit Aero Systems (Europe)",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Spirit Aero Systems (Europe)</h3>
           <ul>
             <li>Approval No. SPIRIT/0161</li>
@@ -1156,14 +1105,12 @@ const companies = [
             <li>18f Final Inspection & Release</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Triumph Actuation Systems",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Triumph Actuation Systems</h3>
           <ul>
             <li>
@@ -1238,14 +1185,12 @@ const companies = [
             <li>PS 4008 Polyurethane Paint Scheme</li>
           </ul>
         </div>
-      </div>
     ),
   },
   {
     title: "Third Party Accreditation Scope",
     description: (
-      <div className='service-container'>
-        <div className='service-cards'>
+        <div>
           <h3>Third Party Accreditation Scope</h3>
           <ul>
             <li>
@@ -1312,7 +1257,6 @@ const companies = [
             </li>
           </ul>
         </div>
-      </div>
     ),
   },
 ];

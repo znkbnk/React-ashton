@@ -12,6 +12,7 @@ const SearchResults = ({ results }) => {
           <div key={index} className='searchResult'>
             <h3>{result.title}</h3>
             <p>{result.content}</p>
+            
           </div>
         ))}
       </div>
