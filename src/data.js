@@ -3,7 +3,6 @@ const companies = [
     title: "Airbus",
     description: (
         <div>
-          <h3>Airbus UK</h3>
           <ul>
             <li>Approval No. 97560/04</li>
           </ul>
@@ -79,7 +78,6 @@ const companies = [
     title: "Babcock",
     description: (
         <div>
-          <h3>Babcock International Group</h3>
 
           <ul>
             <li>Internal Doc. 911 Penetrant Dye Inspection</li>
@@ -94,7 +92,6 @@ const companies = [
     title: "BAe Systems",
     description: (
         <div>
-          <h3>BAe Systems Approvals</h3>
           <h3>BAe Systems - Aircraft Group</h3>
           <ul>
             <li>Approval No. - BAe/AG/10438/MAA</li>
@@ -220,7 +217,6 @@ const companies = [
     title: "Claverham",
     description: (
         <div>
-          <h3>Claverham</h3>
           <ul>
             <li>
               Approval No. 002305 (Previously CDS, AEC, Goodrich Birmingham)
@@ -263,7 +259,6 @@ const companies = [
     title: "Collins Aerospace",
     description: (
         <div>
-          <h3>COLLINS AEROSPACE (ex UTC, HAMILTON, FAIREY, CLAVERHAM)</h3>
           <ul>
             <li>Approval No. PQA 290184 Hamilton Sunstrand Aerospace</li>
           </ul>{" "}
@@ -334,7 +329,6 @@ const companies = [
     title: "Dowty",
     description: (
         <div>
-          <h3>Dowty Rotol</h3>
           <ul>
             <li>
               For AV8B processes only. No specific approvals required. Approvals
@@ -348,7 +342,6 @@ const companies = [
     title: "Eaton Aeroquip Aero Division",
     description: (
         <div>
-          <h3>Eaton Aeroquip Aero Division (Approval No. Y370)</h3>
           <ul>
             <li>
               Approval No. Y370 Approval granted for processes listed below.
@@ -370,7 +363,6 @@ const companies = [
     title: "Flight Refuelling",
     description: (
         <div>
-          <h3>Flight Refuelling</h3>
           <ul>
             <li>
               Flight Refuelling Quality system allows their sub-contractors to
@@ -437,7 +429,6 @@ const companies = [
     title: "Hawker Beechcraft",
     description: (
         <div>
-          <h3>Hawker Beechcraft (Raytheon)</h3>
           <ul>
             <li>
               Approval No. HBIFSAS/ Part 1/0636 NOTE : The above are process
@@ -463,7 +454,6 @@ const companies = [
     title: "Heroux",
     description: (
         <div>
-          <h3>Heroux Devtek (formerly APPH)</h3>
           <ul>
             <li>
               This approval body does not grant approvals. Approval to do work
@@ -508,7 +498,6 @@ const companies = [
     title: "HS Marston Aerospace",
     description: (
         <div>
-          <h3>H.S. Marston Aerospace (Approval No. AS 926)</h3>
           <ul>
             <li>Approval No. AS 926 Approval No AS 970</li>
           </ul>{" "}
@@ -519,10 +508,9 @@ const companies = [
     ),
   },
   {
-    title: "Liebherr",
+    title: "Liebherr Aerospace",
     description: (
         <div>
-          <h3>Liebherr Aerospace</h3>
 
           <ul>
             <li>LAT 4-1201 Passivation</li>
@@ -534,7 +522,6 @@ const companies = [
     title: "Lockheed",
     description: (
         <div>
-          <h3>Lockheed Martin</h3>
 
           <ul>
             <li>
@@ -567,7 +554,6 @@ const companies = [
     title: "Meggitt Aerospace",
     description: (
         <div>
-          <h3>Meggitt Aerospace</h3>
           <ul>
             <li>Meggitt Aircraft Brakes (previously Dunlop Aerospace)</li>
           </ul>
@@ -617,7 +603,6 @@ const companies = [
     title: "Messier Bugatti Dowty",
     description: (
         <div>
-          <h3>Messier Bugatti Dowty (Safran)</h3>
           <ul>
             <li>
               Approval No. MDM 520746 Release- PRIDE or SCREQ-001-PRIDE or
@@ -681,7 +666,6 @@ const companies = [
     title: "Mettis Aerospace",
     description: (
         <div>
-          <h3>Mettis Aerospace</h3>
           <ul>
             <li>
               Approval No 266 All Services Covered by Ashton & Moore's AS9100
@@ -695,7 +679,6 @@ const companies = [
     title: "MOD Defence Standards",
     description: (
         <div>
-          <h3>MOD Defence Standards</h3>
           <ul>
             <li>Approval No. FM00236</li>
           </ul>{" "}
@@ -772,7 +755,6 @@ const companies = [
     title: "Moog Aerocraft Group",
     description: (
         <div>
-          <h3>Moog Aerocraft Group</h3>
           <ul>
             <li>
               Approval No. PRO 16691P Release - SQR-1 and SQR-2 (Previously GE
@@ -834,7 +816,6 @@ const companies = [
     title: "Parker Hannifin And Pratt And Whitney",
     description: (
         <div>
-          <h3>Parker Hannifin & Pratt & Whitney</h3>
           <ul>
             <li>Approval Specification AM203 J</li>
           </ul>
@@ -856,7 +837,6 @@ const companies = [
     title: "Rolls-Royce Aerospace & Overhaul & Repair",
     description: (
         <div>
-          <h3>Rolls-Royce Aerospace & Overhaul & Repair</h3>
           <ul>
             <li>
               Approval No. 01050 Release- RR 9000 SABRe (Flaw Detection
@@ -951,7 +931,6 @@ const companies = [
     title: "Rolls-Royce (Deutschland)",
     description: (
         <div>
-          <h3>Rolls-Royce (Deutschland)</h3>
           <ul>
             <li>Approval No. 97560/04 Release- RR 9000 SABRe</li>
           </ul>{" "}
@@ -1012,7 +991,6 @@ const companies = [
     title: "RRCS",
     description: (
         <div>
-          <h3>RRCS</h3>
           <ul>
             Approval No. 002305 (Previously CDS, AEC, Goodrich Birmingham)
             <li></li>
@@ -1053,7 +1031,6 @@ const companies = [
     title: "Safran Power UK (Formerly Goodrich Power Systems)",
     description: (
         <div>
-          <h3>Safran Power UK (Formerly Goodrich Power Systems)</h3>
           <ul>
             <li>
               Approval No. 7002305 Release-981-151-001 or PS-06-10 No Specific
@@ -1089,7 +1066,6 @@ const companies = [
     title: "Spirit Aero Systems (Europe)",
     description: (
         <div>
-          <h3>Spirit Aero Systems (Europe)</h3>
           <ul>
             <li>Approval No. SPIRIT/0161</li>
           </ul>
@@ -1111,7 +1087,6 @@ const companies = [
     title: "Triumph Actuation Systems",
     description: (
         <div>
-          <h3>Triumph Actuation Systems</h3>
           <ul>
             <li>
               Approval No. PRO 16691H Vendor ID: 5107 Release- SQ93 ( Previously
@@ -1191,7 +1166,6 @@ const companies = [
     title: "Third Party Accreditation Scope",
     description: (
         <div>
-          <h3>Third Party Accreditation Scope</h3>
           <ul>
             <li>
               Approval No. FM 00236 British Standards/Ministry of Defence (Std.

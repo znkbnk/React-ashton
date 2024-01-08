@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../Navbar.css";
 import SearchBar from "./SearchBar";
-import {sections} from "../data";
+import {companies, sections} from "../data";
 
 const Navbar = ({ setSearchResults }) => {
   const [showNavBar, setShowNavbar] = useState(false);
@@ -53,7 +53,7 @@ const Navbar = ({ setSearchResults }) => {
           </Link>
         </div>
         <div className='additional-image-container'>
-          <SearchBar sections={sections} onSearch={handleSearch} />
+          <SearchBar sections={sections} companies={companies} onSearch={handleSearch} />
           <img
             src='https://www.ashton-moore.co.uk/wp-content/uploads/2022/01/accreditations.jpg'
             className='additional-image'

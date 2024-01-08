@@ -20,17 +20,9 @@ const SearchBar = ({ sections, onSearch, companies }) => {
       })
       .filter(Boolean);
 
-    const companyResults = companies
-      .map((company) => {
-        const filteredDescription = filterContent(
-          company.description.props.children,
-          term
-        );
-        return filteredDescription.length > 0
-          ? { ...company, description: <div>{filteredDescription}</div> }
-          : null;
-      })
-      .filter(Boolean);
+    const companyResults = companies.filter((company) =>
+      company.title.toLowerCase().includes(term)
+    );
 
     setSearchResults([...sectionResults, ...companyResults]);
   };

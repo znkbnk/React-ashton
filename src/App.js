@@ -59,6 +59,7 @@ const App = () => {
                     Back
                   </button>
                   <ScrollToTopOnMount />
+                  <h3>{company.title}</h3>
                   {company.description}
                   <button onClick={handleGoBack} className='back-button'>
                     Back

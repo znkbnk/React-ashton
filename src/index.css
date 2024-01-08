@@ -87,6 +87,27 @@ body {
   color: var(--result);
 }
 
+.search-back-button {
+position: fixed;
+top: 200px; /* Adjust the top distance according to your design */
+left: 0;
+max-width: 100px;
+  height: auto;
+  border-radius: 20px;
+  background: var(--service);
+  padding: 10px;
+  overflow: hidden;
+  color: var(--text-color);
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+.search-back-button:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 10px 5px #00000033;
+
+}
+
 @media (max-width: 430px) {
   .searchResult {
     max-width: 100%;
@@ -173,11 +194,11 @@ body {
 }
 
 .back-button {
+  border: 1px solid #3b2112;
   max-width: 100px;
   height: auto;
   border-radius: 20px;
   background: var(--service);
-  box-shadow: 10px 5px 30px 5px #0000004f;
   padding: 10px;
   overflow: hidden;
   color: var(--text-color);
@@ -188,6 +209,9 @@ body {
 
 .back-button:hover {
   transform: scale(1.1);
+
+  box-shadow: 5px 5px 10px 5px #00000033;
+
 }
 
 
