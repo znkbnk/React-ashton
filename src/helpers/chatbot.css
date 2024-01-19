@@ -1,5 +1,7 @@
 /* chatbot.css */
-
+* {
+  box-sizing: border-box;
+}
 
 
 .bot-button:hover {
@@ -8,11 +10,11 @@
 
 .text-section {
  position: fixed; /* or position: absolute; */
-  top: 450px; /* Adjust the top distance according to your design */
+  top: 400px; /* Adjust the top distance according to your design */
   right: 50px;
   display: none; 
   width: 300px;
-  max-height: 400px;
+  max-height: 500px;
   overflow-y: auto;
   border: 2px solid var(--text-color);
   background-color: var(--service);
@@ -209,4 +211,5 @@
   height: 75px; /* Set a fixed height */
   border-radius: 50%; 
 }
+
 

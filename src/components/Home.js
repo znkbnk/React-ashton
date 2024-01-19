@@ -8,11 +8,40 @@ import image1 from "../images/carousel1.jpg";
 import image2 from "../images/carousel2.jpg";
 import image3 from "../images/carousel3.jpg";
 import NewsItem from "./NewsItem";
-import { news } from "../data";
+import { news, sections } from "../data";
 import ScrollToTopOnMount from "../helpers/ScrollToTopOnMount";
-
+import { NavLink } from "react-router-dom";
+import { Parallax } from "react-parallax";
+import Atropos from "atropos";
 
 const Home = () => {
+  // eslint-disable-next-line no-unused-vars
+  const myAtropos = Atropos({
+    el: ".my-atropos",
+    activeOffset: 40,
+    shadow: true,
+    highlight: true,
+    shadowScale: 1.07,
+    rotateXMax: 20,
+    rotateYMax: 20,
+    onRotate(x, y) {
+      console.log("Rotate", x, y);
+    },
+  });
+
+  // eslint-disable-next-line no-unused-vars
+  const myAtroposRight = Atropos({
+    el: ".right",
+    activeOffset: 40,
+    shadow: true,
+    highlight: false,
+    shadowScale: 1.07,
+    rotateXMax: 20,
+    rotateYMax: 20,
+    onRotate(x, y) {
+      console.log("Rotate", x, y);
+    },
+  });
   const settings = {
     infinite: true,
     speed: 500,
@@ -20,59 +49,208 @@ const Home = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    prevArrow: <></>, // Set to empty fragment to hide the default arrows
+    prevArrow: <></>,
     nextArrow: <></>,
   };
 
   return (
     <div>
-      <ScrollToTopOnMount />
-      <div className='slider-container'>
-        <Slider {...settings}>
-          <div>
-            <img src={image1} alt='Slide 1' />
-          </div>
-          <div>
-            <img src={image2} alt='Slide 2' />
-          </div>
-          <div>
-            <img src={image3} alt='Slide 3' />
-          </div>
-        </Slider>
-      </div>
-
       <div>
-        <h1>News</h1>
-
-        <div className='news-container'>
-          {news.map((item, index) => (
-            <NewsItem
-              key={index}
-              image={item.image}
-              title={item.title}
-              description={item.description}
-              link={`/news/${index + 1}`}
-            />
-          ))}
-          {news.map((item, index) => (
-            <NewsItem
-              key={index}
-              image={item.image}
-              title={item.title}
-              description={item.description}
-              link={`/news/${index + 1}`}
-            />
-          ))}
-          {news.map((item, index) => (
-            <NewsItem
-              key={index}
-              image={item.image}
-              title={item.title}
-              description={item.description}
-              link={`/news/${index + 1}`}
-            />
-          ))}
+        <ScrollToTopOnMount />
+        <div className='slider-container'>
+          <Slider {...settings}>
+            <div>
+              <img src={image1} alt='Slide 1' />
+            </div>
+            <div>
+              <img src={image2} alt='Slide 2' />
+            </div>
+            <div>
+              <img src={image3} alt='Slide 3' />
+            </div>
+          </Slider>
         </div>
+        <Parallax
+          blur={{ min: -20, max: 20 }}
+          bgImage={require("../images/company-bg.jpg")}
+          bgImageAlt='the dog'
+          strength={200}
+        >
+          <div className='first'>
+            <h1>News</h1>
+
+            <div className='news-container'>
+              {news.map((item, index) => (
+                <NewsItem
+                  key={index}
+                  image={item.image}
+                  title={item.title}
+                  description={item.description}
+                  link={`/news/${index + 1}`}
+                />
+              ))}
+              {news.map((item, index) => (
+                <NewsItem
+                  key={index}
+                  image={item.image}
+                  title={item.title}
+                  description={item.description}
+                  link={`/news/${index + 1}`}
+                />
+              ))}
+              {news.map((item, index) => (
+                <NewsItem
+                  key={index}
+                  image={item.image}
+                  title={item.title}
+                  description={item.description}
+                  link={`/news/${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </Parallax>
+        <Parallax
+          blur={{ min: -15, max: 20 }}
+          bgImage={require("../images/company-bg1.jpg")}
+          bgImageAlt='the dog'
+          strength={200}
+        >
+          <div className='second'>
+            <h1>Services</h1>
+          </div>
+          <div>
+            <ul className='cards-container'>
+              {sections.map((section, index) => (
+                <li key={index} className='cards'>
+                  <div className='content'>
+                    <h2>{section.title}</h2>
+                    <p>{section.description}</p>
+                    <NavLink
+                      to={`/Services${section.linkTo}`}
+                      className='navlink'
+                    >
+                      Read More
+                    </NavLink>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Parallax>
+        <Parallax
+          blur={{ min: -5, max: 15 }}
+          bgImage={require("../images/company-bg2.jpg")}
+          bgImageAlt='the dog'
+          strength={200}
+        >
+          <div className='third'>
+            <div className='company-info'>
+              <div>
+                <h1>Company Information</h1>
+              </div>
+
+              <div className='info-container '>
+                <div class='atropos my-atropos'>
+                  <div class='atropos-scale'>
+                    <div class='atropos-rotate'>
+                      <div class='atropos-inner'>
+                        <div className='left-side'>
+                          <div className='service-cards'>
+                            <p>
+                              Ashton and Moore Ltd. (Birmingham) is an
+                              independent sub-contract metal finisher who has
+                              serviced the aerospace, defence and general
+                              engineering sectors since 1925. With 90 years of
+                              experience and technical knowledge we successfully
+                              undertake a wide variety of finishes, as well as
+                              NDT, providing a true “One stop shop” to over 400
+                              customers throughout the UK and the rest of the
+                              world. We hold approvals from many household
+                              names, such as Rolls-Royce, BAe, Airbus, GE, Moog,
+                              Honeywell, UTC, Messier Bugatti Dowty, Meggit,
+                              etc. (in total over 28 different primes). We also
+                              hold many industrial approvals including; ISO
+                              14001 and 9001, AS 9001 Rev. D and NADCAP for all
+                              chemical processing and NDT processes undertaken.
+                              Indeed, our prowess has been widely acknowledged
+                              and in recent years and we have won awards, not
+                              only for Quality, but also Environmental
+                              performance and outstanding company achievement,
+                              at the Surface Engineering Association’s awards at
+                              the house of Lords in London. However, we are not
+                              resting on our laurels and are currently
+                              installing REACH compliant processes such as; TSA,
+                              Thin film sulphuric anodising and Socomore
+                              (TCS/PACS), to ensure our ability to continue
+                              providing our high level of service well into the
+                              future.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='right-side '>
+                  <div className='atropos right'>
+                    <div className='atropos-scale'>
+                      <div className='atropos-rotate'>
+                        <div className='atropos-inner'>
+                          <div className='service-cards '>
+                            <tbody className='right-left'>
+                              <h4>The services we provide include:</h4>
+                              <tr>
+                                <td>
+                                  <h3>Anodising</h3>
+                                </td>
+                                <td>
+                                  Sulphuric, Chromic, Thin film sulphuric,
+                                  Tartaric Sulphuric acid anodising
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <h3>Plating</h3>
+                                </td>
+                                <td>Cadmium, Silver, Lead indium</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <h3>Passivation</h3>
+                                </td>
+                                <td>Stainless steel, Brass</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <h3>Painting</h3>
+                                </td>
+                                <td>
+                                  Dry film lubricants, Ipcote,Polyurethanes,
+                                  Epoxies, Stove enamels, lacquers, PTFE
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <h3>Phosphating</h3>
+                                </td>
+                                <td>
+                                  Zinc & Manganese, Calcium modified & Low
+                                  temperature
+                                </td>
+                              </tr>
+                            </tbody>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Parallax>
       </div>
     </div>
   );

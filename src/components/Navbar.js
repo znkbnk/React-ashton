@@ -51,9 +51,12 @@ const Navbar = ({ setSearchResults }) => {
               alt='Ashton & Moore Ltd, Aerospace, Industrial Finishing, Plating, Industrial Finishing, Anodising'
             ></img>
           </Link>
-        </div>
-        <div className='additional-image-container'>
-          <SearchBar sections={sections} companies={companies} onSearch={handleSearch} />
+       
+          <SearchBar
+            sections={sections}
+            companies={companies}
+            onSearch={handleSearch}
+          />
           <img
             src='https://www.ashton-moore.co.uk/wp-content/uploads/2022/01/accreditations.jpg'
             className='additional-image'
@@ -119,6 +122,18 @@ const Navbar = ({ setSearchResults }) => {
               <i>{/*icon*/}</i>
               <NavLink to='/Legals' onClick={handleCloseNavbar}>
                 Legals
+              </NavLink>
+            </li>
+            <li>
+              <i>{/*icon*/}</i>
+              <NavLink to='/Reach' onClick={handleCloseNavbar}>
+                Reach
+              </NavLink>
+            </li>
+            <li>
+              <i>{/*icon*/}</i>
+              <NavLink to='/About' onClick={handleCloseNavbar}>
+                About
               </NavLink>
             </li>
             <li>

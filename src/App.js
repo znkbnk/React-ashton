@@ -16,10 +16,13 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Reach from "./components/Reach";
 import Approvals from "./components/Approvals";
-import { sections, companies } from './data';
+import { sections, companies } from "./data";
 import ScrollToTopOnMount from "./helpers/ScrollToTopOnMount";
 import ChatBot from "./helpers/ChatBot";
-import './helpers/chatbot.css'
+import "./helpers/chatbot.css";
+import Privacy from "./components/Privacy";
+import Cookies from "./components/Cookies";
+import Terms from "./components/Terms";
 
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -33,8 +36,6 @@ const App = () => {
   const handleGoBack = () => {
     navigate("/Approvals");
   };
-
-  
 
   return (
     <div>
@@ -55,15 +56,17 @@ const App = () => {
             element={
               <div className='service-container'>
                 <div className='service-cards'>
-                  <button onClick={handleGoBack} className='back-button'>
-                    Back
-                  </button>
-                  <ScrollToTopOnMount />
-                  <h3>{company.title}</h3>
-                  {company.description}
-                  <button onClick={handleGoBack} className='back-button'>
-                    Back
-                  </button>
+                  <div className='ok'>
+                    <button onClick={handleGoBack} className='back-button'>
+                      Back
+                    </button>
+                    <ScrollToTopOnMount />
+                    <h3>{company.title}</h3>
+                    {company.description}
+                    <button onClick={handleGoBack} className='back-button'>
+                      Back
+                    </button>
+                  </div>
                 </div>
               </div>
             }
@@ -79,6 +82,9 @@ const App = () => {
         <Route path='/Contact' element={<Contact />} />
         <Route path='/About' element={<About />} />
         <Route path='/Reach' element={<Reach />} />
+        <Route path='/Privacy' element={<Privacy />} />
+        <Route path='/Cookies' element={<Cookies />} />
+        <Route path='/Terms' element={<Terms />} />
 
         <Route
           path='/SearchResults'

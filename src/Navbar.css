@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --top: #262018;
   --active: #c16e36;
@@ -52,6 +56,14 @@ h3 {
 
 h2 {
   font-size: 5vh;
+  color: var(--textwhite);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+h4 {
+  font-size: 3vh;
   color: var(--textwhite);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -208,36 +220,31 @@ h2 {
   color: var(--textwhite);
 }
 
-.additional-image-container {
-  max-width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-
 .additional-image {
   width: 65%;
-  display: flex;
+  padding: 10px;
 }
 
 @media only screen and (max-width: 768px) {
+  .additional-image {
+    display: none;
+  }
+
+
 }
 
 @media only screen and (max-width: 430px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+  .leftside img {
+    padding: 10px;
+    border: none;
+  }
+  
 
-.container {
-  width: 100%;
-  padding: 0;
-}
-.leftside img {
-  padding: 10px;
-  border: none;
-}
-.menu-icon {
-  padding: 10px;
-}
-
- 
+  .additional-image {
+    display: none;
+  }
 }

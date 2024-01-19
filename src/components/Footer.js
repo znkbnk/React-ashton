@@ -1,7 +1,7 @@
 // Footer.jsx
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -25,27 +25,27 @@ const Footer = () => {
       </div>
 
       <div className='footer-section'>
-        <ul>
-          <li>
-            <a href='/'>Privacy Policy</a>
+        <ul >
+          <li >
+            <i>{/*icon*/}</i>
+            <Link to='/Privacy'>Privacy Policy</Link>
           </li>
           <li>
-            <a href='/'>Cookie Policy</a>
+            <i>{/*icon*/}</i>
+            <Link to='/Cookies'>Cookie Policy</Link>
           </li>
           <li>
-            <a href='/'>Terms and Conditions</a>
+            <i>{/*icon*/}</i>
+            <Link to='/Terms'>Terms and Conditions</Link>
           </li>
         </ul>
       </div>
 
       <div className='footer-section'>
         <ul>
-          <li>
-            Company No: 195160
-          </li>
-          <li>
-            VAT No: 670939307
-          </li>
+          <li>Company No: 195160</li>
+          <li>VAT No: 670939307</li>
+          <li>Copyright © 2024. All Rights Reserved.</li>
         </ul>
       </div>
     </footer>

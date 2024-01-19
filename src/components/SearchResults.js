@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 const SearchResults = ({ results }) => {
   const navigate = useNavigate();
 
- const handleGoBack = () => {
-   navigate("/#");
- };
+  const handleGoBack = () => {
+    navigate("/#");
+  };
 
   return (
     <div>
@@ -18,13 +18,18 @@ const SearchResults = ({ results }) => {
         <button onClick={handleGoBack} className='search-back-button'>
           Back
         </button>
-        {results.map((result, index) => (
-          <div key={index} className='searchResult'>
-            <h3>{result.title}</h3>
-            {result.description && <p>{result.description}</p>}
-            {result.content && <p>{result.content}</p>}
-          </div>
-        ))}
+
+        {results.length === 0 ? (
+          <h3>No results found.</h3>
+        ) : (
+          results.map((result, index) => (
+            <div key={index} className='searchResult'>
+              <h3>{result.title}</h3>
+              {result.description && <p>{result.description}</p>}
+              {result.content && <p>{result.content}</p>}
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

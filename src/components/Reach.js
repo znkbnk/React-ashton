@@ -3,16 +3,16 @@ import ScrollToTopOnMount from "../helpers/ScrollToTopOnMount";
 
 const Reach = () => {
   return (
-    <div>
-      <ScrollToTopOnMount />
+    <div className='service-container'>
+      <div className='service-cards'>
+        <ScrollToTopOnMount />
 
-      <div>
-        <h2>Reach</h2>
+        <h1>Reach</h1>
 
-        <strong>
+        <p>
           REACH : Authorised Chemicals and SVHC(s) Incorporated in Articles
           above 0.1% (w/w)
-        </strong>
+        </p>
         <p>
           At this time, as far as we are aware, and have been notified by ECHA,
           our chemical suppliers, etc., the only substances of very high concern
@@ -40,17 +40,19 @@ const Reach = () => {
           required by numerous aerospace specifications, and some existing
           defence specifications, in the following solutions :
         </p>
-        <ul>
+        <ol>
           <li>
-            Nitric/dichromate passivates, used for steel (some alloys) and
-            stainless steel.
+              Nitric/dichromate passivates, used for steel (some alloys) and
+              stainless steel.
           </li>
-          <li>Brush alocrom.</li>
+          <li>
+            Brush alocrom.
+          </li>
           <li>Cadmium passivates (both clear and chromate passivates).</li>
           <li>
             Dichromate seal, used for sulphuric acid and chromic acid anodising.
           </li>
-        </ul>
+        </ol>
         <p>
           The good news is that, where still employed for aerospace uses, in the
           case of brush alocrom and any of the passivates they merely result in

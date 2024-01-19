@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// ... (imports)
 
 const NewsItem = ({ image, title, description }) => {
   const [enlarged, setEnlarged] = useState(false);
@@ -11,21 +12,24 @@ const NewsItem = ({ image, title, description }) => {
     setEnlarged(false);
   };
 
-   const truncateDescription = (text, maxLength) => {
-  // Convert JSX elements to plain text
-  const plainText =
-    typeof text === "string"
-      ? text
-      : React.Children.toArray(text.props.children)
-          .map((child) =>
-            typeof child === "string" ? child : child.props.children
-          )
-          .join("");
+  const truncateDescription = (text, maxLength) => {
+    // Convert JSX elements to plain text
+    const plainText =
+      typeof text === "string"
+        ? text
+        : React.Children.toArray(text.props.children)
+            .map((child) =>
+              typeof child === "string" ? child : child.props.children
+            )
+            .join("");
 
-  return plainText.length > maxLength
-    ? `${plainText.slice(0, maxLength)}...`
-    : plainText;
-};
+    return plainText.length > maxLength
+      ? `${plainText.slice(0, maxLength)}...`
+      : plainText;
+  };
+
+  const plainTextDescription = truncateDescription(description, 150);
+
   return (
     <div
       className={`news-cards-container ${
@@ -49,7 +53,7 @@ const NewsItem = ({ image, title, description }) => {
           ) : (
             <>
               <h3>{title}</h3>
-              <p>{truncateDescription(description, 150)}</p>
+              <p>{plainTextDescription}</p>
             </>
           )}
           {!enlarged && (

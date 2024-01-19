@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -74,10 +78,11 @@ body {
 .search-results {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 20px 50px;
   color: var(--textwhite);
+  min-height: 100vh;
+  position: relative;
 }
 
 .searchResult:hover {
@@ -88,10 +93,10 @@ body {
 }
 
 .search-back-button {
-position: fixed;
-top: 200px; /* Adjust the top distance according to your design */
-left: 0;
-max-width: 100px;
+  position: fixed;
+  top: 200px; /* Adjust the top distance according to your design */
+  left: 0;
+  max-width: 100px;
   height: auto;
   border-radius: 20px;
   background: var(--service);
@@ -105,14 +110,8 @@ max-width: 100px;
 .search-back-button:hover {
   transform: scale(1.1);
   box-shadow: 5px 5px 10px 5px #00000033;
-
 }
 
-@media (max-width: 430px) {
-  .searchResult {
-    max-width: 100%;
-  }
-}
 /* service cards */
 
 .service-cards {
@@ -128,12 +127,17 @@ max-width: 100px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .service-cards:hover {
-  transform: scale(1.01);
   box-shadow: 3px 4px 20px 10px #0000006c;
   border: 1px solid #262018;
+}
+
+.service-cards .link {
+  text-decoration: underline;
 }
 
 .service-cards a {
@@ -191,6 +195,7 @@ max-width: 100px;
   justify-content: space-between;
   align-items: center;
   padding: 40px;
+  margin-top: 40px;
 }
 
 .back-button {
@@ -211,20 +216,6 @@ max-width: 100px;
   transform: scale(1.1);
 
   box-shadow: 5px 5px 10px 5px #00000033;
-
-}
-
-
-
-
-@media (max-width: 768px) {
-  .searchResult {
-    background: var(--result-hover);
-  }
-  .service-cards ul {
-    list-style: none;
-    word-wrap: break-word;
-  }
 }
 
 /* Footer */
@@ -300,21 +291,15 @@ footer {
   opacity: 0.3;
 }
 
-@media only screen and (max-width: 430px) {
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .service-cards ul {
-    padding: 0;
-    font-size: 16px;
-  }
-  .service-cards h1 {
-    font-size: 2em;
-    text-decoration: underline;
-  }
+
+
+.atropos-scale, .atropos-rotate, .atropos-inner {
+  overflow: visible;
+  position: relative;
 }
+
+
+
 
 /* NEWS */
 
@@ -345,7 +330,6 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 20px;
 }
 
 .news-cards {
@@ -356,7 +340,7 @@ footer {
   box-shadow: 1px 1px 30px 10px #0000003f;
   overflow: hidden;
   color: var(--text-color);
-  padding: 60px 20px 40px;
+  padding: 20px;
   transition: all 0.5s ease-in-out;
   display: flex;
   justify-content: center;
@@ -395,13 +379,10 @@ footer {
 
 .news-cards h3 {
   font-size: 1.7em;
-  margin-bottom: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   text-wrap: wrap;
-  margin-top: 10px;
-  padding: 0 20px;
 }
 .news-cards h1 {
   text-overflow: ellipsis;
@@ -442,8 +423,10 @@ footer {
   transform: scale(1.1);
 }
 
-.enlarged {
-  max-height: none;
+.enlarged .news-card {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .enlarged .news-cards {
@@ -452,9 +435,9 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  width: 600px;
-  padding: 60px;
+  width: auto;
   transition: top 0.5s ease-in-out;
+  border: 1px solid var(--text-color);
 }
 
 .enlarged.enlarged-visible .news-cards {
@@ -467,11 +450,9 @@ footer {
   top: 10px;
   right: 10px;
   cursor: pointer;
-  width: 30px;
   background: transparent;
   border: none;
 }
-
 
 /* Legals */
 
@@ -480,43 +461,171 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; 
+  height: 100vh;
+  padding: 0;
 }
 
-.chatbot-container {
-  margin-bottom: 20px; 
+/* company info */
+.info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 80px;
 }
 
+.left-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-left tbody {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-left h3 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.company-info {
+  margin-bottom: 40px;
+}
+
+.text-section p {
+  padding: 10px;
+  border-radius: 5px;
+}
 
 /* @media */
 
+@media only screen and (max-width: 1920px) {
+  .first {
+    width: 100%;
+  }
+  .service-container {
+    width: 100%;
+    padding: 0;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .news-cards-container {
     width: 100%;
   }
-  .news-cards {
+  .service-container {
     width: 100%;
+    padding: 0;
   }
-  .additional-image-container {
-    display: flex;
-    flex-direction: column;
+
+  .enlarged .news-cards {
+    width: 80%;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--text-color);
+    overflow-y: auto;
   }
+
+  .enlarged .close-button {
+    top: -10px;
+    right: -50px;
+  }
+
   .additional-image {
-    width: 100%;
+    width: 50%;
+  }
+  .searchResult {
+    background: var(--result-hover);
+  }
+  .service-cards ul {
+    list-style: none;
+    word-wrap: break-word;
+    padding: 40px;
+  }
+  .service-cards {
+    width: 90%;
+    padding: 0;
     margin: 20px;
   }
 }
 
 @media only screen and (max-width: 430px) {
+  .searchResult {
+    max-width: 100%;
+  }
   .news-cards-container {
-    width: 100%;
     padding: 0;
   }
+
+  .enlarged .close-button {
+    top: -10px;
+    right: -50px;
+  }
+
+  .enlarged .news-cards {
+    position: fixed;
+    top: 50%; /* Adjust this value to center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2440;
+    width: 80%;
+    border: 1px solid #333;
+    height: auto;
+    padding: 0;
+    font-size: 14px;
+    overflow-y: auto;
+    transition: top 0.5s ease-in-out;
+  }
+
+  .enlarged.enlarged-visible .news-cards {
+    top: 50%;
+    transition: top 0.5s ease-in-out;
+  }
+
+  .enlarged .news-cards h3 {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
   .logo {
     box-shadow: none;
     outline: none;
     border-radius: 15px;
   }
- 
+  .service-container {
+    width: 100%;
+    padding: 0;
+    min-height: auto;
+  }
+  .service-cards {
+    width: 90%;
+    margin: 20px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-cards ul {
+    margin: 20px;
+    font-size: 16px;
+    padding: 10px;
+  }
+  .service-cards h1 {
+    font-size: 2em;
+    text-decoration: underline;
+  }
 }

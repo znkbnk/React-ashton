@@ -9,11 +9,11 @@ const Approvals = () => {
   return (
     <div>
       <ScrollToTopOnMount />
-      <h1>Approvals</h1>
-      <h3>For individual scopes click relevant name</h3>
 
       <div className='service-container'>
         <div className='service-cards'>
+          <h1>Approvals</h1>
+          <h3>For individual scopes click relevant name</h3>
           <ul>
             {companies.map((company) => (
               <li key={company.title}>
