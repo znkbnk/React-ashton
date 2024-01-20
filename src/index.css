@@ -291,12 +291,9 @@ footer {
   opacity: 0.3;
 }
 
+/* atropos */
 
 
-.atropos-scale, .atropos-rotate, .atropos-inner {
-  overflow: visible;
-  position: relative;
-}
 
 
 
@@ -489,10 +486,7 @@ footer {
   align-items: center;
 }
 
-.right-left tbody {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .right-left h3 {
   display: flex;
@@ -502,6 +496,8 @@ footer {
 .company-info {
   margin-bottom: 40px;
 }
+
+
 
 .text-section p {
   padding: 10px;

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -15,33 +16,28 @@ import { Parallax } from "react-parallax";
 import Atropos from "atropos";
 
 const Home = () => {
-  // eslint-disable-next-line no-unused-vars
-  const myAtropos = Atropos({
-    el: ".my-atropos",
-    activeOffset: 40,
-    shadow: true,
-    highlight: true,
-    shadowScale: 1.07,
-    rotateXMax: 20,
-    rotateYMax: 20,
-    onRotate(x, y) {
-      console.log("Rotate", x, y);
-    },
+  const leftAtropos = Atropos({
+    el: ".left",
+    activeOffset: 30,
+    shadowScale: 1.05,
   });
+   const pAtropos = Atropos({
+     el: ".p",
+     activeOffset: 30,
+     shadowScale: 1.05,
+   });
 
-  // eslint-disable-next-line no-unused-vars
-  const myAtroposRight = Atropos({
+  const rightAtropos = Atropos({
     el: ".right",
-    activeOffset: 40,
-    shadow: true,
-    highlight: false,
-    shadowScale: 1.07,
-    rotateXMax: 20,
-    rotateYMax: 20,
-    onRotate(x, y) {
-      console.log("Rotate", x, y);
-    },
+    activeOffset: 30,
+    shadowScale: 1.05,
   });
+    const tbodyAtropos = Atropos({
+      el: ".tbody",
+      activeOffset: 30,
+      shadowScale: 1.05,
+      
+    });
   const settings = {
     infinite: true,
     speed: 500,
@@ -151,41 +147,57 @@ const Home = () => {
               </div>
 
               <div className='info-container '>
-                <div class='atropos my-atropos'>
+                <div class='atropos left'>
                   <div class='atropos-scale'>
                     <div class='atropos-rotate'>
                       <div class='atropos-inner'>
                         <div className='left-side'>
-                          <div className='service-cards'>
-                            <p>
-                              Ashton and Moore Ltd. (Birmingham) is an
-                              independent sub-contract metal finisher who has
-                              serviced the aerospace, defence and general
-                              engineering sectors since 1925. With 90 years of
-                              experience and technical knowledge we successfully
-                              undertake a wide variety of finishes, as well as
-                              NDT, providing a true “One stop shop” to over 400
-                              customers throughout the UK and the rest of the
-                              world. We hold approvals from many household
-                              names, such as Rolls-Royce, BAe, Airbus, GE, Moog,
-                              Honeywell, UTC, Messier Bugatti Dowty, Meggit,
-                              etc. (in total over 28 different primes). We also
-                              hold many industrial approvals including; ISO
-                              14001 and 9001, AS 9001 Rev. D and NADCAP for all
-                              chemical processing and NDT processes undertaken.
-                              Indeed, our prowess has been widely acknowledged
-                              and in recent years and we have won awards, not
-                              only for Quality, but also Environmental
-                              performance and outstanding company achievement,
-                              at the Surface Engineering Association’s awards at
-                              the house of Lords in London. However, we are not
-                              resting on our laurels and are currently
-                              installing REACH compliant processes such as; TSA,
-                              Thin film sulphuric anodising and Socomore
-                              (TCS/PACS), to ensure our ability to continue
-                              providing our high level of service well into the
-                              future.
-                            </p>
+                          <div
+                            className='service-cards'
+                            data-atropos-offset='-2'
+                          >
+                            <div class='atropos p'>
+                              <div class='atropos-scale'>
+                                <div class='atropos-rotate'>
+                                  <div class='atropos-inner'>
+                                    <p data-atropos-offset='4'>
+                                      Ashton and Moore Ltd. (Birmingham) is an
+                                      independent sub-contract metal finisher
+                                      who has serviced the aerospace, defence
+                                      and general engineering sectors since
+                                      1925. With 90 years of experience and
+                                      technical knowledge we successfully
+                                      undertake a wide variety of finishes, as
+                                      well as NDT, providing a true “One stop
+                                      shop” to over 400 customers throughout the
+                                      UK and the rest of the world. We hold
+                                      approvals from many household names, such
+                                      as Rolls-Royce, BAe, Airbus, GE, Moog,
+                                      Honeywell, UTC, Messier Bugatti Dowty,
+                                      Meggit, etc. (in total over 28 different
+                                      primes). We also hold many industrial
+                                      approvals including; ISO 14001 and 9001,
+                                      AS 9001 Rev. D and NADCAP for all chemical
+                                      processing and NDT processes undertaken.
+                                      Indeed, our prowess has been widely
+                                      acknowledged and in recent years and we
+                                      have won awards, not only for Quality, but
+                                      also Environmental performance and
+                                      outstanding company achievement, at the
+                                      Surface Engineering Association’s awards
+                                      at the house of Lords in London. However,
+                                      we are not resting on our laurels and are
+                                      currently installing REACH compliant
+                                      processes such as; TSA, Thin film
+                                      sulphuric anodising and Socomore
+                                      (TCS/PACS), to ensure our ability to
+                                      continue providing our high level of
+                                      service well into the future.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -198,49 +210,64 @@ const Home = () => {
                     <div className='atropos-scale'>
                       <div className='atropos-rotate'>
                         <div className='atropos-inner'>
-                          <div className='service-cards '>
-                            <tbody className='right-left'>
-                              <h4>The services we provide include:</h4>
-                              <tr>
-                                <td>
-                                  <h3>Anodising</h3>
-                                </td>
-                                <td>
-                                  Sulphuric, Chromic, Thin film sulphuric,
-                                  Tartaric Sulphuric acid anodising
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h3>Plating</h3>
-                                </td>
-                                <td>Cadmium, Silver, Lead indium</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h3>Passivation</h3>
-                                </td>
-                                <td>Stainless steel, Brass</td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h3>Painting</h3>
-                                </td>
-                                <td>
-                                  Dry film lubricants, Ipcote,Polyurethanes,
-                                  Epoxies, Stove enamels, lacquers, PTFE
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <h3>Phosphating</h3>
-                                </td>
-                                <td>
-                                  Zinc & Manganese, Calcium modified & Low
-                                  temperature
-                                </td>
-                              </tr>
-                            </tbody>
+                          <div
+                            className='service-cards'
+                            data-atropos-offset='-2'
+                          >
+                            <div className='atropos tbody'>
+                              <div className='atropos-scale'>
+                                <div className='atropos-rotate'>
+                                  <div className='atropos-inner'>
+                                    <div data-atropos-offset='4'>
+                                      <h4>The services we provide include:</h4>
+                                      <tbody className='right-left'>
+                                        <tr>
+                                          <td>
+                                            <h3>Anodising</h3>
+                                          </td>
+                                          <td>
+                                            Sulphuric, Chromic, Thin film
+                                            sulphuric, Tartaric Sulphuric acid
+                                            anodising
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <h3>Plating</h3>
+                                          </td>
+                                          <td>Cadmium, Silver, Lead indium</td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <h3>Passivation</h3>
+                                          </td>
+                                          <td>Stainless steel, Brass</td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <h3>Painting</h3>
+                                          </td>
+                                          <td>
+                                            Dry film lubricants,
+                                            Ipcote,Polyurethanes, Epoxies, Stove
+                                            enamels, lacquers, PTFE
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <h3>Phosphating</h3>
+                                          </td>
+                                          <td>
+                                            Zinc & Manganese, Calcium modified &
+                                            Low temperature
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
