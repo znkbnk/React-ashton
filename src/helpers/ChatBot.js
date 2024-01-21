@@ -112,6 +112,7 @@ export default function ChatBot() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [response, setResponse] = useState(""); // New state for the response
   const [showFinishSendButtons, setShowFinishSendButtons] = useState(false); // New state to control button visibility
+  const [showYesNoButtons, setShowYesNoButtons] = useState(false);
   const [isChatComplete, setIsChatComplete] = useState(false);
 
   const chatContainerRef = useRef(null);
@@ -124,58 +125,97 @@ export default function ChatBot() {
   };
 
   useEffect(() => {
+    if (currentQuestionIndex === 3) {
+      const timeoutId = setTimeout(() => {
+        setPlaceholder("Please choose Yes or No");
+        setShowYesNoButtons(true);
+      }, 1500);
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [currentQuestionIndex]);
+
+  useEffect(() => {
     scrollToBottom();
   }, [conversation, currentQuestionIndex]);
 
-    const showResponse = () => {
-      if (inputValue === "") {
-        return;
+  const showResponse = () => {
+    if (inputValue === "") {
+      return;
+    }
+
+    const similarityThreshold = 0.4;
+    const keywords = Object.keys(keywordResponses);
+    const inputLowerCase = inputValue.toLowerCase();
+
+    const closestMatch = stringSimilarity.findBestMatch(
+      inputLowerCase,
+      keywords
+    ).bestMatch;
+
+    let response = "";
+
+    if (currentQuestionIndex === 0) {
+      response = `Thank you, ${inputValue}! It's great to have you here.  `;
+    } else if (currentQuestionIndex === 1) {
+      response = `Thank you for sharing that. ${inputValue} sounds like a reputable partner in metal finishing. I appreciate the information.  `;
+    } else if (currentQuestionIndex === 3) {
+      setShowYesNoButtons(true);
+
+      return; // Stop further processing if it's question index 3
+    } else if (closestMatch.rating >= similarityThreshold) {
+      const responseKey = closestMatch.target;
+      response = keywordResponses[responseKey];
+    } else {
+      response = `${inputValue}? I don't understand`;
+    }
+
+    setIsTyping(true);
+
+    setTimeout(() => {
+      setConversation((prevConversation) => [
+        ...prevConversation,
+        { question: questions[currentQuestionIndex], answer: inputValue },
+        { answer: response },
+      ]);
+
+      if (!isChatComplete) {
+        setCurrentQuestionIndex(currentQuestionIndex + 1);
       }
 
-      const similarityThreshold = 0.4;
-      const keywords = Object.keys(keywordResponses);
-      const inputLowerCase = inputValue.toLowerCase();
+      setIsTyping(false);
+      setPlaceholder("Enter your response");
+      setResponse("");
+      setShowYesNoButtons(false);
+    }, 1000);
 
-      const closestMatch = stringSimilarity.findBestMatch(
-        inputLowerCase,
-        keywords
-      ).bestMatch;
+    setInputValue("");
+  };
 
-      let response = "";
-      if (currentQuestionIndex === 0) {
-        response = `Thank you, ${inputValue}! It's great to have you here.  `;
-      } else if (currentQuestionIndex === 1) {
-        response = `Thank you for sharing that. ${inputValue} sounds like a reputable partner in metal finishing. I appreciate the information.  `;
-      } else if (currentQuestionIndex === 3) {
-        if (inputValue.toLowerCase() === "yes") {
-          if (currentQuestionIndex === 4) {
-            const responseKey = closestMatch.target;
-            response = keywordResponses[responseKey];
-          }
-        } else if (inputValue.toLowerCase() === "no") {
-          setShowButtons(true);
-          setIsChatComplete(true);
-          return; // Stop further processing if the response is "no"
-        }
-      } else if (closestMatch.rating >= similarityThreshold) {
-        const responseKey = closestMatch.target;
-        response = keywordResponses[responseKey];
-      } else {
-        response = `${inputValue}? I don't understand`;
-      }
+  const handleYesButtonClick = () => {
+    setPlaceholder("Enter your response");
+    // Additional logic if user presses Yes
+    setShowYesNoButtons(false);
+
+    if (currentQuestionIndex === 4) {
+      const responseKey = stringSimilarity.findBestMatch(
+        inputValue.toLowerCase(),
+        Object.keys(keywordResponses)
+      ).bestMatch.target;
+      const response = keywordResponses[responseKey];
 
       setIsTyping(true);
 
       setTimeout(() => {
         setConversation((prevConversation) => [
           ...prevConversation,
-          { question: questions[currentQuestionIndex], answer: inputValue },
+          { question: questions[currentQuestionIndex], answer: "Yes" },
           { answer: response },
         ]);
 
-        if (!isChatComplete) {
-          setCurrentQuestionIndex(currentQuestionIndex + 1);
-        }
+        // Update the state and end the conversation
+        setIsChatComplete(true);
+        setShowFinishSendButtons(true);
 
         setIsTyping(false);
         setPlaceholder("Enter your response");
@@ -183,14 +223,33 @@ export default function ChatBot() {
       }, 1000);
 
       setInputValue("");
-    };
+    } else {
+      // Continue to the next question if it's not the end of the conversation
+      setIsTyping(true);
 
+      setTimeout(() => {
+        setConversation((prevConversation) => [
+          ...prevConversation,
+          { question: questions[currentQuestionIndex], answer: "Yes" },
+        ]);
 
+        setCurrentQuestionIndex(currentQuestionIndex + 1);
 
+        setIsTyping(false);
+        setPlaceholder("Enter your response");
+        setResponse("");
+      }, 1000);
 
+      setInputValue("");
+    }
+  };
 
-
-
+  const handleNoButtonClick = () => {
+    // Additional logic if user presses No
+    setShowFinishSendButtons(true);
+    setIsChatComplete(true);
+    setShowYesNoButtons(false); // Hide Yes/No buttons after user responds
+  };
 
   const handleButtonClick = () => {
     const botButton = document.querySelector(".bot-button");
@@ -217,14 +276,12 @@ export default function ChatBot() {
 
       // Check if the response is "no" and set states accordingly
       if (inputValue.toLowerCase() === "no") {
-        setShowButtons(true);
+        setShowFinishSendButtons(true);
+        setShowYesNoButtons(false);
         // No need to proceed with the next question, as buttons indicate the end of the conversation
       } else if (currentQuestionIndex < questions.length - 1) {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
       }
-       if (currentQuestionIndex === 3) {
-
-       }
     }
   };
 
@@ -287,6 +344,17 @@ export default function ChatBot() {
                     <button className='send-button' onClick={showResponse}>
                       Send
                     </button>
+                  </>
+                )}
+                {showYesNoButtons && (
+                  <>
+                    <button
+                      className='yes-button'
+                      onClick={handleYesButtonClick}
+                    >
+                      Yes
+                    </button>
+                    <button className='no-button'>No</button>
                   </>
                 )}
               </div>
