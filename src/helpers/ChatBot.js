@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import stringSimilarity from "string-similarity";
 import "../helpers/chatbot.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import emailjs from "emailjs-com";
 
 export default function ChatBot() {
   const questions = [
@@ -110,10 +111,11 @@ export default function ChatBot() {
   const [placeholder, setPlaceholder] = useState("Enter your response");
   const [isTyping, setIsTyping] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [response, setResponse] = useState(""); // New state for the response
-  const [showFinishSendButtons, setShowFinishSendButtons] = useState(false); // New state to control button visibility
+  const [response, setResponse] = useState("");
+  const [showFinishSendButtons, setShowFinishSendButtons] = useState(false); 
   const [showYesNoButtons, setShowYesNoButtons] = useState(false);
   const [isChatComplete, setIsChatComplete] = useState(false);
+  
 
   const chatContainerRef = useRef(null);
 
@@ -166,7 +168,7 @@ export default function ChatBot() {
     } else if (currentQuestionIndex === 3) {
       setShowYesNoButtons(true);
 
-      return; // Stop further processing if it's question index 3
+      return; 
     } else if (closestMatch.rating >= similarityThreshold) {
       const responseKey = closestMatch.target;
       response = keywordResponses[responseKey];
@@ -198,7 +200,6 @@ export default function ChatBot() {
 
   const handleYesButtonClick = () => {
     setPlaceholder("Enter your response");
-    // Additional logic if user presses Yes
     setShowYesNoButtons(false);
 
     if (currentQuestionIndex === 4) {
@@ -217,7 +218,6 @@ export default function ChatBot() {
           { answer: response },
         ]);
 
-        // Update the state and end the conversation
         setIsChatComplete(true);
         setShowFinishSendButtons(true);
 
@@ -228,7 +228,6 @@ export default function ChatBot() {
 
       setInputValue("");
     } else {
-      // Continue to the next question if it's not the end of the conversation
       setIsTyping(true);
 
       setTimeout(() => {
@@ -289,11 +288,65 @@ export default function ChatBot() {
     }
   };
 
-  const handleFinish = () => {
-    // Add any logic you want to execute when the "Finish" button is clicked
-    // For example, you might want to end the conversation or perform some cleanup
-    console.log("Finish button clicked!");
+   const handleStartAgain = () => {
+     setConversation([]);
+     setInputValue("");
+     setPlaceholder("Enter your response");
+     setIsTyping(false);
+     setCurrentQuestionIndex(0);
+     setResponse("");
+     setShowFinishSendButtons(false);
+     setShowYesNoButtons(false);
+     setIsChatComplete(false);
+
+   
+     scrollToBottom();
+   };
+
+const handleFinishChat = () => {
+  setConversation([]);
+  setInputValue("");
+  setPlaceholder("Enter your response");
+  setIsTyping(false);
+  setCurrentQuestionIndex(0);
+  setResponse("");
+  setShowFinishSendButtons(false);
+  setShowYesNoButtons(false);
+  setIsChatComplete(false);
+
+ handleCloseButtonClick();
+};
+
+const handleSendChat = () => {
+ 
+  const messageBody = conversation
+    .filter((entry) => entry.answer)
+    .map((entry) => entry.answer)
+    .join("\n\n"); 
+
+  
+  const templateParams = {
+    to_email: "zenikibeniki@gmail.com", 
+    message: messageBody,
   };
+
+
+   emailjs
+     .send(
+       "YOUR_SERVICE_ID",
+       "YOUR_TEMPLATE_ID",
+       templateParams,
+       "YOUR_USER_ID"
+     )
+     .then(
+       (response) => {
+         console.log("Email sent successfully:", response);
+       },
+       (error) => {
+         console.error("Error sending email:", error);
+       }
+     );
+};
 
   return (
     <div className='btn-help'>
@@ -341,17 +394,23 @@ export default function ChatBot() {
                   required
                 />
                 {showFinishSendButtons && (
-                  <>
-                    <button className='finish-button' onClick={handleFinish}>
-                      Finish
+                  <div className='chat-buttons'>
+                    <button
+                      className='finish-button'
+                      onClick={handleFinishChat}
+                    >
+                      Finish Chat
                     </button>
-                    <button className='send-button' onClick={showResponse}>
-                      Send
+                    <button className='start-button' onClick={handleStartAgain}>
+                      Start Again
                     </button>
-                  </>
+                    <button className='send-button' onClick={handleSendChat}>
+                      Send copy of chat to production manager
+                    </button>
+                  </div>
                 )}
                 {showYesNoButtons && (
-                  <>
+                  <div className='chat-buttons'>
                     <button
                       className='yes-button'
                       onClick={handleYesButtonClick}
@@ -361,7 +420,7 @@ export default function ChatBot() {
                     <button className='no-button' onClick={handleNoButtonClick}>
                       No
                     </button>
-                  </>
+                  </div>
                 )}
               </div>
             </div>

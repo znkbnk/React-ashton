@@ -153,7 +153,7 @@ const Home = () => {
                         <div className='left-side'>
                           <div
                             className='service-cards'
-                            data-atropos-offset='-2'
+                            data-atropos-offset='-3'
                           >
                             <div class='atropos p'>
                               <div class='atropos-scale'>
@@ -211,7 +211,7 @@ const Home = () => {
                         <div className='atropos-inner'>
                           <div
                             className='service-cards'
-                            data-atropos-offset='-2'
+                            data-atropos-offset='-3'
                           >
                             <div className='atropos tbody'>
                               <div className='atropos-scale'>
