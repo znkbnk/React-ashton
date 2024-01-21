@@ -126,10 +126,14 @@ export default function ChatBot() {
 
   useEffect(() => {
     if (currentQuestionIndex === 3) {
+        setIsTyping(true);
+
       const timeoutId = setTimeout(() => {
+        setIsTyping(false);
+
         setPlaceholder("Please choose Yes or No");
         setShowYesNoButtons(true);
-      }, 1500);
+      }, 500);
 
       return () => clearTimeout(timeoutId);
     }
@@ -245,10 +249,19 @@ export default function ChatBot() {
   };
 
   const handleNoButtonClick = () => {
-    // Additional logic if user presses No
+        setIsTyping(true);
+
+    setShowYesNoButtons(false);
+
+    setTimeout(() => {
+        setIsTyping(false);
+
+      setPlaceholder("Please select one of two options");
     setShowFinishSendButtons(true);
+
+    },1000)
+
     setIsChatComplete(true);
-    setShowYesNoButtons(false); // Hide Yes/No buttons after user responds
   };
 
   const handleButtonClick = () => {
@@ -273,15 +286,6 @@ export default function ChatBot() {
   const handleKeyPress = (e) => {
     if (e.which === 13) {
       showResponse();
-
-      // Check if the response is "no" and set states accordingly
-      if (inputValue.toLowerCase() === "no") {
-        setShowFinishSendButtons(true);
-        setShowYesNoButtons(false);
-        // No need to proceed with the next question, as buttons indicate the end of the conversation
-      } else if (currentQuestionIndex < questions.length - 1) {
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
-      }
     }
   };
 
@@ -328,7 +332,7 @@ export default function ChatBot() {
               </div>
               <div className='answer' id='ans'>
                 <input
-                  className='search-input'
+                  className='chatbot-input'
                   type='text'
                   placeholder={placeholder}
                   value={inputValue}
@@ -354,7 +358,9 @@ export default function ChatBot() {
                     >
                       Yes
                     </button>
-                    <button className='no-button'>No</button>
+                    <button className='no-button' onClick={handleNoButtonClick}>
+                      No
+                    </button>
                   </>
                 )}
               </div>
