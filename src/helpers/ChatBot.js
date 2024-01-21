@@ -111,6 +111,8 @@ export default function ChatBot() {
   const [isTyping, setIsTyping] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [response, setResponse] = useState(""); // New state for the response
+  const [showFinishSendButtons, setShowFinishSendButtons] = useState(false); // New state to control button visibility
+  const [isChatComplete, setIsChatComplete] = useState(false);
 
   const chatContainerRef = useRef(null);
 
@@ -121,90 +123,67 @@ export default function ChatBot() {
     }
   };
 
-useEffect(() => {
-  scrollToBottom();
-}, [conversation, currentQuestionIndex]);
+  useEffect(() => {
+    scrollToBottom();
+  }, [conversation, currentQuestionIndex]);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  const showResponse = () => {
-    if (inputValue === "") {
-      return;
-    }
-
-    const similarityThreshold = 0.4;
-    const keywords = Object.keys(keywordResponses);
-    const inputLowerCase = inputValue.toLowerCase();
-
-    const closestMatch = stringSimilarity.findBestMatch(
-      inputLowerCase,
-      keywords
-    ).bestMatch;
-
-    let response = "";
-    if (currentQuestionIndex === 0) {
-      response = `Thank you, ${inputValue}! It's great to have you here.  `;
-    } else if (currentQuestionIndex === 1) {
-      response = `Thank you for sharing that. ${inputValue} sounds like a reputable partner in metal finishing. I appreciate the information.  `;
-    } else if (currentQuestionIndex === 3) {
-      if (inputValue.toLowerCase() === "yes") {
-        if (currentQuestionIndex === 4) {
-          const responseKey = closestMatch.target;
-          response = keywordResponses[responseKey];
-        }
-      } else if (inputValue.toLowerCase() === "no") {
-        response = "Ok.";
+    const showResponse = () => {
+      if (inputValue === "") {
+        return;
       }
-    } else if (closestMatch.rating >= similarityThreshold) {
-      const responseKey = closestMatch.target;
-      response = keywordResponses[responseKey];
-    } else {
-      response = `${inputValue}? I don't understand`;
-    }
 
-    setIsTyping(true);
+      const similarityThreshold = 0.4;
+      const keywords = Object.keys(keywordResponses);
+      const inputLowerCase = inputValue.toLowerCase();
 
-    setTimeout(() => {
-      setConversation((prevConversation) => [
-        ...prevConversation,
-        { question: questions[currentQuestionIndex], answer: inputValue },
-        { answer: response },
-      ]);
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setIsTyping(false);
-      setPlaceholder("Enter your response");
-      setResponse(""); // Clear the response after it's displayed
-    }, 1000);
+      const closestMatch = stringSimilarity.findBestMatch(
+        inputLowerCase,
+        keywords
+      ).bestMatch;
 
-    setInputValue("");
-  };
+      let response = "";
+      if (currentQuestionIndex === 0) {
+        response = `Thank you, ${inputValue}! It's great to have you here.  `;
+      } else if (currentQuestionIndex === 1) {
+        response = `Thank you for sharing that. ${inputValue} sounds like a reputable partner in metal finishing. I appreciate the information.  `;
+      } else if (currentQuestionIndex === 3) {
+        if (inputValue.toLowerCase() === "yes") {
+          if (currentQuestionIndex === 4) {
+            const responseKey = closestMatch.target;
+            response = keywordResponses[responseKey];
+          }
+        } else if (inputValue.toLowerCase() === "no") {
+          setShowButtons(true);
+          setIsChatComplete(true);
+          return; // Stop further processing if the response is "no"
+        }
+      } else if (closestMatch.rating >= similarityThreshold) {
+        const responseKey = closestMatch.target;
+        response = keywordResponses[responseKey];
+      } else {
+        response = `${inputValue}? I don't understand`;
+      }
 
+      setIsTyping(true);
 
+      setTimeout(() => {
+        setConversation((prevConversation) => [
+          ...prevConversation,
+          { question: questions[currentQuestionIndex], answer: inputValue },
+          { answer: response },
+        ]);
 
+        if (!isChatComplete) {
+          setCurrentQuestionIndex(currentQuestionIndex + 1);
+        }
 
+        setIsTyping(false);
+        setPlaceholder("Enter your response");
+        setResponse("");
+      }, 1000);
 
-
-
-
+      setInputValue("");
+    };
 
 
 
@@ -232,11 +211,28 @@ useEffect(() => {
     textSection.style.display = "none";
   };
 
-const handleKeyPress = (e) => {
-  if (e.which === 13) {
-    showResponse();
-  }
-};
+  const handleKeyPress = (e) => {
+    if (e.which === 13) {
+      showResponse();
+
+      // Check if the response is "no" and set states accordingly
+      if (inputValue.toLowerCase() === "no") {
+        setShowButtons(true);
+        // No need to proceed with the next question, as buttons indicate the end of the conversation
+      } else if (currentQuestionIndex < questions.length - 1) {
+        setCurrentQuestionIndex(currentQuestionIndex + 1);
+      }
+       if (currentQuestionIndex === 3) {
+
+       }
+    }
+  };
+
+  const handleFinish = () => {
+    // Add any logic you want to execute when the "Finish" button is clicked
+    // For example, you might want to end the conversation or perform some cleanup
+    console.log("Finish button clicked!");
+  };
 
   return (
     <div className='btn-help'>
@@ -283,6 +279,16 @@ const handleKeyPress = (e) => {
                   onKeyDown={handleKeyPress}
                   required
                 />
+                {showFinishSendButtons && (
+                  <>
+                    <button className='finish-button' onClick={handleFinish}>
+                      Finish
+                    </button>
+                    <button className='send-button' onClick={showResponse}>
+                      Send
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           </div>

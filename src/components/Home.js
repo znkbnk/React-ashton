@@ -19,24 +19,23 @@ const Home = () => {
   const leftAtropos = Atropos({
     el: ".left",
     activeOffset: 30,
-    shadowScale: 1.05,
+    alwaysActive: true,
   });
    const pAtropos = Atropos({
      el: ".p",
      activeOffset: 30,
-     shadowScale: 1.05,
+     alwaysActive: true,
    });
 
   const rightAtropos = Atropos({
     el: ".right",
+    alwaysActive: true,
     activeOffset: 30,
-    shadowScale: 1.05,
   });
     const tbodyAtropos = Atropos({
       el: ".tbody",
+      alwaysActive: true,
       activeOffset: 30,
-      shadowScale: 1.05,
-      
     });
   const settings = {
     infinite: true,
