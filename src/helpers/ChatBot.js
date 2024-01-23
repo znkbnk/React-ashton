@@ -261,7 +261,8 @@ const handleNoButtonClick = () => {
 
     setIsChatComplete(true);
     setShowFinishSendButtons(true);
-    setPlaceholder("Enter your response"); // Or any other placeholder text if needed
+    setPlaceholder("Enter your response");
+    setCurrentQuestionIndex(questions.length); // Set index to a value that prevents showing any further questions
   }, 1000);
 };
 
