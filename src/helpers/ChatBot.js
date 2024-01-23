@@ -8,7 +8,10 @@ import emailjs from "emailjs-com";
 export default function ChatBot() {
   const questions = [
     "Hello! Welcome to Ashton & Moore Ltd, your expert partner in metal finishing. I'm here to assist you. May I have your name, please?",
-    "Could you please share the name of your company? Obtaining information about your business will enable us to offer tailored metal finishing solutions that meet both your industry and specific requirements. Additionally, kindly provide your email for further communication.",
+    "Could you please share the name of your company? Obtaining information about your business will enable us to offer tailored metal finishing solutions that meet both your industry and specific requirements. ",
+
+    "Thank you for providing your name and sharing information about your company. To ensure seamless communication and share detailed information about our metal finishing solutions, may I kindly ask for your email address?",
+
     "Now that we know a bit more about your company, could you share the specific metal finishing process you're interested in? Whether it's silver plating, chromic anodising, ndt or another technique, understanding your preferences will help us provide the most suitable solutions for your project.",
     "Would you like to get another process?",
     "What other process would you like?",
@@ -112,10 +115,9 @@ export default function ChatBot() {
   const [isTyping, setIsTyping] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [response, setResponse] = useState("");
-  const [showFinishSendButtons, setShowFinishSendButtons] = useState(false); 
+  const [showFinishSendButtons, setShowFinishSendButtons] = useState(false);
   const [showYesNoButtons, setShowYesNoButtons] = useState(false);
   const [isChatComplete, setIsChatComplete] = useState(false);
-  
 
   const chatContainerRef = useRef(null);
 
@@ -127,8 +129,8 @@ export default function ChatBot() {
   };
 
   useEffect(() => {
-    if (currentQuestionIndex === 3) {
-        setIsTyping(true);
+    if (currentQuestionIndex === 4) {
+      setIsTyping(true);
 
       const timeoutId = setTimeout(() => {
         setIsTyping(false);
@@ -164,11 +166,13 @@ export default function ChatBot() {
     if (currentQuestionIndex === 0) {
       response = `Thank you, ${inputValue}! It's great to have you here.  `;
     } else if (currentQuestionIndex === 1) {
-      response = `Thank you for sharing that. ${inputValue} sounds like a reputable partner in metal finishing. I appreciate the information.  `;
-    } else if (currentQuestionIndex === 3) {
+      response = `Thank you for sharing that. ${inputValue} sounds like a reputable partner. I appreciate the information.  `;
+    } else if (currentQuestionIndex === 2) {
+      response = `Thank you for sharing your email address with us. We appreciate your prompt response.  `;
+    } else if (currentQuestionIndex === 4) {
       setShowYesNoButtons(true);
 
-      return; 
+      return;
     } else if (closestMatch.rating >= similarityThreshold) {
       const responseKey = closestMatch.target;
       response = keywordResponses[responseKey];
@@ -202,7 +206,7 @@ export default function ChatBot() {
     setPlaceholder("Enter your response");
     setShowYesNoButtons(false);
 
-    if (currentQuestionIndex === 4) {
+    if (currentQuestionIndex === 5) {
       const responseKey = stringSimilarity.findBestMatch(
         inputValue.toLowerCase(),
         Object.keys(keywordResponses)
@@ -247,24 +251,24 @@ export default function ChatBot() {
     }
   };
 
-const handleNoButtonClick = () => {
-  setIsTyping(true);
-  setShowYesNoButtons(false);
+  const handleNoButtonClick = () => {
+    setIsTyping(true);
+    setShowYesNoButtons(false);
 
-  setTimeout(() => {
-    setIsTyping(false);
+    setTimeout(() => {
+      setIsTyping(false);
 
-    setConversation((prevConversation) => [
-      ...prevConversation,
-      { question: questions[currentQuestionIndex], answer: "No" },
-    ]);
+      setConversation((prevConversation) => [
+        ...prevConversation,
+        { question: questions[currentQuestionIndex], answer: "No" },
+      ]);
 
-    setIsChatComplete(true);
-    setShowFinishSendButtons(true);
-    setPlaceholder("Enter your response");
-    setCurrentQuestionIndex(questions.length); // Set index to a value that prevents showing any further questions
-  }, 1000);
-};
+      setIsChatComplete(true);
+      setShowFinishSendButtons(true);
+      setPlaceholder("Enter your response");
+      setCurrentQuestionIndex(questions.length);
+    }, 1000);
+  };
 
   const handleButtonClick = () => {
     const botButton = document.querySelector(".bot-button");
@@ -291,65 +295,61 @@ const handleNoButtonClick = () => {
     }
   };
 
-   const handleStartAgain = () => {
-     setConversation([]);
-     setInputValue("");
-     setPlaceholder("Enter your response");
-     setIsTyping(false);
-     setCurrentQuestionIndex(0);
-     setResponse("");
-     setShowFinishSendButtons(false);
-     setShowYesNoButtons(false);
-     setIsChatComplete(false);
+  const handleStartAgain = () => {
+    setConversation([]);
+    setInputValue("");
+    setPlaceholder("Enter your response");
+    setIsTyping(false);
+    setCurrentQuestionIndex(0);
+    setResponse("");
+    setShowFinishSendButtons(false);
+    setShowYesNoButtons(false);
+    setIsChatComplete(false);
 
-   
-     scrollToBottom();
-   };
-
-const handleFinishChat = () => {
-  setConversation([]);
-  setInputValue("");
-  setPlaceholder("Enter your response");
-  setIsTyping(false);
-  setCurrentQuestionIndex(0);
-  setResponse("");
-  setShowFinishSendButtons(false);
-  setShowYesNoButtons(false);
-  setIsChatComplete(false);
-
- handleCloseButtonClick();
-};
-
-const handleSendChat = () => {
- 
-  const messageBody = conversation
-    .filter((entry) => entry.answer)
-    .map((entry) => entry.answer)
-    .join("\n\n"); 
-
-  
-  const templateParams = {
-    to_email: "zenikibeniki@gmail.com", 
-    message: messageBody,
+    scrollToBottom();
   };
 
+  const handleFinishChat = () => {
+    setConversation([]);
+    setInputValue("");
+    setPlaceholder("Enter your response");
+    setIsTyping(false);
+    setCurrentQuestionIndex(0);
+    setResponse("");
+    setShowFinishSendButtons(false);
+    setShowYesNoButtons(false);
+    setIsChatComplete(false);
 
-   emailjs
-     .send(
-       "YOUR_SERVICE_ID",
-       "YOUR_TEMPLATE_ID",
-       templateParams,
-       "YOUR_USER_ID"
-     )
-     .then(
-       (response) => {
-         console.log("Email sent successfully:", response);
-       },
-       (error) => {
-         console.error("Error sending email:", error);
-       }
-     );
-};
+    handleCloseButtonClick();
+  };
+
+  const handleSendChat = () => {
+    const messageBody = conversation
+      .filter((entry) => entry.answer)
+      .map((entry) => entry.answer)
+      .join("\n\n");
+
+    const templateParams = {
+      to_email: "zenikibeniki@gmail.com",
+      message: messageBody,
+    };
+
+    emailjs
+      .send(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        templateParams,
+        "YOUR_USER_ID"
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully:", response);
+        },
+        (error) => {
+          console.error("Error sending email:", error);
+        }
+      );
+  };
 
   return (
     <div className='btn-help'>
