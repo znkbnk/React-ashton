@@ -164,7 +164,7 @@ export default function ChatBot() {
     if (currentQuestionIndex === 0) {
       response = `Thank you, ${inputValue}! It's great to have you here.  `;
     } else if (currentQuestionIndex === 1) {
-      response = `Thank you for providing your company name and email. I appreciate the information.  `;
+      response = `Thank you for sharing that. ${inputValue} sounds like a reputable partner in metal finishing. I appreciate the information.  `;
     } else if (currentQuestionIndex === 3) {
       setShowYesNoButtons(true);
 
@@ -261,8 +261,7 @@ const handleNoButtonClick = () => {
 
     setIsChatComplete(true);
     setShowFinishSendButtons(true);
-    setPlaceholder("Enter your response");
-    setCurrentQuestionIndex(questions.length); // Set index to a value that prevents showing any further questions
+    setPlaceholder("Enter your response"); // Or any other placeholder text if needed
   }, 1000);
 };
 
@@ -334,21 +333,21 @@ const handleSendChat = () => {
   };
 
 
-    emailjs
-      .send(
-        "service_1n4gsgx",
-        "template_cyifmgn",
-        templateParams,
-        "u4-0CXt6mlWQViI6d"
-      )
-      .then(
-        (response) => {
-          console.log("Email sent successfully:", response);
-        },
-        (error) => {
-          console.error("Error sending email:", error);
-        }
-      );
+   emailjs
+     .send(
+       "YOUR_SERVICE_ID",
+       "YOUR_TEMPLATE_ID",
+       templateParams,
+       "YOUR_USER_ID"
+     )
+     .then(
+       (response) => {
+         console.log("Email sent successfully:", response);
+       },
+       (error) => {
+         console.error("Error sending email:", error);
+       }
+     );
 };
 
   return (
