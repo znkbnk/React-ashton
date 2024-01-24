@@ -15,6 +15,8 @@ export default function ChatBot() {
     "Now that we know a bit more about your company, could you share the specific metal finishing process you're interested in? Whether it's silver plating, chromic anodising, ndt or another technique, understanding your preferences will help us provide the most suitable solutions for your project.",
     "Would you like to get another process?",
     "What other process would you like?",
+    "Would you like to get another process?",
+    "What other process would you like?",
   ];
 
   const keywordResponses = {
@@ -118,6 +120,7 @@ export default function ChatBot() {
   const [showFinishSendButtons, setShowFinishSendButtons] = useState(false);
   const [showYesNoButtons, setShowYesNoButtons] = useState(false);
   const [isChatComplete, setIsChatComplete] = useState(false);
+  
 
   const chatContainerRef = useRef(null);
 
@@ -142,6 +145,23 @@ export default function ChatBot() {
       return () => clearTimeout(timeoutId);
     }
   }, [currentQuestionIndex]);
+  useEffect(() => {
+    if (currentQuestionIndex === 6) {
+      setIsTyping(true);
+
+      const timeoutId = setTimeout(() => {
+        setIsTyping(false);
+
+        setPlaceholder("Please choose Yes or No");
+        setShowYesNoButtons(true);
+      }, 500);
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [currentQuestionIndex]);
+
+
+
 
   useEffect(() => {
     scrollToBottom();
@@ -196,7 +216,22 @@ export default function ChatBot() {
       setIsTyping(false);
       setPlaceholder("Enter your response");
       setResponse("");
-      setShowYesNoButtons(false);
+
+      if (currentQuestionIndex >= 7) {
+        setTimeout(() => {
+          setConversation((prevConversation) => [
+            ...prevConversation,
+            {
+              question:
+                "Great! Thanks for sharing your responses. Now, I have three options for you to choose from.",
+            },
+            
+          ]);
+        });
+      setPlaceholder("Kindly choose one of the three options.");
+
+        setShowFinishSendButtons(true);
+      }
     }, 1000);
 
     setInputValue("");
@@ -408,7 +443,7 @@ export default function ChatBot() {
                       Start Again
                     </button>
                     <button className='send-button' onClick={handleSendChat}>
-                      Send copy of chat to production manager
+                      Forward a copy of the chat to the production manager
                     </button>
                   </div>
                 )}
