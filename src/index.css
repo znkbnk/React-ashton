@@ -293,11 +293,6 @@ footer {
 
 /* atropos */
 
-
-
-
-
-
 /* NEWS */
 
 .news-container {
@@ -485,8 +480,6 @@ footer {
   align-items: center;
 }
 
-
-
 .right-left h3 {
   display: flex;
   justify-content: flex-start;
@@ -495,8 +488,6 @@ footer {
 .company-info {
   margin-bottom: 40px;
 }
-
-
 
 .text-section p {
   padding: 10px;
@@ -515,7 +506,23 @@ footer {
   }
 }
 
+
+
 @media only screen and (max-width: 768px) {
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+.right-left {
+  padding: 20px;
+}
+
+.left-side p {
+  padding: 20px;
+}
+ 
   .news-cards-container {
     width: 100%;
   }
@@ -557,6 +564,36 @@ footer {
 }
 
 @media only screen and (max-width: 430px) {
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+  }
+
+  .right-left h3 {
+    margin: auto;
+    padding: 10px;
+  }
+
+  .right-side {
+    width: 100%;
+     
+  }
+ 
+  .right-left  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+   
+  }
+
+  .left-side p {
+    padding: 10px;
+  }
+
   .searchResult {
     max-width: 100%;
   }
@@ -571,7 +608,7 @@ footer {
 
   .enlarged .news-cards {
     position: fixed;
-    top: 50%; /* Adjust this value to center vertically */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2440;

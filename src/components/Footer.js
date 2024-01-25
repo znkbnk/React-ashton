@@ -2,18 +2,37 @@
 
 import React from "react";
 import { Link} from "react-router-dom";
+import Atropos from "atropos";
+
 
 const Footer = () => {
+  // eslint-disable-next-line no-unused-vars
+  const footerAtropos = Atropos({
+    el: ".footer",
+    activeOffset: 40,
+    alwaysActive: true,
+    highlight: true,
+  });
   return (
     <footer>
       <div className='footer-section'>
-        <Link to='/'>
-          <img
-            src='https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg'
-            className='logo'
-            alt='Ashton & Moore Ltd, Aerospace, Industrial Finishing, Plating, Industrial Finishing, Anodising'
-          ></img>
-        </Link>
+        <div class='atropos footer'>
+          <div class='atropos-scale'>
+            <div class='atropos-rotate'>
+              <div class='atropos-inner'>
+                <Link to='/'>
+                  <img
+                  
+                    data-atropos-offset='3'
+                    src='https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg'
+                    className='logo'
+                    alt='Ashton & Moore Ltd, Aerospace, Industrial Finishing, Plating, Industrial Finishing, Anodising'
+                  ></img>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className='footer-section'>
@@ -25,8 +44,8 @@ const Footer = () => {
       </div>
 
       <div className='footer-section'>
-        <ul >
-          <li >
+        <ul>
+          <li>
             <i>{/*icon*/}</i>
             <Link to='/Privacy'>Privacy Policy</Link>
           </li>

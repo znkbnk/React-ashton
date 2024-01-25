@@ -404,7 +404,7 @@ I'm sorry for the confusion. It seems like I didn't quite grasp your question. C
       </button>
       <div
         id='text-section'
-        className='text-section'
+        className='text-section '
         ref={(ref) => {
           chatContainerRef.current = ref;
           scrollToBottom();

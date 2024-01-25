@@ -3,9 +3,19 @@ import { Link, NavLink } from "react-router-dom";
 import "../Navbar.css";
 import SearchBar from "./SearchBar";
 import {companies, sections} from "../data";
+import Atropos from "atropos";
+
 
 const Navbar = ({ setSearchResults }) => {
   const [showNavBar, setShowNavbar] = useState(false);
+
+   // eslint-disable-next-line no-unused-vars
+   const navbarAtropos = Atropos({
+     el: ".navbar",
+     activeOffset: 40,
+     alwaysActive: true,
+     highlight: true,
+   });
 
   const hanleShowNavnar = () => {
     setShowNavbar(!showNavBar);
@@ -44,19 +54,30 @@ const Navbar = ({ setSearchResults }) => {
     <nav className='navbar'>
       <div className='container'>
         <div className='leftside'>
-          <Link to='/'>
-            <img
-              src='https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg'
-              className='logo'
-              alt='Ashton & Moore Ltd, Aerospace, Industrial Finishing, Plating, Industrial Finishing, Anodising'
-            ></img>
-          </Link>
-       
-          <SearchBar
+          <div class='atropos navbar'>
+            <div class='atropos-scale'>
+              <div class='atropos-rotate'>
+                <div class='atropos-inner'>
+                  <Link to='/'>
+                    <img
+                      data-atropos-offset='3'
+                      src='https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg'
+                      className='logo'
+                      alt='Ashton & Moore Ltd, Aerospace, Industrial Finishing, Plating, Industrial Finishing, Anodising'
+                    ></img>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div>
+            <SearchBar
             sections={sections}
             companies={companies}
             onSearch={handleSearch}
           />
+        </div>
           <img
             src='https://www.ashton-moore.co.uk/wp-content/uploads/2022/01/accreditations.jpg'
             className='additional-image'
