@@ -4,6 +4,8 @@ import stringSimilarity from "string-similarity";
 import "../helpers/chatbot.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ChatBot() {
   const questions = [
@@ -197,7 +199,9 @@ export default function ChatBot() {
       const responseKey = closestMatch.target;
       response = keywordResponses[responseKey];
     } else {
-      response = `${inputValue}? I don't understand`;
+      response = `${inputValue}? 
+I'm sorry for the confusion. It seems like I didn't quite grasp your question. Could you please try rephrasing it or providing more details? And of course, I'm here to assist you with another process if you'd like.`;
+
     }
 
     setIsTyping(true);
@@ -379,15 +383,18 @@ export default function ChatBot() {
       .then(
         (response) => {
           console.log("Email sent successfully:", response);
+          toast.success("Email sent successfully!"); // Add this line to show toast
         },
         (error) => {
           console.error("Error sending email:", error);
+          toast.error("Failed to send email!"); // Add this line to show toast
         }
       );
   };
 
   return (
     <div className='btn-help'>
+      <ToastContainer position='bottom-center' autoClose={3000} />
       <button
         id='bot-button'
         onClick={handleButtonClick}
