@@ -21,13 +21,34 @@ body {
 
 .logo {
   position: relative;
-  width: 125px;
+  width: 100px;
   height: 100px;
   border: 2px solid #ccc;
-  border-radius: 5px;
+  border-radius: 5px !important;
   outline: 2px solid #ddd;
   box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.3);
 }
+
+/* Accreditation */
+
+  .accreditation-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .accreditation-container img {
+        width: 200px; 
+        height: 100px; 
+        margin: 10px; 
+        border-radius: 20px;
+        border: 1px solid #262018;
+
+    }
+
+    
 
 
 
@@ -140,6 +161,7 @@ body {
 .service-cards ul {
   list-style: none;
   font-size: 1.5em;
+  
 }
 
 .service-cards img {
@@ -200,7 +222,6 @@ body {
 }
 
 .back-button:hover {
-  transform: scale(1.1);
 
   box-shadow: 5px 5px 10px 5px #00000033;
 }
@@ -329,7 +350,6 @@ footer {
 }
 
 .news-cards:hover {
-  transform: scale(1.01);
   box-shadow: 3px 4px 20px 10px #0000006c;
   border: 1px solid #262018;
 }
@@ -432,7 +452,18 @@ footer {
   border: none;
 }
 
+/* Approvals */
+
+
+
 /* Legals */
+
+.legals-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .legals-container {
   display: flex;
@@ -452,6 +483,7 @@ footer {
   width: 100%;
   padding: 40px 80px;
 }
+
 
 .left-side {
   flex: 1;
@@ -486,6 +518,15 @@ footer {
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+   .accreditation-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+    }
   .info-container {
     display: flex;
     flex-direction: column;
@@ -495,9 +536,7 @@ footer {
     padding: 20px;
   }
 
-  .left-side p {
-    padding: 20px;
-  }
+  
 
   .news-cards-container {
     width: 100%;
@@ -534,6 +573,7 @@ footer {
     list-style: none;
     word-wrap: break-word;
     padding: 40px;
+    
   }
   .service-cards {
     width: 90%;
@@ -556,6 +596,21 @@ footer {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
+
+
+.accreditation-content {
+     display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+     .accreditation-container img {
+        width: 150px; 
+        height: 80px; 
+        margin: 10px; 
+    }
+
   .info-container {
     display: flex;
     flex-direction: column;
@@ -600,7 +655,7 @@ footer {
   .logo {
     box-shadow: none;
     outline: none;
-    border-radius: 15px;
+    margin: 10px;
   }
   .service-container {
     width: 100%;
@@ -632,4 +687,9 @@ footer {
   .news-cards {
     width: 90%;
   }
+  .right-left h3 {
+    padding: 0;
+    margin: 0;
+  }
+  
 }

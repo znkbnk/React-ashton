@@ -56,7 +56,7 @@ const App = () => {
             element={
               <div className='service-container'>
                 <div className='service-cards'>
-                  <div className='ok'>
+                  <div>
                     <button onClick={handleGoBack} className='back-button'>
                       Back
                     </button>

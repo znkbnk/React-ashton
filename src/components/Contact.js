@@ -4,11 +4,12 @@ import emailjs from "emailjs-com";
 import ScrollToTopOnMount from "../helpers/ScrollToTopOnMount";
 
 const Contact = () => {
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
-     useEffect(() => {
-       // Scroll to the top of the page when the component mounts
-       window.scrollTo(0, 0);
-     }, []);
+  
   const [formData, setFormData] = useState({
     display: false,
     firstName: "",

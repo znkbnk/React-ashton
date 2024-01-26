@@ -11,7 +11,7 @@ const Legals = () => {
           Feel free to click on the links below to obtain copies of our legal
           documents.
         </h3>
-        <ul>
+        <ul className='legals-ul'>
           <li>
             <a
               href='https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/OC001-Standard-Terms-Conditions-rev.pdf'

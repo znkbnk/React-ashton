@@ -27,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 40px;
+  padding: 25px 20px;
   position: relative;
 }
 
@@ -35,7 +35,13 @@ h1 {
   font-size: 6vh;
 
   color: var(--textblack);
-  margin-right: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+h6 {
+  font-size: 6vh;
+  margin: 40px;
+  color: var(--main);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
@@ -43,16 +49,11 @@ h1 {
 h3 {
   font-size: 5vh;
   color: var(--textwhite);
-  margin-right: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
-.leftside {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 
 h2 {
   font-size: 5vh;
@@ -62,6 +63,7 @@ h2 {
   margin: 20px;
   padding: 20px;
 }
+
 h4 {
   font-size: 3vh;
   color: var(--textwhite);
@@ -69,6 +71,20 @@ h4 {
   text-align: center;
   margin: 20px;
   padding: 20px;
+}
+
+h5 {
+  padding-right: 5px;
+}
+
+.leftside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.leftside img {
+  border-radius: 20px;
+  height: 70px;
 }
 
 .home-container {
@@ -125,8 +141,6 @@ h4 {
   color: var(--active);
 }
 
-
-
 /* Search bar */
 
 .search-container {
@@ -162,7 +176,6 @@ h4 {
 
 .search-input::placeholder {
   color: var(--textwhite);
-
 }
 
 .additional-image {
@@ -174,7 +187,7 @@ h4 {
   .additional-image {
     display: none;
   }
-   .menu-icon {
+  .menu-icon {
     display: block;
     cursor: pointer;
     color: var(--textwhite);
@@ -215,8 +228,7 @@ h4 {
     border-radius: 0.8em;
     overflow: hidden;
     margin-top: 10px;
-  background-color: var(--service);
-
+    background-color: var(--service);
   }
 
   .search-container .search-input {
@@ -230,12 +242,6 @@ h4 {
     width: 100%;
     margin: 20px 40px;
   }
-
-  
-
- 
-
-
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -247,13 +253,12 @@ h4 {
     padding: 10px;
     border: none;
   }
-  
 
   .additional-image {
     display: none;
   }
 
-    .menu-icon {
+  .menu-icon {
     display: block;
     cursor: pointer;
     color: var(--textwhite);
@@ -261,7 +266,7 @@ h4 {
     z-index: 4;
     padding-right: 10px;
   }
-   .nav-elements {
+  .nav-elements {
     position: absolute;
     width: 0;
     height: 100vh;
