@@ -163,7 +163,8 @@ const Home = () => {
                 <div className='right-side '>
                   <div className='service-cards'>
                     <h4>The services we provide include:</h4>
-                    <tbody className='right-left'>
+                     <table className='right-left'>
+      <tbody>
                       <tr>
                         <td>
                           <h3>Anodising</h3>
@@ -203,6 +204,7 @@ const Home = () => {
                         </td>
                       </tr>
                     </tbody>
+                    </table>
                   </div>
                 </div>
               </div>

@@ -244,8 +244,8 @@ const Contact = () => {
           <div className='contact-container'>
             <div className='form'>
               <div className='header'>
-                <h1>Make An Enquiry</h1>
-                <h2>Please provide your information below.</h2>
+                <h4>Make An Enquiry</h4>
+                <h4>Please provide your information below.</h4>
               </div>
               <div className='inputcontainer'>
                 <input

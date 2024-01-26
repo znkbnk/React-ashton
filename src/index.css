@@ -29,20 +29,7 @@ body {
   box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.3);
 }
 
-.content-container {
-  max-width: 100%;
-  overflow: hidden;
-  word-wrap: break-word;
-  padding: 20px;
-  margin: 20px;
-  flex: 1;
-}
 
-/* Add the following styles for better readability and aesthetics */
-.content-container p {
-  white-space: normal;
-  overflow-wrap: break-word;
-}
 
 /* search Results */
 
@@ -496,35 +483,27 @@ footer {
 
 /* @media */
 
-@media only screen and (max-width: 1920px) {
-  .first {
-    width: 100%;
-  }
-  .service-container {
-    width: 100%;
-    padding: 0;
-  }
-}
 
 
-
-@media only screen and (max-width: 768px) {
-
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .info-container {
     display: flex;
     flex-direction: column;
     padding: 20px;
   }
-.right-left {
-  padding: 20px;
-}
+  .right-left {
+    padding: 20px;
+  }
 
-.left-side p {
-  padding: 20px;
-}
- 
+  .left-side p {
+    padding: 20px;
+  }
+
   .news-cards-container {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .service-container {
     width: 100%;
@@ -561,42 +540,29 @@ footer {
     padding: 0;
     margin: 20px;
   }
+
+   .info-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .info-container {
     display: flex;
     flex-direction: column;
     padding: 10px;
-
   }
 
-  .right-left h3 {
-    margin: auto;
-    padding: 10px;
-  }
-
-  .right-side {
-    width: 100%;
-     
-  }
- 
-  .right-left  {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-   
-  }
-
-  .left-side p {
-    padding: 10px;
-  }
-
-  .searchResult {
-    max-width: 100%;
-  }
+  
   .news-cards-container {
     padding: 0;
   }
@@ -644,12 +610,14 @@ footer {
   .service-cards {
     width: 90%;
     margin: 20px;
+    padding: 10px;
   }
 
   footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   .service-cards ul {
     margin: 20px;
@@ -659,5 +627,9 @@ footer {
   .service-cards h1 {
     font-size: 2em;
     text-decoration: underline;
+  }
+
+  .news-cards {
+    width: 90%;
   }
 }

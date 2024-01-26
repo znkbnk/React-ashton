@@ -373,23 +373,23 @@ I'm sorry for the confusion. It seems like I didn't quite grasp your question. C
       message: messageBody,
     };
 
-    emailjs
-      .send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        templateParams,
-        "YOUR_USER_ID"
-      )
-      .then(
-        (response) => {
-          console.log("Email sent successfully:", response);
-          toast.success("Email sent successfully!"); // Add this line to show toast
-        },
-        (error) => {
-          console.error("Error sending email:", error);
-          toast.error("Failed to send email!"); // Add this line to show toast
-        }
-      );
+  emailjs
+    .send(
+      "service_1n4gsgx",
+      "template_cyifmgn",
+      templateParams,
+      "u4-0CXt6mlWQViI6d"
+    )
+    .then(
+      (response) => {
+        console.log("Email sent successfully:", response);
+        toast.success("Email sent successfully!"); // Add this line to show toast
+      },
+      (error) => {
+        console.error("Error sending email:", error);
+        toast.error("Failed to send email!"); // Add this line to show toast
+      }
+    );
   };
 
   return (

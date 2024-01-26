@@ -14,7 +14,8 @@ const Navbar = ({ setSearchResults }) => {
      el: ".navbar",
      activeOffset: 40,
      alwaysActive: true,
-     highlight: true,
+    highlight: true,
+
    });
 
   const hanleShowNavnar = () => {
@@ -54,10 +55,10 @@ const Navbar = ({ setSearchResults }) => {
     <nav className='navbar'>
       <div className='container'>
         <div className='leftside'>
-          <div class='atropos navbar'>
-            <div class='atropos-scale'>
-              <div class='atropos-rotate'>
-                <div class='atropos-inner'>
+          <div className='atropos navbar'>
+            <div className='atropos-scale'>
+              <div className='atropos-rotate'>
+                <div className='atropos-inner'>
                   <Link to='/'>
                     <img
                       data-atropos-offset='3'
@@ -71,13 +72,13 @@ const Navbar = ({ setSearchResults }) => {
             </div>
           </div>
 
-        <div>
+          <div>
             <SearchBar
-            sections={sections}
-            companies={companies}
-            onSearch={handleSearch}
-          />
-        </div>
+              sections={sections}
+              companies={companies}
+              onSearch={handleSearch}
+            />
+          </div>
           <img
             src='https://www.ashton-moore.co.uk/wp-content/uploads/2022/01/accreditations.jpg'
             className='additional-image'

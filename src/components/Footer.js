@@ -16,13 +16,12 @@ const Footer = () => {
   return (
     <footer>
       <div className='footer-section'>
-        <div class='atropos footer'>
-          <div class='atropos-scale'>
-            <div class='atropos-rotate'>
-              <div class='atropos-inner'>
+        <div className='atropos footer'>
+          <div className='atropos-scale'>
+            <div className='atropos-rotate'>
+              <div className='atropos-inner'>
                 <Link to='/'>
                   <img
-                  
                     data-atropos-offset='3'
                     src='https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg'
                     className='logo'

@@ -133,17 +133,17 @@
 /* button */
 
 .bot-button {
-  border: none;
+  border: 2px solid white;
   outline: none;
   color: rgb(255, 255, 255);
   background: #111;
   cursor: pointer;
   position: fixed;
-  top: 670px; /* Adjust the top distance according to your design */
-  right: 15px;
+  top: 80%;
+  right: 5%;
   z-index: 300;
-  width: 75px; /* Set a fixed width */
-  height: 75px; /* Set a fixed height */
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   animation: bot-button-bounce 4s infinite;
   display: flex;
@@ -250,7 +250,17 @@
   border-radius: 50%;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .bot-button {
+    position: fixed;
+
+   top: 80%;
+    right: 5%;
+  
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .text-section {
     position: fixed;
     top: 50%;
@@ -259,5 +269,12 @@
     width: 90%;
     max-width: 90%;
     overflow-y: auto; /* Add this line to enable vertical scrolling if needed */
+  }
+  .bot-button {
+   position: fixed;
+
+    top: 80%;
+    right: 5%;
+  
   }
 }
