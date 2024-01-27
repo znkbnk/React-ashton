@@ -51,6 +51,9 @@ h3 {
   color: var(--textwhite);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -62,6 +65,9 @@ h2 {
   text-align: center;
   margin: 20px;
   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h4 {
