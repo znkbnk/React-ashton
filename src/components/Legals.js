@@ -6,7 +6,7 @@ const Legals = () => {
     <div className='service-container'>
       <div className='service-cards'>
         <ScrollToTopOnMount />
-        <h2>Legals</h2>
+        <h1>Legals</h1>
         <h3>
           Feel free to click on the links below to obtain copies of our legal
           documents.
