@@ -253,6 +253,9 @@ h5 {
     padding: 10px;
     border: none;
   }
+  .leftside {
+    margin-right: 30px;
+  }
 
   .additional-image {
     display: none;

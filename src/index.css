@@ -31,26 +31,21 @@ body {
 
 /* Accreditation */
 
-  .accreditation-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 40px;
-    }
-    .accreditation-container img {
-        width: 200px; 
-        height: 100px; 
-        margin: 10px; 
-        border-radius: 20px;
-        border: 1px solid #262018;
-
-    }
-
-    
-
-
+.accreditation-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.accreditation-container img {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 20px;
+  border: 1px solid #262018;
+}
 
 /* search Results */
 
@@ -161,7 +156,6 @@ body {
 .service-cards ul {
   list-style: none;
   font-size: 1.5em;
-  
 }
 
 .service-cards img {
@@ -222,7 +216,6 @@ body {
 }
 
 .back-button:hover {
-
   box-shadow: 5px 5px 10px 5px #00000033;
 }
 
@@ -313,7 +306,7 @@ footer {
 .news-cards-container {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 40px;
 }
@@ -395,7 +388,7 @@ footer {
   font-size: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 20px;
+  padding: 10px;
 }
 
 .button-container {
@@ -454,8 +447,6 @@ footer {
 
 /* Approvals */
 
-
-
 /* Legals */
 
 .legals-ul {
@@ -483,7 +474,6 @@ footer {
   width: 100%;
   padding: 40px 80px;
 }
-
 
 .left-side {
   flex: 1;
@@ -515,38 +505,29 @@ footer {
 
 /* @media */
 
-
-
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
-   .accreditation-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: 40px;
-    }
+  .accreditation-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+  }
   .info-container {
     display: flex;
     flex-direction: column;
     padding: 20px;
   }
   .right-left {
-    padding: 20px;
+    padding: 40px;
   }
-
-  
 
   .news-cards-container {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .service-container {
-    width: 100%;
-    padding: 0;
   }
 
   .enlarged .news-cards {
@@ -573,7 +554,6 @@ footer {
     list-style: none;
     word-wrap: break-word;
     padding: 40px;
-    
   }
   .service-cards {
     width: 90%;
@@ -581,7 +561,12 @@ footer {
     margin: 20px;
   }
 
-   .info-container {
+  .service-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .info-container {
     display: flex;
     flex-direction: column;
   }
@@ -592,24 +577,28 @@ footer {
     align-items: center;
   }
 
-  
+  .left-side p {
+    padding: 20px;
+  }
+
+  .right-side h3 {
+    padding-top: 20px;
+  }
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
-
-
-.accreditation-content {
-     display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-     .accreditation-container img {
-        width: 150px; 
-        height: 80px; 
-        margin: 10px; 
-    }
+  .accreditation-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .accreditation-container img {
+    width: 150px;
+    height: 80px;
+    margin: 10px;
+  }
 
   .info-container {
     display: flex;
@@ -617,20 +606,20 @@ footer {
     padding: 10px;
   }
 
-  
+  .news-cards {
+    width: 90%;
+  }
+
   .news-cards-container {
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .enlarged .close-button {
-    top: -10px;
-    right: -50px;
-  }
+
 
   .enlarged .news-cards {
-    position: fixed;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2440;
     width: 80%;
@@ -640,16 +629,16 @@ footer {
     font-size: 14px;
     overflow-y: auto;
     transition: top 0.5s ease-in-out;
+    margin: 0;
   }
 
   .enlarged.enlarged-visible .news-cards {
     top: 50%;
-    transition: top 0.5s ease-in-out;
+   
   }
 
   .enlarged .news-cards h3 {
     font-size: 20px;
-    padding: 10px 20px;
   }
 
   .logo {
@@ -684,12 +673,8 @@ footer {
     text-decoration: underline;
   }
 
-  .news-cards {
-    width: 90%;
-  }
   .right-left h3 {
     padding: 0;
     margin: 0;
   }
-  
 }

@@ -71,24 +71,7 @@ const Home = () => {
                   link={`/news/${index + 1}`}
                 />
               ))}
-              {news.map((item, index) => (
-                <NewsItem
-                  key={index}
-                  image={item.image}
-                  title={item.title}
-                  description={item.description}
-                  link={`/news/${index + 1}`}
-                />
-              ))}
-              {news.map((item, index) => (
-                <NewsItem
-                  key={index}
-                  image={item.image}
-                  title={item.title}
-                  description={item.description}
-                  link={`/news/${index + 1}`}
-                />
-              ))}
+           
             </div>
           </div>
         </Parallax>
@@ -152,7 +135,7 @@ const Home = () => {
                       Indeed, our prowess has been widely acknowledged and in
                       recent years and we have won awards, not only for Quality,
                       but also Environmental performance and outstanding company
-                      achievement, at the Surface Engineering Association’s
+                      achievement, at the Surface Engineering Association's
                       awards at the house of Lords in London. However, we are
                       not resting on our laurels and are currently installing
                       REACH compliant processes such as; TSA, Thin film

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// ... (imports)
 
 const NewsItem = ({ image, title, description }) => {
   const [enlarged, setEnlarged] = useState(false);
@@ -13,7 +12,6 @@ const NewsItem = ({ image, title, description }) => {
   };
 
   const truncateDescription = (text, maxLength) => {
-    // Convert JSX elements to plain text
     const plainText =
       typeof text === "string"
         ? text
@@ -23,9 +21,12 @@ const NewsItem = ({ image, title, description }) => {
             )
             .join("");
 
-    return plainText.length > maxLength
-      ? `${plainText.slice(0, maxLength)}...`
-      : plainText;
+    const truncatedText =
+      plainText.length > maxLength
+        ? `${plainText.slice(0, maxLength)}...`
+        : plainText;
+
+    return truncatedText;
   };
 
   const plainTextDescription = truncateDescription(description, 150);
