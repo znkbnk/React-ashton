@@ -8,7 +8,8 @@
 # testing
 /coverage
 
-
+# production
+/build
 
 # misc
 .DS_Store
@@ -23,4 +24,5 @@ yarn-error.log*
 
 
 public/email.md
+.gitignore
 .gitignore
