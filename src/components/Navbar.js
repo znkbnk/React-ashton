@@ -124,7 +124,7 @@ const Navbar = ({ setSearchResults }) => {
           <ul>
             <li>
               <i>{/*icon*/}</i>
-              <NavLink to='/' onClick={handleCloseNavbar}>
+              <NavLink to='/Home' onClick={handleCloseNavbar}>
                 Home
               </NavLink>
             </li>

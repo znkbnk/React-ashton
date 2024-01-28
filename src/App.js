@@ -43,7 +43,7 @@ const App = () => {
       <Navbar setSearchResults={handleSearch} />
 
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/Home' element={<Home />} />
         <Route
           path='/Services'
           element={<Services sections={sections} companies={companies} />}
