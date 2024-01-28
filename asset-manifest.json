@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-ashton/static/css/main.494b13c2.css",
-    "main.js": "/React-ashton/static/js/main.cec509a3.js",
+    "main.js": "/React-ashton/static/js/main.a458adb2.js",
     "static/js/787.452c3fbf.chunk.js": "/React-ashton/static/js/787.452c3fbf.chunk.js",
     "static/media/video.mp4": "/React-ashton/static/media/video.700596cafd908e39d779.mp4",
     "static/media/carousel3.jpg": "/React-ashton/static/media/carousel3.95094938a3fcbdcfcff5.jpg",
@@ -23,11 +23,11 @@
     "static/media/slick.woff": "/React-ashton/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/React-ashton/index.html",
     "main.494b13c2.css.map": "/React-ashton/static/css/main.494b13c2.css.map",
-    "main.cec509a3.js.map": "/React-ashton/static/js/main.cec509a3.js.map",
+    "main.a458adb2.js.map": "/React-ashton/static/js/main.a458adb2.js.map",
     "787.452c3fbf.chunk.js.map": "/React-ashton/static/js/787.452c3fbf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.494b13c2.css",
-    "static/js/main.cec509a3.js"
+    "static/js/main.a458adb2.js"
   ]
 }
