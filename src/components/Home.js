@@ -22,6 +22,7 @@ import ScrollToTopOnMount from "../helpers/ScrollToTopOnMount";
 import { NavLink } from "react-router-dom";
 import { Parallax } from "react-parallax";
 
+
 const Home = () => {
   const settings = {
     infinite: true,

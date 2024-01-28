@@ -24,6 +24,7 @@ import Privacy from "./components/Privacy";
 import Cookies from "./components/Cookies";
 import Terms from "./components/Terms";
 
+
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
   const navigate = useNavigate();
