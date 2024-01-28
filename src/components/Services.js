@@ -11,7 +11,7 @@ const Services = ({ sections }) => {
       <ScrollToTopOnMount />
 
       <div className='video-container'>
-        <video autoPlay loop muted>
+        <video autoPlay loop muted controls={false}>
           <source className='home-video' src={video} type='video/mp4' />
         </video>
       </div>

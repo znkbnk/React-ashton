@@ -12,6 +12,7 @@
   align-items: center;
   text-align: center;
   width: 100%;
+  z-index: 10;
 }
 
 .cards-container {
@@ -21,6 +22,7 @@
   position: relative;
   z-index: 2;
   min-height: 100vh;
+  z-index: 10;
 }
 
 .cards {
@@ -32,6 +34,7 @@
   transition: 0.5s;
   width: 400px;
   margin: 50px;
+  z-index: 10;
 }
 
 .cards:hover {
@@ -67,7 +70,8 @@
   position: relative;
   padding: 0 20px;
   background: rgba(0, 0, 0, 0.05);
-  z-index: 1;
+  z-index: 10;
+
   border-radius: 8px;
   backdrop-filter: blur(10px);
   transition: 0.5s;
@@ -112,24 +116,24 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
- .cards::after,
+  .cards::after,
   .cards::before {
     display: none;
     transform: none;
     border: none;
     padding: 0;
     width: 0;
-    top: 0
+    top: 0;
   }
   .cards {
-    background-color:#62361e;
+    background-color: #62361e;
     border-radius: 10px;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-    .cards-container {
+  .cards-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,10 +143,7 @@
     backdrop-filter: none;
     width: 500px;
     padding: 20px;
-    
   }
-
-
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -158,27 +159,18 @@
 
   .cards {
     width: 100%;
-       background-color:#62361e;
+    background-color: #62361e;
     border-radius: 10px;
     height: auto;
   }
 
-  
- 
-.cards::after,
+  .cards::after,
   .cards::before {
     display: none;
     transform: none;
     border: none;
     padding: 0;
     width: 0;
-    top: 0
+    top: 0;
   }
-
-  
- 
-  
-  
- 
-
 }
