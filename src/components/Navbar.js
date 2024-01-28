@@ -59,7 +59,7 @@ const Navbar = ({ setSearchResults }) => {
             <div className='atropos-scale'>
               <div className='atropos-rotate'>
                 <div className='atropos-inner'>
-                  <Link to='/'>
+                  <Link to='/Home'>
                     <img
                       data-atropos-offset='3'
                       src='https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg'
