@@ -89,7 +89,6 @@ h5 {
   justify-content: space-between;
 }
 .leftside img {
-  border-radius: 20px;
   height: 70px;
 }
 
@@ -255,10 +254,7 @@ h5 {
     width: 100%;
     padding: 0;
   }
-  .leftside img {
-    padding: 10px;
-    border: none;
-  }
+  
  
 
   .additional-image {

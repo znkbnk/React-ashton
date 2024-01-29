@@ -14,8 +14,8 @@ const Navbar = ({ setSearchResults }) => {
      el: ".navbar",
      activeOffset: 40,
      alwaysActive: true,
-    highlight: true,
-
+     shadow: false,
+     highlight: false,
    });
 
   const hanleShowNavnar = () => {

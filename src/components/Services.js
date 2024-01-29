@@ -1,7 +1,6 @@
 import React from "react";
 import "../Cards.css";
 import { NavLink } from "react-router-dom";
-import video from "../images/video.mp4";
 import ScrollToTopOnMount from "../helpers/ScrollToTopOnMount";
 
 const Services = ({ sections }) => {
@@ -10,11 +9,7 @@ const Services = ({ sections }) => {
     <div>
       <ScrollToTopOnMount />
 
-      <div className='video-container'>
-        <video autoPlay loop muted controls={false}>
-          <source className='home-video' src={video} type='video/mp4' />
-        </video>
-      </div>
+      
       <div>
         <h1>Services</h1>
       </div>

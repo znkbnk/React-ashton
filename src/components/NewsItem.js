@@ -47,15 +47,15 @@ const NewsItem = ({ image, title, description }) => {
         )}
         <div className='news-card'>
           {enlarged ? (
-            <>
+            <div>
               <h3>{title}</h3>
               <p>{description}</p>
-            </>
+            </div>
           ) : (
-            <>
+            <div>
               <h3>{title}</h3>
               <p>{plainTextDescription}</p>
-            </>
+            </div>
           )}
           {!enlarged && (
             <button className='custom-button' onClick={handleEnlarge}>
