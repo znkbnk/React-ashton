@@ -11,7 +11,7 @@ const Navbar = ({ setSearchResults }) => {
 
    // eslint-disable-next-line no-unused-vars
    const navbarAtropos = Atropos({
-     el: ".navbar",
+     el: ".navbarLogo",
      activeOffset: 40,
      alwaysActive: true,
      shadow: false,
@@ -54,37 +54,31 @@ const Navbar = ({ setSearchResults }) => {
   return (
     <nav className='navbar'>
       <div className='container'>
-        <div className='leftside'>
-          <div className='atropos navbar'>
-            <div className='atropos-scale'>
-              <div className='atropos-rotate'>
-                <div className='atropos-inner'>
-                  <Link to='/React-ashton'>
-                    <img
-                      data-atropos-offset='3'
-                      src='https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg'
-                      className='logo'
-                      alt='Ashton & Moore Ltd, Aerospace, Industrial Finishing, Plating, Industrial Finishing, Anodising'
-                    ></img>
-                  </Link>
-                </div>
+        <div className='atropos navbarLogo'>
+          <div className='atropos-scale'>
+            <div className='atropos-rotate'>
+              <div className='atropos-inner'>
+                <Link to='/react-ashton'>
+                  <img
+                    data-atropos-offset='6'
+                    src='https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg'
+                    className='logo'
+                    alt='Ashton & Moore Ltd, Aerospace, Industrial Finishing, Plating, Industrial Finishing, Anodising'
+                  ></img>
+                </Link>
               </div>
             </div>
           </div>
+        </div>
 
-          <div>
-            <SearchBar
-              sections={sections}
-              companies={companies}
-              onSearch={handleSearch}
-            />
-          </div>
-          <img
-            src='https://www.ashton-moore.co.uk/wp-content/uploads/2022/01/accreditations.jpg'
-            className='additional-image'
-            alt='Additional'
+        <div>
+          <SearchBar
+            sections={sections}
+            companies={companies}
+            onSearch={handleSearch}
           />
         </div>
+
         <div className='menu-icon' onClick={hanleShowNavnar}>
           {showNavBar ? (
             <i>
@@ -124,7 +118,7 @@ const Navbar = ({ setSearchResults }) => {
           <ul>
             <li>
               <i>{/*icon*/}</i>
-              <NavLink to='/React-ashton' onClick={handleCloseNavbar}>
+              <NavLink to='/react-ashton' onClick={handleCloseNavbar}>
                 Home
               </NavLink>
             </li>

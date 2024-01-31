@@ -33,6 +33,8 @@ const Home = () => {
     autoplaySpeed: 5000,
     prevArrow: <></>,
     nextArrow: <></>,
+    fade: true,
+    cssEase: "linear",
   };
 
   return (
@@ -59,7 +61,7 @@ const Home = () => {
           strength={200}
           className='parallax-background'
         >
-          <div className='first'>
+          <div>
             <h1>News</h1>
 
             <div className='news-container'>
@@ -82,7 +84,7 @@ const Home = () => {
           bgImageAlt='the dog'
           strength={200}
         >
-          <div className='second'>
+          <div>
             <h1>Services</h1>
           </div>
           <div>
@@ -110,7 +112,7 @@ const Home = () => {
           bgImageAlt='the dog'
           strength={200}
         >
-          <div className='third'>
+          <div>
             <div className='company-info'>
               <div>
                 <h1>Company Information</h1>

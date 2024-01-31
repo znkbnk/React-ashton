@@ -2,11 +2,16 @@
 
 .slider-container {
   width: 100%;
+ 
 }
 
 .slick-slide {
   display: flex;
   justify-content: center;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin-bottom: -5px;
 }
 
 .slick-slide img {

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 const NewsItem = ({ image, title, description }) => {
   const [enlarged, setEnlarged] = useState(false);
 
@@ -49,12 +48,12 @@ const NewsItem = ({ image, title, description }) => {
           {enlarged ? (
             <div>
               <h3>{title}</h3>
-              <p>{description}</p>
+              {description} {/* Here, remove the <p> tags */}
             </div>
           ) : (
             <div>
               <h3>{title}</h3>
-              <p>{plainTextDescription}</p>
+              {plainTextDescription} {/* Here, remove the <p> tags */}
             </div>
           )}
           {!enlarged && (

@@ -22,7 +22,7 @@
 }
 
 .left-section {
-  flex: 1;
+  flex: 2;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -136,6 +136,11 @@ textarea {
 
 /* contatcs names */
 
+.contact-container-names {
+  width: 100%;
+  margin: 10px;
+}
+
 body {
   font-family: "Oswald", sans-serif;
   margin: 0;
@@ -183,22 +188,15 @@ strong {
 
   h2 {
     font-size: 20px;
-    margin: 20px;
   }
 
   .contact-list {
-    font-size: 12px;
+    font-size: 14px;
   }
 
-
-
- .contact-container-names {
-  width: 100%;
- }
-
-  .form {
-    width: 100%;
-  }
+.left-section {
+  width: 90%;
+}
 
   input,
   textarea {
@@ -209,8 +207,12 @@ strong {
     width: 50%;
   }
 
-  .contact-container {
-    width: 90%;
+
+
+  .name {
+    display: flex;
+    text-align: end;
+    text-wrap: wrap;
   }
 }
 
@@ -219,8 +221,6 @@ strong {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
-    margin: 0;
   }
   .map-container {
     width: 100%;
@@ -240,18 +240,10 @@ strong {
     width: 90%;
   }
 
-  .contact-container-names {
-    padding: 0 20px;
-  }
-
-  .contact-list {
-    padding: 0;
-   
-  }
-
   .name {
-     display: flex;
-  
+    display: flex;
+    text-align: end;
     text-wrap: wrap;
   }
+
 }

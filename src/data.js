@@ -1219,7 +1219,7 @@ const news = [
   {
     title: "A year of Success at Ashton & Moore Ltd.",
     description: (
-      <>
+      <div>
         <p>
           In order to permit Ashton & Moore to continue as one of the best
           sub-contract metal finishers in the dynamic global Aerospace and
@@ -1237,14 +1237,14 @@ const news = [
           All of which illustrates our goal to provide the best possible service
           to our customers, both now and in the future.
         </p>
-      </>
+      </div>
     ),
     image: "https://www.ashton-moore.co.uk/wp-content/uploads/2022/10/AM.jpg",
   },
   {
     title: "JOSCAR REGISTRATION",
     description: (
-      <>
+      <div>
         <p>
           Ashton and Moore Ltd, by invitation, achieved the prestigious JOSCAR
           registration earlier this year.
@@ -1268,7 +1268,7 @@ const news = [
           continue to perform as one of the UK's best SME sub-contract metal
           finishers servicing the Aerospace and Defence sectors.
         </p>
-      </>
+      </div>
     ),
 
     image:

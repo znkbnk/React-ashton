@@ -71,7 +71,6 @@
   padding: 0 20px;
   background: rgba(0, 0, 0, 0.05);
   z-index: 10;
-
   border-radius: 8px;
   backdrop-filter: blur(10px);
   transition: 0.5s;
@@ -90,7 +89,6 @@
 .cards:hover .content {
   padding: 60px;
   height: 100%;
-
   transform: skewX(0deg);
 }
 .cards .content h2 {
@@ -173,4 +171,11 @@
     width: 0;
     top: 0;
   }
+  
+
+
+
+
+
+
 }
