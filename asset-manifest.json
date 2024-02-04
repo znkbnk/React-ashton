@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-ashton/static/css/main.de2ae1bf.css",
-    "main.js": "/React-ashton/static/js/main.6befc5ca.js",
+    "main.js": "/React-ashton/static/js/main.525228cf.js",
     "static/js/787.452c3fbf.chunk.js": "/React-ashton/static/js/787.452c3fbf.chunk.js",
     "static/media/carousel3.jpg": "/React-ashton/static/media/carousel3.95094938a3fcbdcfcff5.jpg",
     "static/media/company-bg.jpg": "/React-ashton/static/media/company-bg.1fc3c1d2633ab4a2cead.jpg",
@@ -22,11 +22,11 @@
     "static/media/slick.woff": "/React-ashton/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/React-ashton/index.html",
     "main.de2ae1bf.css.map": "/React-ashton/static/css/main.de2ae1bf.css.map",
-    "main.6befc5ca.js.map": "/React-ashton/static/js/main.6befc5ca.js.map",
+    "main.525228cf.js.map": "/React-ashton/static/js/main.525228cf.js.map",
     "787.452c3fbf.chunk.js.map": "/React-ashton/static/js/787.452c3fbf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.de2ae1bf.css",
-    "static/js/main.6befc5ca.js"
+    "static/js/main.525228cf.js"
   ]
 }
