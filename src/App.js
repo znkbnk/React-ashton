@@ -23,6 +23,8 @@ import "./helpers/chatbot.css";
 import Privacy from "./components/Privacy";
 import Cookies from "./components/Cookies";
 import Terms from "./components/Terms";
+import LivechatBar from "./helpers/LivechatBar";
+
 
 
 const App = () => {
@@ -41,8 +43,10 @@ const App = () => {
   return (
     <div>
       <Navbar setSearchResults={handleSearch} />
-
+     
       <Routes>
+        <Route path='/' element={<LivechatBar /> } />
+
         <Route path='/react-ashton' element={<Home />} />
         <Route
           path='/Services'

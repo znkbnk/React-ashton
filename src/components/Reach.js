@@ -6,7 +6,15 @@ const Reach = () => {
     <div className='service-container'>
       <div className='service-cards'>
         <ScrollToTopOnMount />
-
+        <iframe
+        title='Ashton chatBot'
+          src='https://chat.dante-ai.com/embed?kb_id=391a34dc-8a66-4f78-a580-f5d1c262c672&token=c58b0bb1-3389-497b-817e-fbe84d8c4160&modeltype=gpt-4-turbo&logo=ZmFsc2U=&mode=undefined'
+          allow='clipboard-write; microphone'
+          className="dante"
+          width='100%'
+          height='550'
+          frameborder='0'
+        ></iframe>
         <h1>Reach</h1>
 
         <p>
@@ -42,12 +50,10 @@ const Reach = () => {
         </p>
         <ol>
           <li>
-              Nitric/dichromate passivates, used for steel (some alloys) and
-              stainless steel.
+            Nitric/dichromate passivates, used for steel (some alloys) and
+            stainless steel.
           </li>
-          <li>
-            Brush alocrom.
-          </li>
+          <li>Brush alocrom.</li>
           <li>Cadmium passivates (both clear and chromate passivates).</li>
           <li>
             Dichromate seal, used for sulphuric acid and chromic acid anodising.

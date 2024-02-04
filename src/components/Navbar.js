@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../Navbar.css";
+import "../helpers/livechat.css";
 import SearchBar from "./SearchBar";
-import {companies, sections} from "../data";
+import { companies, sections } from "../data";
 import Atropos from "atropos";
-
 
 const Navbar = ({ setSearchResults }) => {
   const [showNavBar, setShowNavbar] = useState(false);
 
-   // eslint-disable-next-line no-unused-vars
-   const navbarAtropos = Atropos({
-     el: ".navbarLogo",
-     activeOffset: 40,
-     alwaysActive: true,
-     shadow: false,
-     highlight: false,
-   });
+  // eslint-disable-next-line no-unused-vars
+  const navbarAtropos = Atropos({
+    el: ".navbarLogo",
+    activeOffset: 40,
+    alwaysActive: true,
+    shadow: false,
+    highlight: false,
+  });
 
   const hanleShowNavnar = () => {
     setShowNavbar(!showNavBar);
@@ -71,12 +71,13 @@ const Navbar = ({ setSearchResults }) => {
           </div>
         </div>
 
-        <div>
+        <div className='navbar-middle'>
           <SearchBar
             sections={sections}
             companies={companies}
             onSearch={handleSearch}
           />
+          
         </div>
 
         <div className='menu-icon' onClick={hanleShowNavnar}>
@@ -116,6 +117,12 @@ const Navbar = ({ setSearchResults }) => {
           onClick={handleCloseNavbar}
         >
           <ul>
+            <li>
+              <i>{/*icon*/}</i>
+              <NavLink to='/' >
+                LiveChat
+              </NavLink>
+            </li>
             <li>
               <i>{/*icon*/}</i>
               <NavLink to='/react-ashton' onClick={handleCloseNavbar}>

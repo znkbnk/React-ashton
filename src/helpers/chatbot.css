@@ -8,9 +8,9 @@
 }
 
 .text-section {
-  position: fixed; /* or position: absolute; */
-  top: 400px; /* Adjust the top distance according to your design */
-  right: 50px;
+  position: fixed; 
+ top: 40%;
+    left: 80%;
   display: none;
   width: 300px;
   max-height: 500px;
@@ -245,18 +245,36 @@
   background: #191919;
   left: 0;
   top: 0;
-  width: 75px; /* Set a fixed width */
-  height: 75px; /* Set a fixed height */
+  width: 75px; 
+  height: 75px; 
   border-radius: 50%;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 1025px) and (max-width: 1740px)  {
+    .text-section {
+    position: fixed;
+    top: 50%;
+    left: 75%;
+  }
+  
   .bot-button {
     position: fixed;
-
-   top: 80%;
+    top: 80%;
     right: 5%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .text-section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  }
   
+  .bot-button {
+    position: fixed;
+    top: 80%;
+    right: 5%;
   }
 }
 
@@ -271,10 +289,9 @@
     overflow-y: auto; /* Add this line to enable vertical scrolling if needed */
   }
   .bot-button {
-   position: fixed;
+    position: fixed;
 
     top: 80%;
     right: 5%;
-  
   }
 }
