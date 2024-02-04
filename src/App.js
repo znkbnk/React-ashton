@@ -25,8 +25,6 @@ import Cookies from "./components/Cookies";
 import Terms from "./components/Terms";
 import LivechatBar from "./helpers/LivechatBar";
 
-
-
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
   const navigate = useNavigate();
@@ -43,11 +41,11 @@ const App = () => {
   return (
     <div>
       <Navbar setSearchResults={handleSearch} />
-     
-      <Routes>
-        <Route path='/' element={<LivechatBar /> } />
 
-        <Route path='/react-ashton' element={<Home />} />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/Livechat' element={<LivechatBar />} />
+
         <Route
           path='/Services'
           element={<Services sections={sections} companies={companies} />}

@@ -6,7 +6,7 @@ const SearchResults = ({ results }) => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate("/react-ashton");
+    navigate("/");
   };
 
   return (

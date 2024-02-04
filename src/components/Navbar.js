@@ -58,7 +58,7 @@ const Navbar = ({ setSearchResults }) => {
           <div className='atropos-scale'>
             <div className='atropos-rotate'>
               <div className='atropos-inner'>
-                <Link to='/react-ashton'>
+                <Link to='/'>
                   <img
                     data-atropos-offset='6'
                     src='https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg'
@@ -77,7 +77,6 @@ const Navbar = ({ setSearchResults }) => {
             companies={companies}
             onSearch={handleSearch}
           />
-          
         </div>
 
         <div className='menu-icon' onClick={hanleShowNavnar}>
@@ -119,13 +118,13 @@ const Navbar = ({ setSearchResults }) => {
           <ul>
             <li>
               <i>{/*icon*/}</i>
-              <NavLink to='/' >
+              <NavLink to='/Livechat' onClick={handleCloseNavbar}>
                 LiveChat
               </NavLink>
             </li>
             <li>
               <i>{/*icon*/}</i>
-              <NavLink to='/react-ashton' onClick={handleCloseNavbar}>
+              <NavLink to='/' onClick={handleCloseNavbar}>
                 Home
               </NavLink>
             </li>

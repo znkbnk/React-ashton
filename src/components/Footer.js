@@ -20,7 +20,7 @@ const Footer = () => {
           <div className='atropos-scale'>
             <div className='atropos-rotate'>
               <div className='atropos-inner'>
-                <Link to='/react-ashton'>
+                <Link to='/'>
                   <img
                     data-atropos-offset='3'
                     src='https://www.ashton-moore.co.uk/wp-content/uploads/2018/12/logo.jpg'
