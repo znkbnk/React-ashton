@@ -708,6 +708,7 @@ footer {
 
   .enlarged.enlarged-visible .news-cards {
     top: 50%;
+    z-index: 77777777;
   }
 
   .enlarged .news-cards h3 {
