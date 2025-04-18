@@ -385,7 +385,7 @@ footer {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  z-index: 77777;
+  z-index: 77777777;
 }
 
 .enlarged .news-cards {
@@ -393,7 +393,7 @@ footer {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 77777777;
   transition: top 0.5s ease-in-out;
   border: 1px solid var(--text-color);
 }
@@ -401,6 +401,8 @@ footer {
 .enlarged.enlarged-visible .news-cards {
   top: 20%;
   transition: top 0.5s ease-in-out;
+  z-index: 77777777;
+
 }
 
 .close-button {
